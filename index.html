@@ -8,6 +8,8 @@
 	.highlight_bo { color: red; }
 	span[lang=bo] { font-size: 28px; margin: 0 0.25em 0 0.25em; }
 	#terminology_table td { border: 1px solid #eee; }
+	h3+h3 { margin-top: 0; }
+	.leadin[lang="bo"] {font-size: 20px; }
 	</style>
     <!-- 
       === NOTA BENE ===
@@ -183,7 +185,9 @@
 <section id="language_overview">
 <h2>Tibetan language overview</h2>
 <p>藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
+<p>Tibetan script is based on alphabetic characters and combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables.</p>
 <p>藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
+<p>Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
 <figure>
 	<p><img src="images/syllable.png" alt="Picture of syllable composition."></p>
     <figcaption>Syllable composition in Tibetan</figcaption>
@@ -198,35 +202,7 @@
   <h3>藏文字符（Tibetan Characters）</h3>
   <p>藏文字符（Tibetan character）是由藏文字母纵向叠加而成的结构稳定的符号。一个藏文字符可能包括多个辅音，最上面的辅音称为主辅音，其他辅音称为附加辅音（Subjoined consonant）。</p>
   <p>例如：</p>
-  <!--p><img src="images/ex1b.svg" alt="example 1" height="100px"></p-->
-  <!--svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
-<style type="text/css">
-	.st0{fill:none;}
-	.st1{fill:#ED1C24;}
-	.st2{font-family:'Tibetan_Machine_Uni';}
-	.st3{font-size:36px;}
-	.st4{font-family:'SIL-Hei-Med-Jian';}
-	.st5{font-size:14px;}
-	.st6{fill:#27AAE1;}
-</style>
-<rect id="XMLID_6_" x="2.2" y="1.2" class="st0" width="25.2" height="47.8"/>
-<text id="XMLID_7_" transform="matrix(1 0 0 1 2.25 28.3574)" class="st1 st2 st3">རྐ་</text>
-<rect id="XMLID_16_" x="38" y="1.2" class="st0" width="25.2" height="47.8"/>
-<text id="XMLID_8_" transform="matrix(1 0 0 1 38 28.3574)" class="st1 st2 st3">སྤྱ</text>
-<rect id="XMLID_10_" x="125.8" y="5.1" class="st0" width="169.5" height="20"/>
-<text id="XMLID_11_" transform="matrix(1 0 0 1 125.75 18.0273)" class="st4 st5">主辅音 (root consonant)</text>
-<rect id="XMLID_13_" x="123.2" y="44" class="st0" width="169.5" height="20"/>
-<text id="XMLID_12_" transform="matrix(1 0 0 1 123.25 56.9023)" class="st4 st5">附加辅音 (subscript consonants)</text>
-<g id="XMLID_22_">
-	<rect id="XMLID_20_" x="74.2" y="9.7" class="st6" width="42.5" height="2"/>
-	<polygon id="XMLID_21_" class="st6" points="75.6,13.1 68,10.7 75.6,8.4 	"/>
-</g>
-<g id="XMLID_1_">
-	
-		<rect id="XMLID_3_" x="69.4" y="37.7" transform="matrix(0.9544 0.2984 -0.2984 0.9544 15.6698 -25.2737)" class="st6" width="42.5" height="2"/>
-	<polygon id="XMLID_2_" class="st6" points="70.9,34.9 64.4,30.4 72.3,30.5 	"/>
-</g>
-</svg-->
+  <p>For example:</p>
 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
 <style type="text/css">
 	.svg_bo36 { fill:#ED1C24; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
@@ -245,9 +221,17 @@
 <text x="100" y="60" class="svg_annotation">附加辅音</text>
 <use xlink:href="#arrow" x="55" y="50" transform="rotate(10,80,45)"/>
 </svg>
+<svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<text x="0" y="48" class="svg_bo36">རྐ་སྤྱ</text>
+<text x="100" y="35" class="svg_annotation">Root consonant</text>
+<use xlink:href="#arrow" x="55" y="25"/>
+<text x="100" y="60" class="svg_annotation">Subscript consonants</text>
+<use xlink:href="#arrow" x="55" y="50" transform="rotate(10,80,45)"/>
+</svg>
 </section>
   <section id="tibetan_syllables">
-    <h3>藏文音节（Tibetan Syllables）</h3>
+    <h3>藏文音节</h3>
+    <h3>Tibetan Syllables</h3>
     <p>藏文是拼音文字，因此它的构字方式采用音节分写，不采用像汉语类词式分写。</p>
     <section id="音节构成">
       <h4>音节构成</h4>
@@ -256,10 +240,6 @@
   <section id="结构规则">
     <h4>结构规则</h4>
     <p>要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
-  </section>
-  <section id="结构规则">
-    <h4>结构规则</h4>
-    <p>Other glyphs are designed with either proportional or fixed width.</p>
     <ol>
       <li><p>一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
         <p> A consonant with a vowel is always the root, unless it is the phrase connector <span lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
@@ -294,6 +274,7 @@
       <li>
         <p>如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
         <p>例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
+        <p>For example: <span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
         <p> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
       </li>
       <li>
@@ -303,8 +284,10 @@
   
   
   <p><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
+  <p><span class="leadin" lang="bo">སྔོ་འཇུག་</span> the prefix appears above the root consonant, and is one the following 5 letters: <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
   <p><span class="leadin" lang="bo">མིང་བཞི་</span> 即根字母（root）一个音节的中心字母。</p>
-  <p><span class="leadin" lang="bo">རྗེས་འཇུག་</span> 即后缀（suffix）放在根字母后，通常有10个后缀字母。如下十个：  <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
+  <p><span class="leadin" lang="bo">མིང་བཞི་</span> the root letter is central to the syllable.</p>
+  <p><span class="leadin" lang="bo">རྗེས་འཇུག་</span> suffixes appear after (to the right of) the root letter, and are usually one of the following 10 letters: <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
   <p><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
   <p><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
   <p><span class="leadin" lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ</span></p>
