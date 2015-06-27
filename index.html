@@ -3,6 +3,12 @@
   <head>
     <title>Requirements for Tibetan Text Layout and Typography</title>
     <meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
+    <style>
+	.large_example { font-size: 32px; }
+	.highlight_bo { color: red; }
+	span[lang=bo] { font-size: 28px; margin: 0 0.25em 0 0.25em; }
+	#terminology_table td { border: 1px solid #eee; }
+	</style>
     <!-- 
       === NOTA BENE ===
       For the three scripts below, if your spec resides on dev.w3 you can check them
@@ -192,14 +198,42 @@
   <h3>藏文字符（Tibetan Characters）</h3>
   <p>藏文字符（Tibetan character）是由藏文字母纵向叠加而成的结构稳定的符号。一个藏文字符可能包括多个辅音，最上面的辅音称为主辅音，其他辅音称为附加辅音（Subjoined consonant）。</p>
   <p>例如：</p>
-  <p>IMAGE GOES HERE</p>
+  <!--p><img src="images/ex1b.svg" alt="example 1" height="100px"></p-->
+  <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill:#ED1C24;}
+	.st2{font-family:'Tibetan_Machine_Uni';}
+	.st3{font-size:36px;}
+	.st4{font-family:'SIL-Hei-Med-Jian';}
+	.st5{font-size:14px;}
+	.st6{fill:#27AAE1;}
+</style>
+<rect id="XMLID_6_" x="2.2" y="1.2" class="st0" width="25.2" height="47.8"/>
+<text id="XMLID_7_" transform="matrix(1 0 0 1 2.25 28.3574)" class="st1 st2 st3">རྐ་</text>
+<rect id="XMLID_16_" x="38" y="1.2" class="st0" width="25.2" height="47.8"/>
+<text id="XMLID_8_" transform="matrix(1 0 0 1 38 28.3574)" class="st1 st2 st3">སྤྱ</text>
+<rect id="XMLID_10_" x="125.8" y="5.1" class="st0" width="169.5" height="20"/>
+<text id="XMLID_11_" transform="matrix(1 0 0 1 125.75 18.0273)" class="st4 st5">主辅音 (root consonant)</text>
+<rect id="XMLID_13_" x="123.2" y="44" class="st0" width="169.5" height="20"/>
+<text id="XMLID_12_" transform="matrix(1 0 0 1 123.25 56.9023)" class="st4 st5">附加辅音 (subscript consonants)</text>
+<g id="XMLID_22_">
+	<rect id="XMLID_20_" x="74.2" y="9.7" class="st6" width="42.5" height="2"/>
+	<polygon id="XMLID_21_" class="st6" points="75.6,13.1 68,10.7 75.6,8.4 	"/>
+</g>
+<g id="XMLID_1_">
+	
+		<rect id="XMLID_3_" x="69.4" y="37.7" transform="matrix(0.9544 0.2984 -0.2984 0.9544 15.6698 -25.2737)" class="st6" width="42.5" height="2"/>
+	<polygon id="XMLID_2_" class="st6" points="70.9,34.9 64.4,30.4 72.3,30.5 	"/>
+</g>
+</svg>
 </section>
   <section id="tibetan_syllables">
     <h3>藏文音节（Tibetan Syllables）</h3>
     <p>藏文是拼音文字，因此它的构字方式采用音节分写，不采用像汉语类词式分写。</p>
     <section id="音节构成">
       <h4>音节构成</h4>
-    <p>一个藏文音节由一个或多个藏文字符组成，音节之间加音节间隔符（Intersyllabic mark），藏文排版不能对音节进行切分。</p>
+    <p>一个藏文音节由一个或多个藏文字符组成，音节之间加音节间隔符（intersyllabic mark），藏文排版不能对音节进行切分。</p>
     <p>例如：<span lang="bo">གསལ་པོ་ /</span>csa/ 清晰  其中有音节间隔符即隔音符“<span lang="bo">་</span>”/tsek/  作为区分两个音节。</p></section>
   <section id="结构规则">
     <h4>结构规则</h4>
@@ -210,28 +244,70 @@
     <p>Other glyphs are designed with either proportional or fixed width.</p>
     <ol>
       <li><p>一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
-      <p>IMAGE GOES HERE</p></li>
+        <p> A consonant with a vowel is always the root, unless it is the phrase connector <span lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
+<svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<style type="text/css">
+	.svg_bo36 { fill:#ED1C24; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_bo36_highlight { fill:#0000DD; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
+	.svg_annotation { font-size:14px; }
+	#arrow {fill:#27AAE1;}
+    </style>
+<defs>
+    <g id="arrow">
+	  <polygon points="0,4 8,0 8,3 40,3 40,5 8,5 8,8"/>
+	  </g>
+      </defs>
+<text id="XMLID_8_" x="0" y="48" class="svg_bo36">གི་</text>
+<text x="70" y="40" class="svg_annotation">根字母</text>
+<use xlink:href="#arrow" x="25" y="30"/>
+</svg>
       <li><p>一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
-      <p>IMAGE GOES HERE</p>
-      <p>在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
-      <p>例如：IMAGE GOES HERE</p>
+      <p>In a 2-consonant syllable with no vowel, the first consonant is always the root.</p>
+<svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<text id="XMLID_8_" x="0" y="48" class="svg_bo36">རྐ</text>
+<use xlink:href="#arrow" x="25" y="20"/>
+<text x="70" y="30" class="svg_annotation">上标</text>
+<use xlink:href="#arrow" x="25" y="45"/>
+<text x="70" y="55" class="svg_annotation">根字母</text>
+
+<text id="XMLID_8_" x="200" y="48" class="svg_bo36">ཀྲ</text>
+<use xlink:href="#arrow" x="225" y="25"/>
+<text x="270" y="35" class="svg_annotation">根字母</text>
+<use xlink:href="#arrow" x="225" y="45"/>
+<text x="270" y="55" class="svg_annotation">上标</text>
+</svg>      <p>在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
+      <p>例如：</p>
+<svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
+<text id="XMLID_8_" x="109" y="48" class="svg_bo36_highlight">ག</text>
+<text id="XMLID_8_" x="130" y="48" class="svg_bo36">བ་</text>
+<use xlink:href="#arrow" x="55" y="45" transform="rotate(180,75,45)" />
+<text x="0" y="45" class="svg_annotation">根字母</text>
+</svg>
       </li>
       <li>
         <p>如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
-        <p>TEXT GOES HERE</p>
-        <p> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo">ལགས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
-        <p>例如：TEXT GOES HERE</p>
+        <p>例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
+        <p> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
       </li>
       <li>
         <p>在一个具有四个辅音字母的字中，第二个辅音字母是根字母。</p>
       </li>
       </ol>
-    <p>asdf</p>
+  
+  
+  <p><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
+  <p><span class="leadin" lang="bo">མིང་བཞི་</span> 即根字母（root）一个音节的中心字母。</p>
+  <p><span class="leadin" lang="bo">རྗེས་འཇུག་</span> 即后缀（suffix）放在根字母后，通常有10个后缀字母。如下十个：  <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
+  <p><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
+  <p><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
+  <p><span class="leadin" lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ</span></p>
+  <p><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
+ 
   </section>
   </section>
   <section id="藏文的字体与字符的Unicode编码">
     <h3>藏文的字体与字符的Unicode编码</h3>
-    <p>藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+OF2E  U+0F30+范围。具体如下：</p>
+    <p>藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
     <figure>
     <p><img src="images/code-chart.png" alt="Picture of Unicode Tibetan block."/></p>
 	<figcaption>Unicode Tibetan block.</figcaption>
@@ -270,6 +346,7 @@
       <figcaption>Tibetan subjoined consonants</figcaption>
     </figure>
   </section>
+  
   <section id="元音字母">
     <h4>元音字母</h4>
     <p>藏文中，共有4个元音字母，如下表。</p>
@@ -281,8 +358,10 @@
     <p>例如：上述四个元音字母与辅音<span lang="bo">ྐ</span>联合使用：<span lang="bo">ཀི     ཀུ    ཀེ    ཀོ</span></p>
   </section>
   </section>
+  
+  
   <section id="下标字与上标字">
-    <h3>下标字与上标字</h3></section>
+    <h3>下标字与上标字</h3>
   <section id="下标字">
     <h4>下标字</h4>
     <p>藏文中，有4个下标字，如下表：</p>
@@ -296,7 +375,8 @@
       <figcaption>Tibetan subscripts</figcaption>
     </figure>
   </section>
-</section>
+
+
 <section id="下标字2">
   <h4>上标字</h4>
   <p>藏文中，有3个上标字，分别为<span lang="bo">ར  ལ   ས</span>。这三个字母也可作为上标字跟辅音字母叠加产生特定形式的字以及音。例如：</p>
@@ -305,7 +385,7 @@
     <figcaption>Tibetan superscripts.</figcaption>
   </figure>
 </section>
-<section> </section>
+</section>
 
 <section id="后缀与后后缀">
   <h3>后缀与后后缀</h3>
@@ -362,6 +442,11 @@
 <section id="聚宝垂符">
   <h4>聚宝垂符</h4>
   <p>聚宝垂符“<span lang="bo">༑</span>”主要用来断句，藏文印刷体书籍的一句尾，恰在一行的右端起首，不满三个字母者均该用聚宝垂符作句符。其最末一字为语终词，以及为颂歇句末尾者，则均用两个聚宝垂符。</p>
+</section>
+  
+<section id="蛇行垂符">
+  <h4>蛇行垂符</h4>
+  <p>蛇行垂符“<span lang="bo">༈</span>”用于段落层次之首，但用此符号后不能另行。</p>
 </section>
   
 <section id="其他符号">
@@ -474,7 +559,7 @@
 <h2>Terminology</h2>
 
 <p>报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
-<table><tbody>
+<table id="terminology_table"><tbody>
 <tr><th>Term</th><th>Chinese Tibetan</th><th>Romanized transliteration</th><th>Definition</th></tr>
 <tr><td>back matter</td><td>後付</td><td>atozuke(拼音或发音)</td><td>Appendices, supplements, glossary of terms, index and/or bibliography, and so on, appended at the end of a book.</td></tr>
 </tbody></table>
