@@ -23,6 +23,37 @@ h3+h3 {
 .leadin[lang="bo"] {
 	font-size: 20px;
 }
+.locations td .ex {
+    margin-left: 8px;
+    font-size: 36px;
+	color: #f00;
+}
+.locations th {
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    height: 40px;
+}
+.chartable { line-height: 1.4; }
+.chartable td { padding: 8px; border: 1px solid #ddd; }
+.chartable td :lang(bo) {
+    margin-left: 8px;
+    font-size: 48px;
+	color: #f00;
+}
+.ipa {
+    font-family: doulosipa,"Gentium Plus","Lucida Sans Unicode","Lucida Grande","lucida sans","helvetica",sans-serif;
+    font-size: 18px;
+}
+.ipa::before {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-right: 1.5px;
+}
+.ipa::after {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-left: 1.5px;
+}
 </style>
     <style id="languageStyling">
 .translateme {
@@ -382,7 +413,49 @@ h3+h3 {
           <h4><span data-lang="zh">辅音字母（consonants）</span></h4>
           <p data-lang="zh">藏文有三十个辅音字母，具体如下表所示：</p>
           <figure>
-        <p><img src="images/consonants.png" alt="consonants"/></p>
+        <!--p><img src="images/consonants.png" alt="consonants"/></p-->
+        <table class="chartable">
+          <tr>
+          	<td><span lang="bo">ཀ</span><br/>KA e</td>
+          	<td><span lang="bo">ཁ</span><br/>KHA e</td>
+          	<td><span lang="bo">ག</span><br/>GA e</td>
+          	<td><span lang="bo">ང</span><br/>NGA m</td>
+          	<td><span lang="bo">ཅ</span><br/>CA p</td>
+          	<td><span lang="bo">ཆ</span><br/>CHA p</td>
+          	<td><span lang="bo">ཇ</span><br/>JA e</td>
+          	<td><span lang="bo">ཉ</span><br/>NYA p</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ཏ</span><br/>TA p</td>
+          	<td><span lang="bo">ཐ</span><br/>THA p</td>
+          	<td><span lang="bo">ད</span><br/>DA e</td>
+          	<td><span lang="bo">ན</span><br/>NA p</td>
+          	<td><span lang="bo">པ</span><br/>PA p</td>
+          	<td><span lang="bo">ཕ</span><br/>PHA p</td>
+          	<td><span lang="bo">བ</span><br/>BA e</td>
+          	<td><span lang="bo">མ</span><br/>MA p</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ཙ</span><br/>TSA p</td>
+          	<td><span lang="bo">ཚ</span><br/>TSHA p</td>
+          	<td><span lang="bo">ཛ</span><br/>DZA e</td>
+          	<td><span lang="bo">ཝ</span><br/>WA e</td>
+          	<td><span lang="bo">ཞ</span><br/>ZHA p</td>
+          	<td><span lang="bo">ཟ</span><br/>ZA e</td>
+          	<td><span lang="bo">འ</span><br/>-A e</td>
+          	<td><span lang="bo">ཡ</span><br/>YA e</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ར</span><br/>RA e</td>
+          	<td><span lang="bo">ལ</span><br/>LA e</td>
+          	<td><span lang="bo">ཤ</span><br/>SHA e</td>
+          	<td><span lang="bo">ས</span><br/>SA e</td>
+          	<td><span lang="bo">ཧ</span><br/>HA e</td>
+          	<td><span lang="bo">ཨ</span><br/>A p</td>
+          	<td><span lang="bo"></span><br/></td>
+          	<td><span lang="bo"></span><br/></td>
+            </tr>
+            </table>
         <figcaption><span data-lang="en">Tibetan consonants</span></figcaption>
       </figure>
         </section>
@@ -394,7 +467,49 @@ h3+h3 {
           <p data-lang="zh">例如： <span lang="bo">ྐ</span>加上其他字母后变形为叠加字如<span lang="bo">རྐ </span></p>
           <p data-lang="zh">每个辅音所对应的附加辅音的变形方式如下表：</p>
           <figure>
-        <p><img src="images/subjoined-consonants.png" alt="Subjoined consonants" style="width: 80%;"/></p>
+          <table class="chartable">
+          <tr>
+          	<td><span lang="bo">ྐ</span><br/>KA e</td>
+          	<td><span lang="bo">ྑ</span><br/>KHA e</td>
+          	<td><span lang="bo">ྒ</span><br/>GA e</td>
+          	<td><span lang="bo">ྔ</span><br/>NGA e</td>
+          	<td><span lang="bo">ྕ</span><br/>CA p</td>
+          	<td><span lang="bo">ྖ</span><br/>CHA p</td>
+          	<td><span lang="bo">ྗ</span><br/>JA e</td>
+          	<td><span lang="bo">ྙ</span><br/>NYA p</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ྟ</span><br/>TA p</td>
+          	<td><span lang="bo">ྠ</span><br/>THA p</td>
+          	<td><span lang="bo">ྡ</span><br/>DA e</td>
+          	<td><span lang="bo">ྣ</span><br/>NA p</td>
+          	<td><span lang="bo">ྤ</span><br/>PA p</td>
+          	<td><span lang="bo">ྥ</span><br/>PHA p</td>
+          	<td><span lang="bo">ྦ</span><br/>BA e</td>
+          	<td><span lang="bo">ྨ</span><br/>MA p</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ྩ</span><br/>TSA p</td>
+          	<td><span lang="bo">ྪ</span><br/>TSHA p</td>
+          	<td><span lang="bo">ྫ</span><br/>DZA e</td>
+          	<td><span lang="bo">ྭ</span><br/>WA e</td>
+          	<td><span lang="bo">ྮ</span><br/>ZHA p</td>
+          	<td><span lang="bo">ྯ</span><br/>ZA e</td>
+          	<td><span lang="bo">ྰ</span><br/>-A e</td>
+          	<td><span lang="bo">ྱ</span><br/>YA e</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">ྲ</span><br/>RA e</td>
+          	<td><span lang="bo">ླ</span><br/>LA e</td>
+          	<td><span lang="bo">ྴ</span><br/>SHA e</td>
+          	<td><span lang="bo">ྶ</span><br/>SA e</td>
+          	<td><span lang="bo">ྷ</span><br/>HA e</td>
+          	<td><span lang="bo">ྸ</span><br/>A e</td>
+          	<td><span lang="bo"></span><br/></td>
+          	<td><span lang="bo"></span><br/></td>
+            </tr>
+            </table>
+        <!--p><img src="images/subjoined-consonants.png" alt="Subjoined consonants" style="width: 80%;"/></p-->
         <figcaption><span data-lang="en">Tibetan subjoined consonants</span></figcaption>
       </figure>
         </section>
@@ -403,7 +518,15 @@ h3+h3 {
           <h4><span data-lang="zh">元音字母</span></h4>
           <p data-lang="zh">藏文中，共有4个元音字母，如下表。</p>
           <figure>
-        <p><img src="images/vowels.png" alt="Vowels"/></p>
+          <table class="chartable">
+          <tr>
+          	<td><span lang="bo">ི</span><br/>SIGN E</td>
+          	<td><span lang="bo">ེ</span><br/>SIGN U</td>
+          	<td><span lang="bo">ོ</span><br/>SIGN E</td>
+          	<td><span lang="bo">ུ</span><br/>SIGN O</td>
+            </tr>
+            </table>
+        <!--p><img src="images/vowels.png" alt="Vowels"/></p-->
         <figcaption><span data-lang="en">Tibetan vowels</span></figcaption>
       </figure>
           <p data-lang="zh">元音字母禁止单独使用，单个也不能表达意思。跟辅音字母使用后产生特定的音。它们需要和辅音（或附加辅音）联合起来表达音节和含义。</p>
@@ -418,12 +541,137 @@ h3+h3 {
           <h4><span data-lang="zh">下标字</span></h4>
           <p data-lang="zh">藏文中，有4个下标字，如下表：</p>
           <figure>
-        <p><img src="images/subjoined-2.png" alt="tbd"/></p>
+          <table class="chartable">
+          <tr>
+          	<td><span lang="bo">ྱ</span><br/>YA</td>
+          	<td><span lang="bo">ྲ</span><br/>RA</td>
+          	<td><span lang="bo">ླ</span><br/>LA</td>
+          	<td><span lang="bo">ྭ</span><br/>WA</td>
+            </tr>
+            </table>
+        <!--p><img src="images/subjoined-2.png" alt="tbd"/></p-->
         <figcaption>tbd</figcaption>
       </figure>
           <p data-lang="zh">这些下标字加在辅音下方，辅助产生音。例如：</p>
           <figure>
-        <p><img src="images/subscripts.png" alt="Subscripts"/></p>
+        <!--p><img src="images/subscripts.png" alt="Subscripts"/></p-->
+        <table class="locations"><tbody>
+      <tr>
+				<th><img src='images/0FB1.png' alt='' title='0FB1' /></th>
+				<td><span class="ex" lang="bo">ཀྱ</span></td>
+		  		<td><span class="ipa">kja</span></td>
+				<td><span class="ex" lang="bo">ཁྱ</span></td>
+				<td><span class="ipa">kʰja</span></td>
+				<td><span class="ex" lang="bo">གྱ</span></td>
+				<td><span class="ipa">gja</span></td>
+				<td><span class="ex" lang="bo">པྱ</span></td>
+				<td><span class="ipa">cja</span></td>
+				<td><span class="ex" lang="bo">ཕྱ</span></td>
+				<td><span class="ipa">cʰja</span></td>
+				<td><span class="ex" lang="bo">བྱ</span></td>
+				<td><span class="ipa">ʤja</span></td>
+				<td><span class="ex" lang="bo">མྱ</span></td>
+				<td><span class="ipa">ɲa</span></td>
+				<td><span class="ex" lang="bo">ཧྱ</span></td>
+				<td><span class="ipa">hja</span></td>
+	    </tr>
+          <tr><td colspan="17" style="height: 7px;"></td></tr>
+              <tr>
+				<th rowspan="2"><img src='images/0FB2.png' alt='' title='0FB2' /></th>
+				<td><span class="ex" lang="bo">ཀྲ</span></td>
+				<td><span class="ipa">tra</span></td>
+				<td><span class="ex" lang="bo">ཁྲ</span></td>
+				<td><span class="ipa">tʰra</span></td>
+				<td><span class="ex" lang="bo">གྲ</span></td>
+				<td><span class="ipa">dra</span></td>
+				<td><span class="ex" lang="bo">ཏྲ</span></td>
+				<td><span class="ipa">tra</span></td>
+				<td><span class="ex" lang="bo">ཐྲ</span></td>
+				<td><span class="ipa">tʰra</span></td>
+				<td><span class="ex" lang="bo">དྲ</span></td>
+				<td><span class="ipa">dra</span></td>
+				<td><span class="ex" lang="bo">ནྲ</span></td>
+				<td><span class="ipa">na</span></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			  <tr>
+				<td><span class="ex" lang="bo">པྲ</span></td>
+				<td><span class="ipa">tra</span></td>
+				<td><span class="ex" lang="bo">ཕྲ</span></td>
+				<td><span class="ipa">tʰra</span></td>
+				<td><span class="ex" lang="bo">བྲ</span></td>
+				<td><span class="ipa">tra</span></td>
+				<td><span class="ex" lang="bo">མྲ</span></td>
+				<td><span class="ipa">ma</span></td>
+				<td><span class="ex" lang="bo">སྲ</span></td>
+				<td><span class="ipa">sa</span></td>
+				<td><span class="ex" lang="bo">ཧྲ</span></td>
+				<td><span class="ipa">hra</span></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+          <tr><td colspan="17" style="height: 7px;"></td></tr>
+              <tr>
+				<th><img src='images/0FB3.png' alt='' title='0FB3' /></th>
+				<td><span class="ex" lang="bo">ཀླ</span></td>
+				<td><span class="ipa">la</span></td>	
+				<td><span class="ex" lang="bo">གླ</span></td>
+				<td><span class="ipa">la</span></td>
+				<td><span class="ex" lang="bo">བླ</span></td>
+				<td><span class="ipa">la</span></td>
+				<td><span class="ex" lang="bo">རླ</span></td>
+				<td><span class="ipa">la</span></td>	
+				<td><span class="ex" lang="bo">སླ</span></td>
+				<td><span class="ipa">la</span></td>
+				<td><span class="ex" lang="bo">ཟླ</span></td>
+				<td><span class="ipa">da</span></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+          <tr><td colspan="17" style="height: 7px;"></td></tr>
+              <tr>
+				<th rowspan="2"><img src='images/0FAD.png' alt='' title='0FAD' /></th>
+				<td><span class="ex" lang="bo">ཀྭ</span></td>
+				<td><span class="ipa">ka</span></td>
+				<td><span class="ex" lang="bo">ཁྭ</span></td>
+				<td><span class="ipa">ka</span></td>
+				<td><span class="ex" lang="bo">གྭ</span></td>
+				<td><span class="ipa">ga</span></td>
+				<td><span class="ex" lang="bo">ཉྭ</span></td>
+				<td><span class="ipa">ɲa</span></td>
+				<td><span class="ex" lang="bo">དྭ</span></td>
+				<td><span class="ipa">da</span></td>
+				<td><span class="ex" lang="bo">ཙྭ</span></td>
+				<td><span class="ipa">tsa</span></td>
+				<td><span class="ex" lang="bo">ཚྭ</span></td>
+				<td><span class="ipa">ʧa</span></td>
+				<td></td>
+				<td></td>
+			  </tr>
+			  <tr>
+				<td><span class="ex" lang="bo">ཞྭ</span></td>
+				<td><span class="ipa">zʰa</span></td>
+				<td><span class="ex" lang="bo">ཟྭ</span></td>
+				<td><span class="ipa">za</span></td>
+				<td><span class="ex" lang="bo">རྭ</span></td>
+				<td><span class="ipa">ra</span></td>
+				<td><span class="ex" lang="bo">ལྭ</span></td>
+				<td><span class="ipa">la</span></td>	
+				<td><span class="ex" lang="bo">ཤྭ</span></td>
+				<td><span class="ipa">ʃa</span></td>
+				<td><span class="ex" lang="bo">ཧྭ</span></td>
+				<td><span class="ipa">ha</span></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			  </tr>
+      </tbody></table>
         <figcaption><span data-lang="en">Tibetan subscripts</span></figcaption>
       </figure>
         </section>
@@ -432,7 +680,98 @@ h3+h3 {
           <h4><span data-lang="zh">上标字</span></h4>
           <p data-lang="zh">藏文中，有3个上标字，分别为<span lang="bo">ར  ལ   ས</span>。这三个字母也可作为上标字跟辅音字母叠加产生特定形式的字以及音。例如：</p>
           <figure>
-        <p><img src="images/superscripts.png" alt="Superscripts"/></p>
+        <!--p><img src="images/superscripts.png" alt="Superscripts"/></p-->
+        <table class="locations"><tbody>
+       <tr>
+			<th rowspan="2"><img src='images/0F62.png' alt='' title='0F62' /></th>
+          <td><span class="ex" lang="bo">རྐ</span></td>
+          <td><span class="ipa">ka</span></td>
+          <td><span class="ex" lang="bo">རྒ</span></td>
+          <td><span class="ipa">ga</span></td>
+          <td><span class="ex" lang="bo">རྔ</span></td>
+          <td><span class="ipa">ŋa</span></td>
+          <td><span class="ex" lang="bo">རྗ</span></td>
+          <td><span class="ipa">ʤa</span></td>
+          <td><span class="ex" lang="bo">རྙ</span></td>
+          <td><span class="ipa">ɲa</span></td>
+          <td><span class="ex" lang="bo">རྟ</span></td>
+          <td><span class="ipa">ta</span></td>
+        </tr>
+          <tr>
+            <td><span class="ex" lang="bo">རྡ</span></td>
+            <td><span class="ipa">da</span></td>
+            <td><span class="ex" lang="bo">རྣ</span></td>
+            <td><span class="ipa">na</span></td>
+            <td><span class="ex" lang="bo">རྦ</span></td>
+            <td><span class="ipa">ba</span></td>
+            <td><span class="ex" lang="bo">རྨ</span></td>
+            <td><span class="ipa">ma</span></td>
+            <td><span class="ex" lang="bo">རྩ</span></td>
+            <td><span class="ipa">tsa</span></td>
+            <td><span class="ex" lang="bo">རྫ</span></td>
+            <td><span class="ipa">dza</span></td>
+          </tr>
+          <tr><td colspan="13" style="height: 7px;"></td></tr>
+          <tr>
+			<th rowspan="2"><img src='images/0F63.png' alt='' title='0F63' /></th>
+			<td><span class="ex" lang="bo">ལྐ</span></td>
+			<td><span class="ipa">ka</span></td>
+			<td><span class="ex" lang="bo">ལྒ</span></td>
+			<td><span class="ipa">ga</span></td>
+			<td><span class="ex" lang="bo">ལྔ</span></td>
+			<td><span class="ipa">ŋa</span></td>
+			<td><span class="ex" lang="bo">ལྕ</span></td>
+			<td><span class="ipa">ca</span></td>
+			<td><span class="ex" lang="bo">ལྗ</span></td>
+			<td><span class="ipa">ʤa</span></td>
+			<td><span class="ex" lang="bo">ལྟ</span></td>
+			<td><span class="ipa">ta</span></td>
+		  </tr>
+		  <tr>
+			<td><span class="ex" lang="bo">ལྡ</span></td>
+			<td><span class="ipa">da</span></td>
+			<td><span class="ex" lang="bo">ལྤ</span></td>
+			<td><span class="ipa">pa</span></td>
+			<td><span class="ex" lang="bo">ལྦ</span></td>
+			<td><span class="ipa">ba</span></td>
+			<td><span class="ex" lang="bo">ལྷ</span></td>
+			<td><span class="ipa">lha</span></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		  </tr>
+          <tr><td colspan="13" style="height: 7px;"></td></tr>
+          <tr>
+			<th rowspan="2"><img src='images/0F66.png' alt='' title='0F66' /></th>
+            <td><span class="ex" lang="bo">སྐ</span></td>
+            <td><span class="ipa">ka</span></td>
+            <td><span class="ex" lang="bo">སྒ</span></td>
+            <td><span class="ipa">ga</span></td>
+            <td><span class="ex" lang="bo">སྔ</span></td>
+            <td><span class="ipa">ŋa</span></td>
+            <td><span class="ex" lang="bo">སྙ</span></td>
+            <td><span class="ipa">ɲa</span></td>
+            <td><span class="ex" lang="bo">སྟ</span></td>
+            <td><span class="ipa">ta</span></td>
+            <td><span class="ex" lang="bo">སྡ</span></td>
+            <td><span class="ipa">da</span></td>
+          </tr>
+          <tr>
+            <td><span class="ex" lang="bo">སྡ</span></td>
+            <td><span class="ipa">na</span></td>
+            <td><span class="ex" lang="bo">སྤ</span></td>
+            <td><span class="ipa">pa</span></td>
+            <td><span class="ex" lang="bo">སྦ</span></td>
+            <td><span class="ipa">ba</span></td>
+            <td><span class="ex" lang="bo">སྨ</span></td>
+            <td><span class="ipa">ma</span></td>
+            <td><span class="ex" lang="bo">སྩ</span></td>
+            <td><span class="ipa">tsa</span></td>
+            <td></td>
+            <td></td>
+          </tr>
+          </tbody></table>
         <figcaption><span data-lang="en">Tibetan superscripts.</span></figcaption>
       </figure>
         </section>
@@ -450,7 +789,33 @@ h3+h3 {
     <p data-lang="zh">藏文的半数字是指1到9数字一半的表达方式。例如：1的一半是0.5，2的一半是1，3的一半是1.5等等。在藏文中，可以通过半数字直接表达而不用书写小数树。例如，43.5在藏文中可以直接书写为<span lang="bo"> ༤༬</span>。</p>
     <p data-lang="zh">下表是藏文数字（及半数字）与阿拉伯数字表示方法的对应： </p>
     <figure>
-          <p><img src="images/numbers.png" alt="Numbers"/></p>
+          <table class="chartable">
+          <tr>
+          	<td><span lang="bo">༡</span><br/>1</td>
+          	<td><span lang="bo">༢</span><br/>2</td>
+          	<td><span lang="bo">༣</span><br/>3</td>
+          	<td><span lang="bo">༤</span><br/>4</td>
+          	<td><span lang="bo">༥</span><br/>5</td>
+          	<td><span lang="bo">༦</span><br/>6</td>
+          	<td><span lang="bo">༧</span><br/>7</td>
+          	<td><span lang="bo">༨</span><br/>8</td>
+          	<td><span lang="bo">༩</span><br/>9</td>
+          	<td><span lang="bo">༠</span><br/>0</td>
+            </tr>
+          <tr>
+          	<td><span lang="bo">༪</span><br/>0.5</td>
+          	<td><span lang="bo">༫</span><br/>1</td>
+          	<td><span lang="bo">༬</span><br/>1.5</td>
+          	<td><span lang="bo">༭</span><br/>2</td>
+          	<td><span lang="bo">༮</span><br/>2.5</td>
+          	<td><span lang="bo">༯</span><br/>3</td>
+          	<td><span lang="bo">༰</span><br/>3.5</td>
+          	<td><span lang="bo">༱</span><br/>4</td>
+          	<td><span lang="bo">༲</span><br/>4.5</td>
+          	<td><span lang="bo">༳</span><br/>0</td>
+            </tr>
+            </table>
+          <!--p><img src="images/numbers.png" alt="Numbers"/></p-->
           <figcaption><span data-lang="en">Tibetan numbers.</span></figcaption>
         </figure>
     <p data-lang="zh">藏文的文章或文字在表示数量大小的时候，通常可以使用阿拉伯数字进行表示。一般来说，藏文的半数字较少使用。但在大多数藏文书籍页码页脚等场合中，也可以使用阿拉伯数字代替藏文数字。</p>
