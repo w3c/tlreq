@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
     <title>Requirements for Tibetan Text Layout and Typography</title>
-    <meta http-equiv='Content-Type' content='text/html;charset=utf-8'/>
+    <meta charset="utf-8"/>
     <style>
 .large_example {
 	font-size: 32px;
@@ -38,8 +38,8 @@ h3+h3 {
       For the three scripts below, if your spec resides on dev.w3 you can check them
       out in the same tree and use relative links so that they'll work offline,
      -->
-    <script src='http://www.w3.org/Tools/respec/respec-w3c-common' class='remove'></script>
-    <script class='remove'>
+    <script src="http://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+    <script class="remove">
       var respecConfig = {
           // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
           specStatus:           "ED",
@@ -169,6 +169,7 @@ h3+h3 {
 <section id="abstract">
       <p data-lang="en">This document describes requirements for general Tibetan text layout and typography realized with technologies like CSS, SVG and XSL-FO. The document is part of Chinese Layout Requirement Task Force in W3C i18n Activity, which is focusing on language layout requirements for languages mainly used in China.</p>
     </section>
+
 <section id="intro">
       <h2>Introduction</h2>
       <section id="purpose">
@@ -176,6 +177,7 @@ h3+h3 {
     <p data-lang="en">Every cultural group has its own language and writing system. Especially between East and West, the difference is great. Thus to digitize the writing system, a lot of data and technology is needed that accurately represents the language and writing system. </p>
     <p data-lang="en">The purpose of this document is to explain the important differences between the Tibetan writing system and  others, in order to digitize it. However this document does not provide the solution for actual implementations or problems, but only describes the basic information that should be treated as important issues.</p>
   </section>
+
       <section id="how-developed">
     <h3><span data-lang="en">How this Document was Created</span></h3>
     <p data-lang="en">This document was created by discussing  Tibetan  issues in the context of China’s National Standards  and surveying needs from actual users and technical experts. </p>
@@ -194,6 +196,7 @@ h3+h3 {
     <p data-lang="en">As part of Chinese Layout Requirement Task Force of the Internationalization activity, the contents of this document are related to the Tibetan writing system mainly in China and other related areas in the world. Based on existing China national standards on Tibetan language character sets, encoding, typography and layout rules, all the discussions are took place in Chinese or Tibetan, and were then translated into English once the document had been finished.</p>
     <p data-lang="en">The technical terms for discussing and describing the Tibetan writing system were carefully selected after considering  potential differences in nuance even if a direct translation exists, and in some parts  they were described in both languages so the discussion can be continued in the future. Also many figures are included to promote understanding for  certain parts that are hard to describe in English.</p>
   </section>
+
       <section id="basicprinciples">
     <h3><span data-lang="en">Basic Principles for Document Development</span></h3>
     <p data-lang="en">This document describes the characteristics of the Tibetan language system along the lines of the  following principles.</p>
@@ -212,6 +215,7 @@ h3+h3 {
       </li>
         </ol>
   </section>
+
       <section id="structure">
     <h3><span data-lang="en">The Structure of this Document</span></h3>
     <p data-lang="en">This document consists of six parts as below:</p>
@@ -236,7 +240,9 @@ h3+h3 {
       </li>
         </ol>
   </section>
+
     </section>
+
 <section id="language_overview">
       <h2><span data-lang="en">Tibetan language overview</span></h2>
       <p data-lang="en">Tibetan script is based on alphabetic characters and combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables.</p>
@@ -251,6 +257,7 @@ h3+h3 {
     <h3><span data-lang="en">Tibetan Alphabet</span> <span data-lang="zh">藏文字母</span></h3>
     <p data-lang="zh">藏文字母（Tibetan alphabet）是用于拼写一个藏文字符或音节的辅音和元音所对应的图形符号。具体包括30个辅音字母及其对应的附加辅音字母、4个元音字母、4个下标字、3个上标字。此外，藏文也有自己的数字表示方法及对应的字母。</p>
   </section>
+
       <section id="tibetan_characters">
     <h3><span data-lang="en">Tibetan Characters</span> <span data-lang="zh">藏文字符</span></h3>
     <p data-lang="zh">藏文字符（Tibetan character）是由藏文字母纵向叠加而成的结构稳定的符号。一个藏文字符可能包括多个辅音，最上面的辅音称为主辅音，其他辅音称为附加辅音（Subjoined consonant）。</p>
@@ -275,6 +282,8 @@ h3+h3 {
       </svg>
         </div>
   </section>
+
+
       <section id="tibetan_syllables">
     <h3><span data-lang="en">Tibetan Syllables</span> <span data-lang="zh">藏文音节</span></h3>
     <p data-lang="zh">藏文是拼音文字，因此它的构字方式采用音节分写，不采用像汉语类词式分写。</p>
@@ -283,6 +292,7 @@ h3+h3 {
           <p data-lang="zh">一个藏文音节由一个或多个藏文字符组成，音节之间加音节间隔符（intersyllabic mark），藏文排版不能对音节进行切分。</p>
           <p data-lang="zh">例如：<span lang="bo">གསལ་པོ་ /</span>csa/ 清晰  其中有音节间隔符即隔音符“<span lang="bo">་</span>”/tsek/  作为区分两个音节。</p>
         </section>
+
     <section id="结构规则">
           <h4><span data-lang="zh">结构规则</span></h4>
           <p data-lang="zh">要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
@@ -292,7 +302,7 @@ h3+h3 {
               <p data-lang="zh">一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
               <div data-lang="zh">
             <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
-                  <text id="XMLID_8_" x="0" y="48" class="svg_bo36">གི་</text>
+                  <text x="0" y="48" class="svg_bo36">གི་</text>
                   <text x="70" y="40" class="svg_annotation">根字母</text>
                   <use xlink:href="#arrow" x="25" y="30"/>
                 </svg>
@@ -302,12 +312,12 @@ h3+h3 {
               <p data-lang="zh">一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
               <div data-lang="zh">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
-                  <text id="XMLID_8_" x="0" y="48" class="svg_bo36">རྐ</text>
+                  <text x="0" y="48" class="svg_bo36">རྐ</text>
                   <use xlink:href="#arrow" x="25" y="20"/>
                   <text x="70" y="30" class="svg_annotation">上标</text>
                   <use xlink:href="#arrow" x="25" y="45"/>
                   <text x="70" y="55" class="svg_annotation">根字母</text>
-                  <text id="XMLID_8_" x="200" y="48" class="svg_bo36">ཀྲ</text>
+                  <text x="200" y="48" class="svg_bo36">ཀྲ</text>
                   <use xlink:href="#arrow" x="225" y="25"/>
                   <text x="270" y="35" class="svg_annotation">根字母</text>
                   <use xlink:href="#arrow" x="225" y="45"/>
@@ -318,8 +328,8 @@ h3+h3 {
               <p data-lang="zh">例如：</p>
               <div data-lang="zh">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
-                  <text id="XMLID_8_" x="109" y="48" class="svg_bo36_highlight">ག</text>
-                  <text id="XMLID_8_" x="130" y="48" class="svg_bo36">བ་</text>
+                  <text x="109" y="48" class="svg_bo36_highlight">ག</text>
+                  <text x="130" y="48" class="svg_bo36">བ་</text>
                   <use xlink:href="#arrow" x="55" y="45" transform="rotate(180,75,45)" />
                   <text x="0" y="45" class="svg_annotation">根字母</text>
                 </svg>
@@ -345,7 +355,9 @@ h3+h3 {
           <p data-lang="zh"><span class="leadin" lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ</span></p>
           <p data-lang="zh"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
         </section>
+
   </section>
+
       <section id="藏文的字体与字符的Unicode编码">
     <h3><span data-lang="zh">藏文的字体与字符的Unicode编码</span></h3>
     <p data-lang="zh">藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
@@ -354,13 +366,16 @@ h3+h3 {
           <figcaption><span  data-lang="en">Unicode Tibetan block.</span></figcaption>
         </figure>
   </section>
+
     </section>
+
 <section id="characters">
       <h2><span data-lang="en">Typography for Tibetan characters</span></h2>
       <section id="character_catetgories">
     <h3><span data-lang="en">藏文的字符集分类（Character Category）</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="辅音与元音">
     <h3><span data-lang="zh">辅音与元音</span></h3>
     <section id="consonants">
@@ -371,6 +386,7 @@ h3+h3 {
         <figcaption><span data-lang="en">Tibetan consonants</span></figcaption>
       </figure>
         </section>
+
     <section id="subjoined-consonants">
           <h4><span data-lang="zh">附加辅音字母（Subjoined consonants）</span></h4>
           <p data-lang="zh">在现代信息处理过程中还有增加了附加辅音字母，辅音字母在字符的上下中位置不同，可能存在不同的编码，一般最上面的辅音称为主辅音，其他辅音称为附加辅音。在ISO/IEC 10646中，主辅音和附加辅音拥有不同的编码。</p>
@@ -382,6 +398,7 @@ h3+h3 {
         <figcaption><span data-lang="en">Tibetan subjoined consonants</span></figcaption>
       </figure>
         </section>
+
     <section id="元音字母">
           <h4><span data-lang="zh">元音字母</span></h4>
           <p data-lang="zh">藏文中，共有4个元音字母，如下表。</p>
@@ -392,7 +409,9 @@ h3+h3 {
           <p data-lang="zh">元音字母禁止单独使用，单个也不能表达意思。跟辅音字母使用后产生特定的音。它们需要和辅音（或附加辅音）联合起来表达音节和含义。</p>
           <p data-lang="zh">例如：上述四个元音字母与辅音<span lang="bo">ྐ</span>联合使用：<span lang="bo">ཀི     ཀུ    ཀེ    ཀོ</span></p>
         </section>
+
   </section>
+
       <section id="下标字与上标字">
     <h3><span data-lang="zh">下标字与上标字</span></h3>
     <section id="下标字">
@@ -408,6 +427,7 @@ h3+h3 {
         <figcaption><span data-lang="en">Tibetan subscripts</span></figcaption>
       </figure>
         </section>
+
     <section id="下标字2">
           <h4><span data-lang="zh">上标字</span></h4>
           <p data-lang="zh">藏文中，有3个上标字，分别为<span lang="bo">ར  ལ   ས</span>。这三个字母也可作为上标字跟辅音字母叠加产生特定形式的字以及音。例如：</p>
@@ -416,11 +436,14 @@ h3+h3 {
         <figcaption><span data-lang="en">Tibetan superscripts.</span></figcaption>
       </figure>
         </section>
+
   </section>
+
       <section id="后缀与后后缀">
     <h3><span data-lang="zh">后缀与后后缀</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="藏文的数字">
     <h3><span data-lang="zh">藏文的数字</span></h3>
     <p data-lang="zh">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
@@ -432,6 +455,7 @@ h3+h3 {
         </figure>
     <p data-lang="zh">藏文的文章或文字在表示数量大小的时候，通常可以使用阿拉伯数字进行表示。一般来说，藏文的半数字较少使用。但在大多数藏文书籍页码页脚等场合中，也可以使用阿拉伯数字代替藏文数字。</p>
   </section>
+
       <section id="藏文的标点符号">
     <h3><span data-lang="zh">藏文的标点符号</span></h3>
     <p data-lang="zh">藏文标点符号，主要为“分界线”或“分界符号”。藏文标点符号形体简单、种类极少，而且，其使用规则也与其他文字的标点符号有别。</p>
@@ -440,33 +464,40 @@ h3+h3 {
           <h4><span data-lang="zh">云头符</span></h4>
           <p data-lang="zh">云头符“<span lang="bo">༄༅༎</span>”必须出现在每篇文章题目的起始或者每本书名的起始位置。表示文章及作品从这里开始，也起一个修饰作用（预示写作能顺利完成）。如果不加云头符，我们就不知道文章是从何开始。</p>
         </section>
+
     <section id="音节符">
           <h4><span data-lang="zh">音节符</span></h4>
           <p data-lang="zh">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
           <p data-lang="zh">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
         </section>
+
     <section id="单垂符">
           <h4><span data-lang="zh">单垂符</span></h4>
           <p data-lang="zh">单垂符<span class="uname">U+0F0D TIBETAN MARK SHAD [<span lang="bo">།</span>]</span>通常出现在一段文字的末尾表示该文字段是一个句子，如果该句子恰在一段的末尾，表示该段落。表示一个句子或者段落的结束。单垂符出现在词语、短语或者句子末尾，相当于汉语的顿号、逗号、句号、叹号等。</p>
           <p data-lang="zh">在一个词语、短语或者句子最后一个音节的末尾出现“<span lang="bo">ག</span>”、“<span lang="bo">ཤ</span>”、“<span lang="bo">ཀ</span>”时，不写单垂符。在一个词语、短语或者句子最后一个音节的末尾出现“<span lang="bo">ང</span>”时，必须在单垂符前加上一个音节符。排版的时候需要注意“<span lang="bo">ང</span>”的位置，如果“<span lang="bo">ང</span>”出现在其所在的音节中间，虽在音节末尾，但在句子中间时，不存在上述规则。</p>
         </section>
+
     <section id="双垂符">
           <h4><span data-lang="zh">双垂符</span></h4>
           <p data-lang="zh">双垂符<span class="uname">U+0F0E TIBETAN MARK NYIS SHAD [<span lang="bo">༎</span>]</span>跟单垂符用途基本相同，但是双垂符只用在段落的末尾或者文章的最末尾处。一般不用在句子的末尾。</p>
           <p data-lang="zh">双垂符“<span lang="bo">༎</span>”出现在一个自然段的末尾和诗歌中每行的结尾处，表示段或诗歌行的结束。在自然段的末尾和诗歌中每行的结尾处出现“<span lang="bo">ག</span>”时，不能使用双垂符号，而改用单垂符；在自然段的末尾和诗歌中每行的结尾处出现“<span lang="bo">ང</span>”时，必须在双垂符号前加上一个音节符。</p>
         </section>
+
     <section id="四垂符">
           <h4><span data-lang="zh">四垂符</span></h4>
           <p data-lang="zh">四垂符“<span lang="bo">།།།།</span>”出现在长篇文章的结尾，表示文章的结束。在长篇文章的结尾处出现“<span lang="bo">ག</span>”时，只需要出现“<span lang="bo">།།།</span>”。</p>
         </section>
+
     <section id="聚宝垂符">
           <h4><span data-lang="zh">聚宝垂符</span></h4>
           <p data-lang="zh">聚宝垂符“<span lang="bo">༑</span>”主要用来断句，藏文印刷体书籍的一句尾，恰在一行的右端起首，不满三个字母者均该用聚宝垂符作句符。其最末一字为语终词，以及为颂歇句末尾者，则均用两个聚宝垂符。</p>
         </section>
+
     <section id="蛇行垂符">
           <h4><span data-lang="zh">蛇行垂符</span></h4>
           <p data-lang="zh">蛇行垂符“<span lang="bo">༈</span>”用于段落层次之首，但用此符号后不能另行。</p>
         </section>
+
     <section id="其他符号">
           <h4><span data-lang="zh">其他符号</span></h4>
           <ol>
@@ -480,8 +511,11 @@ h3+h3 {
             </li>
       </ol>
         </section>
+
   </section>
+
     </section>
+
 <section id="paragraphs">
       <h2><span data-lang="en">Typography for Tibetan paragraphs</span></h2>
       <p>tbd</p>
@@ -489,19 +523,25 @@ h3+h3 {
     <h3><span data-lang="zh">藏文的书写方式</span></h3>
     <p data-lang="zh">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
   </section>
+
       <section id="paragraph_adjustment">
     <h3><span data-lang="en">Paragraph Adjustment</span> <span data-lang="zh">段落调整</span></h3>
   </section>
+
       <section id="punctuation_marks">
     <h3><span data-lang="en">Writing Rules of Punctuation Marks</span> <span data-lang="zh">标点符号的书写规则</span></h3>
   </section>
+
       <section id="line_breaking">
     <h3><span data-lang="en">Lines and Line Breaking Rules</span> <span data-lang="zh">行与分行规则</span></h3>
   </section>
+
       <section id="多文种混排中的行布局规则">
     <h3><span data-lang="zh">多文种混排中的行布局规则</span></h3>
   </section>
+
     </section>
+
 <section id="besidespara">
       <h2><span data-lang="en">Components Besides Paragraphs</span></h2>
       <p data-lang="zh">段间组件的布局规则。</p>
@@ -509,47 +549,59 @@ h3+h3 {
     <h3><span data-lang="en">Notes (Footnote, Endnote)</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="tables">
     <h3><span data-lang="en">Tables</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="images">
     <h3><span data-lang="en">Images</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="lists_numbering">
     <h3><span data-lang="en">Lists and Numbering</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="other_components">
     <h3><span data-lang="en">Other components</span></h3>
     <p data-lang="zh">科学公式?</p>
   </section>
+
     </section>
+
 <section id="page_layout">
       <h2><span data-lang="en">Page Layout</span></h2>
       <section id="text_layout">
     <h3><span data-lang="en">Designing the Tibetan Text Layout System</span></h3>
     <p data-lang="en">The Tibetan text layout system is approached from two perspectives: overall page layout design and page body design.</p>
   </section>
+
       <section id="page_format">
     <h3><span data-lang="en">Elements of Designing Page Format</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="page_body">
     <h3><span data-lang="en">Designing the Page Body</span></h3>
     <p>tbd</p>
   </section>
+
       <section id="running_head">
     <h3><span data-lang="en">Running Heads and Page Numbers</span></h3>
     <p data-lang="en">Running heads and page numbers are placed outside of the page body, and typical positions are as shown below.</p>
     <p>tbd</p>
   </section>
+
       <section id="pagination_multi_column">
     <h3><span data-lang="en">Pagination and Multi-Column Text</span></h3>
     <p data-lang="zh">分页与多栏文本.</p>
   </section>
+
     </section>
+
 <section class="appendix" id="terminology">
       <h2><span data-lang="en">Terminology</span></h2>
       <p data-lang="zh">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
@@ -570,6 +622,7 @@ h3+h3 {
         </tbody>
   </table>
     </section>
+
 <section class="appendix" id="references">
       <h2><span data-lang="en">References</span></h2>
       <p data-lang="zh">报告中引用到的中国国家标准，或其他标准文本</p>
@@ -583,15 +636,18 @@ h3+h3 {
         </li>
   </ul>
     </section>
+
 <section class="appendix" id="revision_log">
       <h2><span data-lang="en">Revision Log</span></h2>
       <ul>
     <li><span data-lang="en">new document</span></li>
   </ul>
     </section>
-<section id="acknowledgements" class='appendix'>
+
+<section id="acknowledgements" class="appendix">
       <h2><span data-lang="en">Acknowledgements</span></h2>
       <p data-lang="en">This document has been developed with contributions from participants of the <a href="http://www.w3.org/International/groups/chinese-layout/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
     </section>
+
 </body>
 </html>
