@@ -92,3 +92,72 @@ samp, kbd {
 	font-size: 85%;
 	letter-spacing:0.03em;
 	}
+
+
+
+/*  tlreq specific */
+
+.large_example {
+	font-size: 32px;
+}
+.highlight_bo {
+	color: red;
+}
+span[lang=bo] {
+	font-size: 28px;
+	margin: 0 0.25em 0 0.25em;
+}
+#terminology_table td {
+	border: 1px solid #eee;
+}
+h3+h3 {
+	margin-top: 0;
+}
+.leadin[lang="bo"] {
+	font-size: 20px;
+}
+.locations td .ex {
+    margin-left: 8px;
+    font-size: 36px;
+	color: #f00;
+}
+.locations th {
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    height: 40px;
+}
+.chartable { line-height: 1.4; }
+.chartable td { padding: 8px; border: 1px solid #ddd; }
+.chartable td :lang(bo) {
+    margin-left: 8px;
+    font-size: 48px;
+	color: #f00;
+}
+.ipa {
+    font-family: doulosipa,"Gentium Plus","Lucida Sans Unicode","Lucida Grande","lucida sans","helvetica",sans-serif;
+    font-size: 18px;
+}
+.ipa::before {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-right: 1.5px;
+}
+.ipa::after {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-left: 1.5px;
+}
+</style>
+    <style id="languageStyling">
+.translateme {
+	background-color: #F3F3C3;
+}
+
+#langSwitch {
+	position: fixed;
+    top: 40px;
+    right: 20px;
+    width: 202px;
+    text-align: right;
+	}
+
