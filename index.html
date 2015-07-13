@@ -3,67 +3,8 @@
     <head>
     <title>Requirements for Tibetan Text Layout and Typography</title>
     <meta charset="utf-8"/>
-    <style>
-.large_example {
-	font-size: 32px;
-}
-.highlight_bo {
-	color: red;
-}
-span[lang=bo] {
-	font-size: 28px;
-	margin: 0 0.25em 0 0.25em;
-}
-#terminology_table td {
-	border: 1px solid #eee;
-}
-h3+h3 {
-	margin-top: 0;
-}
-.leadin[lang="bo"] {
-	font-size: 20px;
-}
-.locations td .ex {
-    margin-left: 8px;
-    font-size: 36px;
-	color: #f00;
-}
-.locations th {
-    border: 1px solid #CCC;
-    vertical-align: middle;
-    height: 40px;
-}
-.chartable { line-height: 1.4; }
-.chartable td { padding: 8px; border: 1px solid #ddd; }
-.chartable td :lang(bo) {
-    margin-left: 8px;
-    font-size: 48px;
-	color: #f00;
-}
-.ipa {
-    font-family: doulosipa,"Gentium Plus","Lucida Sans Unicode","Lucida Grande","lucida sans","helvetica",sans-serif;
-    font-size: 18px;
-}
-.ipa::before {
-    content: "/";
-    font-family: "Helvetica Neue",serif;
-    margin-right: 1.5px;
-}
-.ipa::after {
-    content: "/";
-    font-family: "Helvetica Neue",serif;
-    margin-left: 1.5px;
-}
-</style>
-    <style id="languageStyling">
-.translateme {
-	background-color: #F3F3C3;
-}
-[data-lang = zh] {
-	border-left: 3px solid #F88A05;
-	padding-left: 10px;
-}
-</style>
+	<script src="script.js" type="application/javascript">
+    </script>
     <!-- 
       === NOTA BENE ===
       For the three scripts below, if your spec resides on dev.w3 you can check them
@@ -169,6 +110,12 @@ h3+h3 {
       };
     </script>
     <link rel="stylesheet" href="local.css" type="text/css" />
+	<style id="languageStyling">
+    .translateme {
+        background-color: #F3F3C3;
+    }
+    [data-lang = zh] { border-left: 3px solid #F88A05; padding-left: 10px;  }
+    </style>
     </head>
     <body>
 <!-- THE FOLLOWING SVG CONTAINS STYLE AND DEFS DECLARATIONS FOR THE SVG EXAMPLES -->
@@ -192,10 +139,8 @@ h3+h3 {
     <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/tlreq/issues" style="font-size: 120%;">github issues</a><!-- against the <a href="http://www.w3.org/TR/2015/WD-klreq-20150630/" style="font-size: 120%">latest dated version in /TR</a-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
     <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
   </div>
-      <p>
-    <button onClick="en=document.querySelectorAll('[data-lang=en]');for (i=0;i<en.length;i++){en[i].style.display='none';} document.getElementById('languageStyling').textContent=''; document.documentElement.lang='zh';">Hide English content</button>
-    <button onClick="zh=document.querySelectorAll('[data-lang=zh]');for (i=0;i<zh.length;i++){zh[i].style.display='none';}document.getElementById('languageStyling').textContent=''; document.documentElement.lang='en';">Hide Chinese content</button>
-  </p>
+  <p id="langSwitch"><button id="toZH" onClick="switch2zh();">zh</button> 
+  <button onClick="switch2en();">en</button></p>
     </div>
 <section id="abstract">
       <p data-lang="en">This document describes requirements for general Tibetan text layout and typography realized with technologies like CSS, SVG and XSL-FO. The document is part of Chinese Layout Requirement Task Force in W3C i18n Activity, which is focusing on language layout requirements for languages mainly used in China.</p>
@@ -403,14 +348,15 @@ h3+h3 {
 <section id="characters">
       <h2><span data-lang="en">Typography for Tibetan characters</span></h2>
       <section id="character_catetgories">
-    <h3><span data-lang="en">藏文的字符集分类（Character Category）</span></h3>
-    <p>tbd</p>
+    <h3><span data-lang="en">Character Categories</span>
+    <span data-lang="zh">藏文的字符集分类</span></h3>
   </section>
 
       <section id="辅音与元音">
     <h3><span data-lang="zh">辅音与元音</span></h3>
     <section id="consonants">
-          <h4><span data-lang="zh">辅音字母（consonants）</span></h4>
+          <h4><span data-lang="en">Consonants</span>
+          <span data-lang="zh">辅音字母</span></h4>
           <p data-lang="zh">藏文有三十个辅音字母，具体如下表所示：</p>
           <figure>
         <!--p><img src="images/consonants.png" alt="consonants"/></p-->
@@ -461,7 +407,8 @@ h3+h3 {
         </section>
 
     <section id="subjoined-consonants">
-          <h4><span data-lang="zh">附加辅音字母（Subjoined consonants）</span></h4>
+          <h4><span data-lang="en">Subjoined consonants</span>
+          <span data-lang="zh">附加辅音字母</span></h4>
           <p data-lang="zh">在现代信息处理过程中还有增加了附加辅音字母，辅音字母在字符的上下中位置不同，可能存在不同的编码，一般最上面的辅音称为主辅音，其他辅音称为附加辅音。在ISO/IEC 10646中，主辅音和附加辅音拥有不同的编码。</p>
           <p data-lang="zh">附加辅音在藏文的实际意义跟主辅音字母一致。</p>
           <p data-lang="zh">例如： <span lang="bo">ྐ</span>加上其他字母后变形为叠加字如<span lang="bo">རྐ </span></p>
