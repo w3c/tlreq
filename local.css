@@ -10,6 +10,12 @@
 	font-size: 28px; 
 	}
 
+body {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300;
+	}
+
 h2 {
 	margin-top: 3em;
 	margin-bottom: 0em;
@@ -51,7 +57,11 @@ figcaption {
 	}
 .figno:after {
 	content: ':\00A0  ';
-}
+	}
+figure table {
+	margin: auto;
+	}
+
 
 a.termref:link {
 	color:#C60;
@@ -147,8 +157,8 @@ h3+h3 {
     font-family: "Helvetica Neue",serif;
     margin-left: 1.5px;
 }
-</style>
-    <style id="languageStyling">
+
+
 .translateme {
 	background-color: #F3F3C3;
 }
