@@ -7,7 +7,7 @@
 
 [lang='bo'] { 
 	font-family: 'Tibetan Machine Uni WF', "Tibetan Machine Uni", Kokonor, "Microsoft Himalaya", sans-serif; 
-	font-size: 28px; 
+	font-size: 22px; 
 	}
 
 body {
@@ -171,3 +171,28 @@ h3+h3 {
     text-align: right;
 	}
 
+.char_highlight { color: red; }
+
+p { line-height: 2em; }
+
+#character_list_table td {
+	vertical-align: top;
+	border: 1px solid #eee;
+	padding: 0.5em;
+	}
+#character_list_table:lang(bo) {
+	font-size: 1.75em;
+	padding: 0.5em;
+	}
+#character_list_table td td {
+	border: none;
+	padding: 0.2em;
+	font-size: 100%;
+	}
+#character_list_table th {
+	vertical-align: top;
+	font-weight: normal;
+	text-align: start;
+	font-size: 90%;
+	font-style: italic;
+	}
