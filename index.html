@@ -3,89 +3,40 @@
     <head>
     <title>Requirements for Tibetan Text Layout and Typography</title>
     <meta charset="utf-8"/>
-	<script src="script.js" type="application/javascript">
-    </script>
-    <!-- 
-      === NOTA BENE ===
-      For the three scripts below, if your spec resides on dev.w3 you can check them
-      out in the same tree and use relative links so that they'll work offline,
-     -->
+	<script src="script.js" type="application/javascript"></script>
     <script src="http://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
     <script class="remove">
       var respecConfig = {
-          // specification status (e.g. WD, LCWD, NOTE, etc.). If in doubt use ED.
+          // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
           specStatus:           "ED",
-          
-          // the specification's short name, as in http://www.w3.org/TR/short-name/
+          //publishDate:  "2015-07-21",
+          //previousPublishDate:  "2014-12-16",
+          //previousMaturity:  "ED",
+
+
+          noRecTrack:           true,
           shortName:            "tlreq",
-
-          // if your specification has a subtitle that goes below the main
-          // formal title, define it here
-          // subtitle   :  "an excellent document",
-
-          // if you wish the publication date to be other than today, set this
-          //publishDate:  "2015-06-30",
-
-          // if the specification's copyright date is a range of years, specify
-          // the start date here:
-          //copyrightStart: "2015",
-
-          // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
-          // and its maturity status
-          //previousPublishDate:  "2015-04-14",
-          //previousMaturity:  "WD",
-
-          // if there a publicly available Editor's Draft, this is the link
-          edDraftURI:           "http://w3c.github.io/tlreq/",
+          copyrightStart: 		"2015",
+          edDraftURI:   		"http://w3c.github.io/tlreq/",
 
           // if this is a LCWD, uncomment and set the end of its review period
           // lcEnd: "2009-08-05",
 
-          // if you want to have extra CSS, append them to this list
-          // it is recommended that the respec.css stylesheet be kept
-         // extraCSS:             [  "local.css"],
-
-          // alternative formats
-		  //alternateFormats:  [
-          //    { uri: "ko/", label: "Korean version" },
-          //],
-
-          // authors, add as many as you like. 
-          // This is optional, uncomment if you have authors as well as editors.
-          // only "name" is required. Same format as editors.
-
-          //authors:  [
-          //    { name: "Soon-Bum Lim", url: "",
-          //      company: "Sookmyung Women's University", companyURL: "" },
-          //    { name: "Wu-Jin Sim", url: "",
-          //      company: "Invited Expert", companyURL: "" },
-          //    { name: "Yong-Je Lee", url: "",
-          //      company: "Kaywon School of Art &amp; Design", companyURL: "" },
-          //    { name: "Dongsun Nam", url: "",
-          //      company: "Hancom Inc.", companyURL: "" },
-          //    { name: "HyunYoung Kim", url: "",
-          //      company: "DAOUinCUBE, Inc.", companyURL: "" },
-          //    { name: "YongHo Lim", url: "",
-          //      company: "School of Visual Art", companyURL: "" },
-          //],
-          
           // editors, add as many as you like
           // only "name" is required
           editors:  [
-              { name: "Richard Ishida", url: "",
-                company: "W3C", companyURL: "" },
-          ],
+              { name: "Richard Ishida", mailto: "ishida@w3.org",
+                company: "W3C" },
+              { name: "胡春明 (Chunming Hu)", mailto: "hucm@w3.org",
+                company: "W3C" },
+			     ],
+         
 
-          // name of the WG
           wg:           "Internationalization Working Group",
-          
-          // URI of the public WG page
-          wgURI:        "http://www.w3.org/International/core/",
-          
-          // name (without the @w3c.org) of the public mailing to which comments are due
+          wgURI:         "http://www.w3.org/International/core/",
           wgPublicList: "public-i18n-tibetan",
 		  bugTracker: { new: "https://github.com/w3c/tlreq/issues", open: "https://github.com/w3c/tlreq/issues" } ,
-		  otherLinks: [
+		otherLinks: [
 			{
 			key: "Github",
 			data: [
@@ -97,9 +48,6 @@
 			}
 			],
 		  
-		  noRecTrack: true,
-		  
-		  // subjectPrefix: '[klreq] ',
           
           // URI of the patent status for this WG, for Rec-track documents
           // !!!! IMPORTANT !!!!
@@ -107,16 +55,25 @@
           // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
           // Team Contact.
           wgPatentURI:  "http://www.w3.org/2004/01/pp-impl/32113/status",
+          // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
       };
     </script>
+    <link rel="stylesheet" href="http://fantasai.inkedblade.net/style/design/w3c-restyle/2016/W3C-REC.css" type="text/css" />
     <link rel="stylesheet" href="local.css" type="text/css" />
 	<style id="languageStyling">
-    .translateme {
-        background-color: #F3F3C3;
-    }
+    .translateme { background-color: #F3F3C3; }
     [data-lang = zh] { border-left: 3px solid #F88A05; padding-left: 10px;  }
     </style>
-    </head>
+    
+<!-- STUFF FOR NEW STYLESHEET -->
+<meta name="viewport" content="width=device-width, initial-scale=1, width = content-width, initial-scale = 1.0, shrink-to-fit=no">
+<style>
+body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-restyle/2016/logos/REC.png); }
+.example::before { content: "Example"; content: "Example " counter(example); }
+#example + p + p.example::before { content: ""; }
+</style>
+ <!-- =================== -->
+ 	</head>
     <body>
 <!-- THE FOLLOWING SVG CONTAINS STYLE AND DEFS DECLARATIONS FOR THE SVG EXAMPLES -->
 <svg width="10px" height="1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
@@ -201,6 +158,7 @@
   <h2><span data-lang="en">Tibetan script overview</span></h2>
       <p data-lang="en">The Tibetan script is an abugida, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs. Text runs from left to right.</p>
       <p data-lang="en">The script combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables. Words are made up of one or more syllables.</p>
+      <p data-lang="en">There are no case differences in Tibetan.</p>
       <p data-lang="zh">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
       <p data-lang="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
       <p data-lang="en">Traditionally, Tibetan text was written on <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
@@ -317,12 +275,12 @@
 <section id="a_chung_a_chen">
     <h4><span data-lang="en">A-chung and a-chen</span> 
     <span data-lang="zh">...</span></h4>
-<p> The phonological realisation for <a href="#char0F60"><span class="uname">U+0F60 TIBETAN LETTER -A</span> <span lang="bo">འ</span></a> (called <span class="ex" lang="bo">འ་ཆུང་</span>, <span class="trans">'a-chung</span>) and <a href="#char0F68"><span class="uname">U+0F68 TIBETAN LETTER A</span> <span lang="bo">ཨ</span></a> (called <span class="ex" lang="bo">ཨ་ཆེན་</span>, <span class="trans">a-chen</span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
+<p> The phonological realisation for <span class="uname">U+0F60 TIBETAN LETTER -A</span> <span lang="bo">འ</span> (called <span class="ex" lang="bo">འ་ཆུང་</span>, <span class="trans">'a-chung</span>) and <span class="uname">U+0F68 TIBETAN LETTER A</span> <span lang="bo">ཨ</span> (called <span class="ex" lang="bo">ཨ་ཆེན་</span>, <span class="trans">a-chen</span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
 		<p>Both 'a-chung and a-chen can be used with vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel.</p>
 		<p>'A-chung can also represent a nasal, so <span class="ex" lang="bo">མཚམས་</span> <span class="trans">mtshams</span>  (<span class="meaning">boundary</span>) and  <span class="ex" lang="bo">མཐུན་</span> <span class="trans">mthun</span> (<span class="meaning">agreement</span>) are often written <span class="ex" lang="bo">འཚམས་</span> and <span class="ex" lang="bo">འཐུན་</span>. </p>
 		<p>'A-chung may also nasalise the juncture of two morphemes, as in <span class="ex" lang="bo">དགེ་འདུན་</span> <span class="trans">dge-'dun</span> (<span class="meaning">buddhist community</span>), pronounced <span class="ipa">ɡenyn</span>.</p>
 	  <p>Other than loanwords, Tibetan only allows diphthongs in diminutive expressions. 'A-chung is used to write these, as in the following:  <span class="ex" lang="bo">མི་</span> <span class="trans">mi</span> <span class="meaning">person</span> →   <span class="ex" lang="bo">མེའུ་</span> <span class="trans">me'u</span> <span class="meaning">dwarf</span>;   <span class="ex" lang="bo">རྡོ་</span> <span class="trans">rdo</span> <span class="meaning">stone</span> →   <span class="ex" lang="bo">རྡེའུ་</span> <span class="trans">rde'u</span> <span class="meaning">pebble</span>.</p>
-		<p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example,   <span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="meaning">grand lama</span>) (ta from Chinese), and   <span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">śrī</span> (<span class="meaning">wealth</span>) from Sanskrit. For this purpose you should use <a href="#char0F71"><span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span> <span lang="bo">&nbsp;ཱ</span></a>, and not <a href="#char0FB0"><span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span> <span lang="bo">&nbsp;ྰ</span></a>.</p>
+		<p>A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example,   <span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="meaning">grand lama</span>) (ta from Chinese), and   <span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">śrī</span> (<span class="meaning">wealth</span>) from Sanskrit. For this purpose you should use <span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span> <span lang="bo">&nbsp;ཱ</span>, and not <span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span> <span lang="bo">&nbsp;ྰ</span>.</p>
 		<p>The Unicode Standard says of SUBJOINED LETTER -A: </p>
 		<blockquote>U+0FB0 TIBETAN SUBJOINED LETTER -A ( a-chung ) should be used only in the very rare cases where a full-sized subjoined a-chung letter is required. The small vowel lengthening a-chung encoded as U+0F71 TIBETAN VOWEL SIGN AA is far more frequently used in Tibetan text, and it is therefore recommended that implementations treat this character (rather than U+0FB0) as the normal subjoined a-chung.</blockquote>
 		<p>Finally, <span class="name">'a-chung</span> can be used to disambiguate the location of an inherent vowel in a syllable. The sequence <span class="ex" lang="bo">དག་</span> <span class="trans">dag</span> <span class="ipa">dàg</span> (<span class="meaning">I</span>) is interpreted as CVC. To express CCV add <span class="name">'a-chung</span>, eg. <span class="ex" lang="bo">དགའ་</span> <span class="trans">dga'</span> <span class="ipa">gà</span> (<span class="meaning">virtue</span>).</p>
@@ -428,13 +386,13 @@
 	    <li>Subjoined vowel 'a-chung</li>
 	    <li>Standard or compound vowel sign, or virama</li>
       </ol>
-	  <p>Some consonant characters are modified using the character <a href="#char0F39"><span class="uname">U+0F39 TIBETAN MARK TSA-PHRU</span> <span lang="bo">&nbsp;༹&nbsp;</span></a> In these cases, the tsa-phru character should be placed in memory immediately after the consonant it modifies.</p>
+	  <p>Some consonant characters are modified using the character <span class="uname">U+0F39 TIBETAN MARK TSA-PHRU</span> <span lang="bo">&nbsp;༹&nbsp;</span> In these cases, the tsa-phru character should be placed in memory immediately after the consonant it modifies.</p>
 </section>
 
 
       <section id="tibetan_syllables">
     <h3><span data-lang="en">Tibetan Syllables</span> <span data-lang="zh">藏文音节</span></h3>
-    <p data-lang="en">Word boundaries within a section are not indicated, only 'syllables',  known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>. Syllable boundaries are usually separated by the tsek character, <a href="#char0F0B"><span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span></a>.</p>
+    <p data-lang="en">Word boundaries within a section are not indicated, only 'syllables',  known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>. Syllable boundaries are usually separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
     <p>The pronunciation of Tibetan words is typically much simpler than the orthography, which involves patterns of consonants. These patterns reduce ambiguity and can affect pronunciation and tone. </p>
     <p>The following diagram shows characters in all of the syllabic positions, and lists the characters that can appear in each of the non-root locations. The two-syllable word in the example is <span class="ex" lang="bo">འགྲེམས་སྟོན་</span> <span class="trans">'grems-ston</span> <span class="ipa">ɖɹem-ton</span> (<span class="meaning">exhibition</span>).</p>
     <figure id="syllable_structure">
@@ -926,7 +884,7 @@
         </tbody></table>
 	    <figcaption>Additional vowel sign characters for transliteration.</figcaption>
     </figure>
-    <p><a href="/scripts/tibetan/block#char0F7F"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span></a> ( <span class="name">nam chay</span> ) is the visarga, and <a href="/scripts/tibetan/block#char0F7E"><span class="uname">U+0F7E TIBETAN SIGN RJES SU NGA RO</span> <span lang="bo">&nbsp;ཾ</span></a> ( <span class="name">ngaro</span> ) is the anusvara. </p>
+    <p><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> ( <span class="name">nam chay</span> ) is the visarga, and <span class="uname">U+0F7E TIBETAN SIGN RJES SU NGA RO</span> <span lang="bo">&nbsp;ཾ</span> ( <span class="name">ngaro</span> ) is the anusvara. </p>
     
     	<section id="compound_consonants">
         <h4><span data-lang="en">Compound Consonants</span></h4>
@@ -935,7 +893,7 @@
 
     	<section id="fixed_form_letters">
         <h4><span data-lang="en">Fixed Form Letters</span></h4>
-	  <p><span class="uname">U+0F62 TIBETAN LETTER RA</span> at the top of a stack usually has a reduced form, eg. <span class="ex" lang="bo">རྐ</span> <span class="trans">rka</span>. For transliterations it is sometimes desirable to retain the full form of RA where in Tibetan words it would be reduced. To do this use <a href="/scripts/tibetan/block#char0F6A"><span class="uname">U+0F6A TIBETAN LETTER FIXED-FORM RA</span> <span lang="bo">ཪ</span></a> instead of the normal RA, but only where the normal RA would not produce the full form anyway, ie. do not use eg. <span class="ex" lang="bo">རྙ</span> <span class="trans">rnya</span>, which has the full form already.</p>
+	  <p><span class="uname">U+0F62 TIBETAN LETTER RA</span> at the top of a stack usually has a reduced form, eg. <span class="ex" lang="bo">རྐ</span> <span class="trans">rka</span>. For transliterations it is sometimes desirable to retain the full form of RA where in Tibetan words it would be reduced. To do this use <span class="uname">U+0F6A TIBETAN LETTER FIXED-FORM RA</span> <span lang="bo">ཪ</span> instead of the normal RA, but only where the normal RA would not produce the full form anyway, ie. do not use eg. <span class="ex" lang="bo">རྙ</span> <span class="trans">rnya</span>, which has the full form already.</p>
     <p>There are also fixed form variants of subjoined RA, YA and WA.</p>
 </section>
 </section>
@@ -997,11 +955,13 @@
     <p data-lang="en">In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
 	  <p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
 	  <p>Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
-	  <p>A common head mark is <a href="/scripts/tibetan/block#char0F04" target="c"><span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span> <span lang="bo">༄</span></a>, and there is also the extension character <a href="/scripts/tibetan/block#char0F05" target="c"><span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span> <span lang="bo">༅</span></a>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two shads, eg.<span class="ex" lang="bo">༄༅། །</span>.</p>
+	  <p>A common head mark is <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span> <span lang="bo">༄</span>, and there is also the extension character <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span> <span lang="bo">༅</span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two shads, eg.<span class="ex" lang="bo">༄༅། །</span>.</p>
     <p>Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
-    <p><a href="/scripts/tibetan/block#char0F01" target="c"><span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span> <span lang="bo">༁</span></a><br>
-      <a href="/scripts/tibetan/block#char0F02" target="c"><span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span> <span lang="bo">༂</span></a><br>
-    <a href="/scripts/tibetan/block#char0F03" target="c"><span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span> <span lang="bo">༃</span></a></p>
+    <ul>
+      <li><span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span> <span lang="bo">༁</span></li>
+        <li><span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span> <span lang="bo">༂</span></li>
+        <li><span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span> <span lang="bo">༃</span></li>
+    </ul>
 </section>
 
 
@@ -1015,19 +975,19 @@
           <span data-lang="zh">音节符</span></h4>
           <p data-lang="en">The <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> is used to indicate syllable boundaries. Note that this is not necessarily equivalent to word boundaries.</p>
           <p data-lang="zh">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
-          <p data-lang="en">For more information about the use of the tsek see section @@@ [Syllable, Word and Section Boundaries].</p>
+          <p data-lang="en">For more information about the use of the tsek see <a href="#text_segmentation"></a>.</p>
           <p data-lang="zh">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
         </section>
 
 <section id="section_breaks">
           <h4><span data-lang="en">Section Breaks</span>
           <span data-lang="zh">...</span></h4>
-    <p data-lang="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <a href="/scripts/tibetan/block#char0F0D"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span></a>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
+    <p data-lang="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
     <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="ex">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="ex">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="ex">།།</span></p>
+	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
 	    <figcaption>Examples of double shay.</figcaption>
 	    </figure>
-	    <p data-lang="en">For more information about the use of  this punctuation and various similar punctuation marks, see section @@@ [Syllable, Word and Section Boundaries].</p>
+	    <p data-lang="en">For more information about the use of  this punctuation and various similar punctuation marks, see  <a href="#text_segmentation"></a>.</p>
 </section>
         
         
@@ -1036,15 +996,36 @@
           <h4><span data-lang="en">Other Punctuation &amp; Signs</span>
           <span data-lang="zh">...</span></h4>
     <p data-lang="en">Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
-	  <p><a href="/scripts/tibetan/block#char0F08" target="c"><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span> <span lang="bo">༈</span></a> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
-	  <p>This <span class="name">drul-shay</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified). The <span class="name">drul-shay</span> should not appear at the beginning of a new line and the whole structure of spacing-plus- shay needs to be kept together.</p>
-	  <p><a href="/scripts/tibetan/block#char0F3C" target="c"><span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span> <span lang="bo">༼</span></a> and <a href="/scripts/tibetan/block#char0F3D" target="c"><span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span> <span lang="bo">༽</span></a> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
-	  <p><a href="/scripts/tibetan/block#char0F3E" target="c"><span class="uname">U+0F3E TIBETAN SIGN YAR TSHES</span> <span lang="bo">༾</span></a> and <a href="/scripts/tibetan/block#char0F3F" target="c"><span class="uname">U+0F3F TIBETAN SIGN MAR TSHES</span> <span lang="bo">༿</span></a> are also paired characters used in combination with digits.</p>
-	  <p><a href="/scripts/tibetan/block#char0F34" target="c"><span class="uname">U+0F34   TIBETAN MARK BSDUS RTAGS</span> <span lang="bo">༴</span></a> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
-	  <p><a href="/scripts/tibetan/block#char0FBE" target="c"><span class="uname">U+0FBE   TIBETAN KU RU KHA</span> <span lang="bo">྾</span></a> (often repeated three times) indicates a refrain.</p>
-	  <p><a href="/scripts/tibetan/block#char0F36" target="c"><span class="uname">U+0F36   TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span> <span lang="bo">༶</span></a> and <a href="/scripts/tibetan/block#char0FBF" target="c"><span class="uname">U+0FBF   TIBETAN KU RU KHA BZHI MIG CAN</span> <span lang="bo">྿</span></a> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
-	  <p><a href="/scripts/tibetan/block#char2638" target="c"><span class="uname">U+2638   WHEEL OF DHARMA</span> <span lang="bo">☸</span></a> which occurs sometimes in Tibetan texts is encoded in the Miscellaneous Symbols block.</p>
-</section>
+	  <ul>
+	    <li>
+	      <p><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span> <span lang="bo">༈</span> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
+	    </li>
+	    <li>
+	      <p>This <span class="name">drul-shay</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified). The <span class="name">drul-shay</span> should not appear at the beginning of a new line and the whole structure of spacing-plus- shay needs to be kept together.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span> <span lang="bo">༼</span> and <span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span> <span lang="bo">༽</span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+0F3E TIBETAN SIGN YAR TSHES</span> <span lang="bo">༾</span> and <span class="uname">U+0F3F TIBETAN SIGN MAR TSHES</span> <span lang="bo">༿</span> are also paired characters used in combination with digits.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+0F34   TIBETAN MARK BSDUS RTAGS</span> <span lang="bo">༴</span> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+0FBE   TIBETAN KU RU KHA</span> <span lang="bo">྾</span> (often repeated three times) indicates a refrain.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+0F36   TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span> <span lang="bo">༶</span> and <span class="uname">U+0FBF   TIBETAN KU RU KHA BZHI MIG CAN</span> <span lang="bo">྿</span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
+	    </li>
+	    <li>
+	      <p><span class="uname">U+2638   WHEEL OF DHARMA</span> <span lang="bo">☸</span> which occurs sometimes in Tibetan texts is encoded in the Miscellaneous Symbols block.</p>
+	    </li>
+      </ul>
+    </section>
+<div class="issue">
+  <p>How are quotations demarcated in Tibetan?</p>
+</div>
         
 </section>
 </section>
@@ -1055,49 +1036,55 @@
   <h2><span data-lang="en">Typography for Tibetan characters</span></h2>
   
 
-      <section id="藏文的标点符号">
-    <h3><span data-lang="zh">Text Segmentation in Tibetan</span>
+      <section id="text_segmentation">
+    <h3><span data-lang="en">Text Segmentation in Tibetan</span>
     <span data-lang="zh">...</span></h3>
-  <p>Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <a href="/scripts/tibetan/block#char0F0D"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span></a>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
+  <p>Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
 	  <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="ex">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="ex">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="ex">།།</span></p>
+	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
 	    <figcaption>Examples of double shay.</figcaption>
-	    </figure>    <p data-lang="en">Unicode provides <a href="/scripts/tibetan/block#char0F0E"><span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span></a> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear to me how that would work when using NYIS SHAD.</span></p>
-      <div class="note" style="line-height:1.4em;">
-	  In a Chinese magazine publication I have, most articles contain no double shay as a delimiter. (The text is formatted in paragraphs.) I did find a double shay at the very end of one of the articles, and it was used at the end of each line on a page containing some verse-formatted folk literature. The same appears to apply for large parts of the Bhutanese newspapers I have, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.
+	    </figure>  
+        <div class="issue">  
+        <p data-lang="en">Unicode provides <span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear  how that would work when using NYIS SHAD.</span></p>
+        </div>
+      <div class="note">
+	  <p>In Chinese magazine publications  articles may contain no double shay as a delimiter. (The text is formatted in paragraphs.) The double shay may still be found at the very end of some articles, or at the end of each line on a page containing some verse-formatted folk literature. The  applies for large parts of  Bhutanese newspapers, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.</p>
       </div>
       </div>
-	  <p>A line that ends with the root consonant <a href="/scripts/tibetan/block#char0F40"><span class="uname">U+0F40 TIBETAN LETTER KA</span> <span lang="bo">ཀ</span></a> or <a href="/scripts/tibetan/block#char0F42"><span class="uname">U+0F42 TIBETAN LETTER GA</span> <span lang="bo">ག</span></a> will normally swallow up the shay that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shay, you might see <span class="ex" style="white-space:nowrap;" lang="bo">ཀུ །</span> and <span class="ex" style="white-space:nowrap;" lang="bo">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" style="white-space:nowrap;" lang="bo">གྲུ། །</span>. </p>
+	  <p>A line that ends with the root consonant <span class="uname">U+0F40 TIBETAN LETTER KA</span> <span lang="bo">ཀ</span> or <span class="uname">U+0F42 TIBETAN LETTER GA</span> <span lang="bo">ག</span> will normally swallow up the shay that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shay, you might see <span class="ex" style="white-space:nowrap;" lang="bo">ཀུ །</span> and <span class="ex" style="white-space:nowrap;" lang="bo">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" style="white-space:nowrap;" lang="bo">གྲུ། །</span>. </p>
 	  <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ། །དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅི<span class="ex">ག །</span>བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན། །རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད།།</p>
+	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ། །དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅི<span class="char_highlight">ག །</span>བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན། །རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད།།</p>
 	    <figcaption>Example of GA swallowing up a shay at the end of a topic.</figcaption>
       </figure>
 	  <figure>
-	    <p lang="bo">རྩོམ་པ་པོ། ལྡོང་ཕྲུ<span class="ex">ག </span>པར་སྐྲུན་ཁང་། གངས་ཅན་པ་ཚོང་འཕྲིན་ཇུས་འགོད་ཞབས་ཞུ་ལྟེ་གནས་ནས་དཔར།</p>
+	    <p lang="bo">རྩོམ་པ་པོ། ལྡོང་ཕྲུ<span class="char_highlight">ག </span>པར་སྐྲུན་ཁང་། གངས་ཅན་པ་ཚོང་འཕྲིན་ཇུས་འགོད་ཞབས་ཞུ་ལྟེ་གནས་ནས་དཔར།</p>
 	    <figcaption>Example of GA swallowing up a shay at the end of a section.</figcaption>
       </figure>
-	  <p>Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the tsek character, <a href="#char0F0B"><span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span></a>.</p>
-	  <p>The tsek is not used before a shay, except after <a href="/scripts/tibetan/block#char0F44"><span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span></a>. For example, note the end of the three sections in this example:</p>
+	  <p>Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
+	  <p>The tsek is not used before a shay, except after <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span>. For example, note the end of the three sections in this example:</p>
 	  <figure>
-      <p lang="bo">དོན་ཚན་དང་<span class="ex">པོ།</span>&nbsp;འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་ད<span class="ex">ང༌།</span>&nbsp;ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་<span class="ex">ལ།</span></p>
+      <p lang="bo">དོན་ཚན་དང་<span class="char_highlight">པོ།</span>&nbsp;འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་ད<span class="char_highlight">ང༌།</span>&nbsp;ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་<span class="char_highlight">ལ།</span></p>
       <figcaption>Examples of tsek not being used before shay, and of U+0F0C being used between NGA and shay.</figcaption>
       </figure>
-	  <p>Users may use an ordinary TSHEG between NGA and SHAD, but Unicode also provides a special non-breaking character that can be used instead, <a href="/scripts/tibetan/block#char0F0C"><span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span> <span lang="bo">༌</span></a>. The word 'delimiter' in the name is a misnomer.</p>
+	  <p>Users may use an ordinary TSHEG between NGA and SHAD, but Unicode also provides a special non-breaking character that can be used instead, <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span> <span lang="bo">༌</span>. The word 'delimiter' in the name is a misnomer.</p>
 	  <figure>
-	    <p lang="bo">སུ་གང་གིས་གང་ཞིག་གི་རྒྱལ་ཁབ་ཐོབ་ཐང་བཙན་ཤེད་ཀྱིས་འཕྲོག་པ་ད<span class="ex">ང༌།</span> ཡང་ན་དེའི་རྒྱལ་ཁབ་བརྗེ་བསྒྱུར་གྱི་ཐོབ་ཐང་བཀག་འགོག་བྱེདཔའི་རིགས་མི་ཆོག །</p>
+	    <p lang="bo">སུ་གང་གིས་གང་ཞིག་གི་རྒྱལ་ཁབ་ཐོབ་ཐང་བཙན་ཤེད་ཀྱིས་འཕྲོག་པ་ད<span class="char_highlight">ང༌།</span> ཡང་ན་དེའི་རྒྱལ་ཁབ་བརྗེ་བསྒྱུར་གྱི་ཐོབ་ཐང་བཀག་འགོག་བྱེདཔའི་རིགས་མི་ཆོག །</p>
 	    <figcaption>Example of U+0F0C being used between NGA and shay.</figcaption>
       </figure>
-	  <p>Whitespace in Tibetan text should use U+00A0   NO-BREAK SPACE. Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following: <span class="ex" lang="bo">།</span>, <span class="ex" lang="bo">༑</span>, <span class="ex" lang="bo">༔</span> or <span class="ex" lang="bo">ཿ</span>. However, numbers and embedded Western text are surrounded by smaller spaces, eg. <span class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</span>. <span class="ednote">Looks like this is also something that the application needs to take care of.</span></p>
+	  <p>Whitespace in Tibetan text should use U+00A0   NO-BREAK SPACE. Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following: <span class="ex" lang="bo">།</span>, <span class="ex" lang="bo">༑</span>, <span class="ex" lang="bo">༔</span> or <span class="ex" lang="bo">ཿ</span>. However, numbers and embedded Western text are surrounded by smaller spaces, eg. <span class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</span>. </p>
+	  <div class="issue">
+	    <p>What effect should double-clicking on text produce? Should the whole syllable be selected? Does that include the tsek? Or should the application just highlight the grapheme clusters?</p>
+	    </div>
     </section>
     
     
-    <section id="云头符">
+    <section id="emphasis_and_highlighting">
           <h3><span data-lang="en">Text Emphasis and Highlighting</span>
           <span data-lang="zh">...</span></h3>
 
-          <p data-lang="zh"><a href="/scripts/tibetan/block#char0F35" target="c"><span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span> <span lang="bo">&nbsp;༵</span></a> and <a href="/scripts/tibetan/block#char0F37" target="c"><span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span> <span lang="bo">&nbsp;༷</span></a> can be used to create a similar effect to underlining or to mark emphasis.</p>
-	  <p>The use of these marks is not straightforward, since they attach to a syllable rather than a character and therefore to place them correctly the application needs to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
-	  <p>Application software  has to ignore these characters for text processing, such as search and collation.</p>
+          <p data-lang="en"><span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span> <span lang="bo">&nbsp;༵</span> and <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span> <span lang="bo">&nbsp;༷</span> can be used to create a similar effect to underlining or to mark emphasis.</p>
+	  <p>These marks  attach to a syllable rather than a character and therefore to place them correctly it is necessary to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
+	  <p>Application software  has to ignore these characters for text processing operations such as search and collation.</p>
 	  <p>Alternative methods of emphasis include use of a different colour, or the use of the prefix <span class="ex" lang="bo">༸</span>.</p>
 	  <figure>
 	    <p style="text-align:center;" lang="bo">སྐལ་ལྡན་གདུལ་བྱར་སྣང་བའི་<span class="ex" style="color:#768029">བསོ༵ད་ནམ༵ས་</span>གཟུགས།</p>
@@ -1108,7 +1095,15 @@
 	    <p style="text-align:center;" lang="bo"><span class="ex" lang="bo">སྐུ༷</span>་ག<span class="ex" lang="bo">སུ༷</span>ང་ཐུ<span class="ex" lang="bo">ག༷</span>ས།.</p>
 	    <figcaption>Marks being used to identify root text.</figcaption>
       </figure>
-    <p>Modern texts appear to use bolding on text.</p>
+    <p>Modern texts tend to bold text for emphasis.</p>
+  </section>
+    
+    
+    <section id="baseline_alignment">
+          <h3><span data-lang="en">Baseline alignment</span>
+          <span data-lang="zh">...</span></h3>
+
+      <p>When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
   </section>
 </section>
 
@@ -1121,57 +1116,111 @@
       <section id="藏文的书写方式">
     <h3><span data-lang="en">Tibetan Writing Mode</span>
     <span data-lang="zh">藏文的书写方式</span></h3>
+    <p data-lang="en">Tibetan is written horizontally and read from left to right.</p>
     <p data-lang="zh">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
+    <div class="issue">
+      <p>Is Tibetan written vertically with upright glyphs at all (eg. in table headings, in pictures, etc.)? If so, does it require that all elements composing a syllable be kept together in horizontal fashion, placing just syllables one above the other? Or does each non-subjoined/combining character move to the next line? etc.</p>
+    </div>
   </section>
 
       <section id="line_breaking">
     <h3><span data-lang="en">Line breaking</span> <span data-lang="zh">...</span></h3>
-    <p>Normally, Tibetan only breaks after the tsek, and doesn't break after spaces.</p>
+    <p>Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
 	  <p>Line breaks do not occur after a tsek
-	    when it follows <a href="/scripts/tibetan/block#char0F44"><span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span></a> (with or without a vowel sign) and precedes a shay, <a href="/scripts/tibetan/block#char0F0D"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span></a>. <span class="ednote">The Unicode Standard also talks of other instances where Tibetan grammatical rules do not permit a break, but it isn't clear what those are.</span></p>
-	  <p>If the character after NGA is an ordinary INTER-SYLLABIC TSHEG, then applications need to ensure that lines do not break between the TSHEG and the SHAD. Text is likely to be more portable if content authors use the  TSHEG BSTAR in these locations, instead of the normal TSHEG.</p>
+	    when it follows <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span> (with or without a vowel sign) and precedes a shay (<span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>).</p>
+	  <div class="issue">
+	    <p>The Unicode Standard also talks of other instances where Tibetan grammatical rules do not permit a break, but it isn't clear what those are.</p>
+      </div>
+	  <p>If the character after NGA is an ordinary tsek, then  lines should not break between the tsek and the shay. Text is likely to be more portable if content authors use the  TSHEG BSTAR in these locations, instead of the normal tsek.</p>
 	  <p>Line breaks are also possible after:</p>
 	  <ul>
-	    <li><a href="/scripts/tibetan/block#char0F0D"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span></a> - as long as the next line starts with a consonant (ie. not a second shad).</li>
-	    <li><a href="/scripts/tibetan/block#char0F14"><span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span> <span lang="bo">༔</span></a></li>
+	    <li><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span> - as long as the next line starts with a consonant (ie. not a second shad).</li>
+	    <li><span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span> <span lang="bo">༔</span></li>
       </ul>
 	  <ul>
-	    <li><a href="/scripts/tibetan/block#char0F7F"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span></a> (visarga) (there is never a tsek after this character, eg. <span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>)</li>
+	    <li><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> (used to represent the visarga in transliterations). There is never a tsek after this character, eg. <span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>.</li>
       </ul>
 	  <p>Tibetan never breaks inside a syllable, and has no hyphenation. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
 	  <p>A line must never start with a shad.</p>
-	  <p> <a class="leadin" href="#linebreak" id="linebreak2">Line breaks and rin chen spungs shad.</a> In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <a href="#char0F11"><span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span></a>. At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
+
+
+      <section id="rin_chen_spungs_shad">
+    <h4><span data-lang="en">Line breaks and rin chen spungs shad</span> <span data-lang="zh">...</span></h4>
+	  <p>In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span>. </p>
+	  <p>At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
 	  <p>This varies in the following cases:</p>
 	  <ul>
 	    <li>
 	      when a line starts with <span class="ex" style="white-space:nowrap;" lang="bo">ལེའུ། །</span>, no rin chen spungs shad would be used, since <span class="ipa">le'u</span> is pronounced as two syllables.</li>
 	    <li>sometimes  only the first of two shays is replaced, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ །</span>, but this style is considered less attractive.</li>
-	    <li> some printed books do not use rin chen spungs shad replacements, however the majority of books seem to apply the same rules as are used with pechas.</li>
+	    <li> some printed books do not use rin chen spungs shad replacements, however the majority of books  apply the same rules as are used with pechas.</li>
 	  </ul>
 	  <p>In an environment where the width or content of the page can change, this feature poses a problem for the content author. The application needs to be able to automatically switch between the two styles of shad as a syllable moves on or off a new line when the page is resized or when preceding content is modified.</p>
 	  <p>The Unicode Standard adds: "Not only is rin-chen-spungs-shad used as the replacement for the shay but a whole class of “ornamental shays ” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it."</p>
+      </section>
+      <div class="issue">
+        <p>What are the rules for line-wrap for other symbols? Are there rules about certain characters not starting/ending a line?</p>
+      </div>
   </section>
 
       <section id="punctuation_marks">
     <h3><span data-lang="en">Justification</span> <span data-lang="zh">...</span></h3>
-    <p>There appear to be two alternative methods of justification.</p>
-	  <p> <a class="leadin" href="#icspacing" id="icspacing">Method 1: inter-character spacing.</a> Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
-	  <p> <a class="leadin" id="icspacing2">Method 2: tsek padding.</a> While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
+    <p>There are two alternative methods of justification.</p>
+
+
+      <section id="inter_character_spacing">
+    <h4><span data-lang="en">Inter-character spacing</span> <span data-lang="zh">...</span></h4>
+	  <p>Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
+      </section>
+      
+
+
+      <section id="tsek_padding">
+    <h4><span data-lang="en">Tsek padding</span> <span data-lang="zh">...</span></h4>
+	  <p>  While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
 	  <figure><img src="images/tsek-justification.jpg" alt="" height="475" width="313"><figcaption>A page of a booklet showing tsek padding.</figcaption></figure>
-	  <p>There are a couple of detailed rules about the use of tsek padding. Justifying tseks are almost always used when the line ends in a tsek. If, however, the line ends in a shay, there are a number of alternatives.</p>
+	  <p>There are a couple of detailed rules about the use of tsek padding. </p>
+	  <p>Justifying tseks are almost always used when the line ends in a tsek. If, however, the line ends in a shay, there are a number of alternatives.</p>
 	  <p>If the line ends with a single shay the shay is followed by spaces. Tsek padding is never applied after spaces. (See examples in the figure above.)</p>
 	  <p>If the line ends in a double shay (with space between), it is unusual (though possible) to add tsek padding. Instead, the space between the shays is stretched or narrowed. (See examples in the figure below.) The same applies if the second shay was removed because it was preceded by a KA or GA.</p>
 	  <figure><img src="images/shay-justification.jpg" alt="" height="440" width="600"><figcaption>Booklet pages showing double shay usage at the end of a line.</figcaption></figure>
+      </section>
   </section>
+  
+ 
+<section id="counters_lists">
+          <h3><span data-lang="en">Lists and counters</span>
+          <span data-lang="zh">...</span></h3>
+
+        <div class="note">
+        <p data-lang="en">This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
+        </div>
+      <p>Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals. They differ only in shape.</p>
+	  <figure>
+   		
+      <div style="text-align:left;">
+	    <p lang="bo">༡ འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
+	    <p lang="bo">༢ ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
+	    <p lang="bo">༣ ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
+        </div>
+	    <figcaption>Examples of Tibetan counters in a list.</figcaption>
+	    </figure>  
+      <p>European numerals can be used for list counters. The European numeral is followed by a period.</p>
+	  <figure>
+      <div style="text-align:left;">
+	    <p lang="bo">1. འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
+	    <p lang="bo">2. ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
+	    <p lang="bo">3. ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
+        </div>
+	    <figcaption>Examples of European numeral counters in a list.</figcaption>
+	    </figure>  
+  </section> 
   
   </section>
 
-  </section>
-
-    </section>
 
 <section id="besidespara">
-      <h2><span data-lang="en">Components Besides Paragraphs</span></h2>
+  <h2><span data-lang="en">Components Besides Paragraphs</span></h2>
       <p data-lang="zh">段间组件的布局规则。</p>
       <section id="notes">
     <h3><span data-lang="en">Notes (Footnote, Endnote)</span></h3>
@@ -1187,13 +1236,14 @@
     <h3><span data-lang="en">Images</span></h3>
     <p>tbd</p>
   </section>
-
       <section id="lists_numbering">
-    <h3><span data-lang="en">Lists and Numbering</span></h3>
-    <p>tbd</p>
+    <h3><span data-lang="en">Block quotations</span></h3>
+    <div class="issue">
+    <p>Are there any special rules about how to handle block quotations? Are such things common in Tibetan content?</p>
+    </div>
   </section>
 
-      <section id="other_components">
+  <section id="other_components">
     <h3><span data-lang="en">Other components</span></h3>
     <p data-lang="zh">科学公式?</p>
   </section>
@@ -1277,5 +1327,224 @@
       <p data-lang="en">This document has been developed with contributions from participants of the <a href="http://www.w3.org/International/groups/chinese-layout/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
     </section>
 
+<section id="character_list" class="appendix">
+      <h2><span data-lang="en">Character List</span></h2>
+      <p data-lang="en">This appendix lists the characters in the Unicode Tibetan block, and sorts them into various groups that describe how they are used.</p>
+      
+      <table id="character_list_table">
+	    <tbody>
+	      <tr>
+	        <th>Consonants</th>
+	        <td><table style="margin:0;">
+              <tbody>
+	              <tr>
+	                <td><p>U+0F40 TIBETAN LETTER KA <span lang="bo">ཀ</span></p>
+	                <p>U+0F41 TIBETAN LETTER KHA <span lang="bo">ཁ</span></p>
+	                <p>U+0F42 TIBETAN LETTER GA <span lang="bo">ག</span></p>
+	                <p>U+0F44 TIBETAN LETTER NGA <span lang="bo">ང</span></p>
+	                </td><td>
+	                <p>U+0F90 TIBETAN SUBJOINED LETTER KA <span lang="bo">&nbsp;ྐ</span></p>
+	                <p>U+0F91 TIBETAN SUBJOINED LETTER KHA <span lang="bo">&nbsp;ྑ</span></p>
+	                <p>U+0F92 TIBETAN SUBJOINED LETTER GA <span lang="bo">&nbsp;ྒ</span></p>
+	                <p>U+0F94 TIBETAN SUBJOINED LETTER NGA <span lang="bo">&nbsp;ྔ</span></p>
+                  </tr>
+	              <tr>
+                  	<td>
+	                <p>U+0F45 TIBETAN LETTER CA <span lang="bo">ཅ</span></p>
+	                <p>U+0F46 TIBETAN LETTER CHA <span lang="bo">ཆ</span></p>
+	                <p>U+0F47 TIBETAN LETTER JA <span lang="bo">ཇ</span></p>
+	                <p>U+0F49 TIBETAN LETTER NYA <span lang="bo">ཉ</span></p>
+	                </td><td>
+	                <p>U+0F95 TIBETAN SUBJOINED LETTER CA <span lang="bo">&nbsp;ྕ</span></p>
+	                <p>U+0F96 TIBETAN SUBJOINED LETTER CHA <span lang="bo">&nbsp;ྖ</span></p>
+	                <p>U+0F97 TIBETAN SUBJOINED LETTER JA <span lang="bo">&nbsp;ྗ</span></p>
+	                <p>U+0F99 TIBETAN SUBJOINED LETTER NYA <span lang="bo">&nbsp;ྙ</span></p>
+                    </td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F4F TIBETAN LETTER TA <span lang="bo">ཏ</span></p>
+	                <p>U+0F50 TIBETAN LETTER THA <span lang="bo">ཐ</span></p>
+	                <p>U+0F51 TIBETAN LETTER DA <span lang="bo">ད</span></p>
+	                <p>U+0F53 TIBETAN LETTER NA <span lang="bo">ན</span></p>
+	                </td><td>
+	                <p>U+0F9F TIBETAN SUBJOINED LETTER TA <span lang="bo">&nbsp;ྟ</span></p>
+	                <p>U+0FA0 TIBETAN SUBJOINED LETTER THA <span lang="bo">&nbsp;ྠ</span></p>
+	                <p>U+0FA1 TIBETAN SUBJOINED LETTER DA <span lang="bo">&nbsp;ྡ</span></p>
+	                <p>U+0FA3 TIBETAN SUBJOINED LETTER NA <span lang="bo">&nbsp;ྣ</span></p></td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F54 TIBETAN LETTER PA <span lang="bo">པ</span></p>
+	                <p>U+0F55 TIBETAN LETTER PHA <span lang="bo">ཕ</span></p>
+	                <p>U+0F56 TIBETAN LETTER BA <span lang="bo">བ</span></p>
+	                <p>U+0F58 TIBETAN LETTER MA <span lang="bo">མ</span></p>
+	                </td><td>
+	                <p>U+0FA4 TIBETAN SUBJOINED LETTER PA <span lang="bo">&nbsp;ྤ</span></p>
+	                <p>U+0FA5 TIBETAN SUBJOINED LETTER PHA <span lang="bo">&nbsp;ྥ</span></p>
+	                <p>U+0FA6 TIBETAN SUBJOINED LETTER BA <span lang="bo">&nbsp;ྦ</span></p>
+	                <p>U+0FA8 TIBETAN SUBJOINED LETTER MA <span lang="bo">&nbsp;ྨ</span></p></td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F59 TIBETAN LETTER TSA <span lang="bo">ཙ</span></p>
+	                <p>U+0F5A TIBETAN LETTER TSHA <span lang="bo">ཚ</span></p>
+	                <p>U+0F5B TIBETAN LETTER DZA <span lang="bo">ཛ</span></p>
+	                <p>U+0F5D TIBETAN LETTER WA <span lang="bo">ཝ</span></p>
+	                </td><td>
+	                <p>U+0FA9 TIBETAN SUBJOINED LETTER TSA <span lang="bo">&nbsp;ྩ</span></p>
+	                <p>U+0FAA TIBETAN SUBJOINED LETTER TSHA <span lang="bo">&nbsp;ྪ</span></p>
+	                <p>U+0FAB TIBETAN SUBJOINED LETTER DZA <span lang="bo">&nbsp;ྫ</span></p>
+	                <p>U+0FAD TIBETAN SUBJOINED LETTER WA <span lang="bo">&nbsp;ྭ</span></p></td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F5E TIBETAN LETTER ZHA <span lang="bo">ཞ</span></p>
+	                <p>U+0F5F TIBETAN LETTER ZA <span lang="bo">ཟ</span></p>
+	                <p>U+0F60 TIBETAN LETTER -A <span lang="bo">འ</span></p>
+	                <p>U+0F61 TIBETAN LETTER YA <span lang="bo">ཡ</span></p>
+	                </td><td>
+	                <p>U+0FAE TIBETAN SUBJOINED LETTER ZHA <span lang="bo">&nbsp;ྮ</span></p>
+	                <p>U+0FAF TIBETAN SUBJOINED LETTER ZA <span lang="bo">&nbsp;ྯ</span></p>
+	                <p>U+0FB0 TIBETAN SUBJOINED LETTER -A <span lang="bo">&nbsp;ྰ</span></p>
+	                <p>U+0FB1 TIBETAN SUBJOINED LETTER YA <span lang="bo">&nbsp;ྱ</span></p></td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F62 TIBETAN LETTER RA <span lang="bo">ར</span></p>
+	                <p>U+0F63 TIBETAN LETTER LA <span lang="bo">ལ</span></p>
+	                <p>U+0F64 TIBETAN LETTER SHA <span lang="bo">ཤ</span></p>
+	                <p>U+0F66 TIBETAN LETTER SA <span lang="bo">ས</span></p>
+	                </td><td>
+	                <p>U+0FB2 TIBETAN SUBJOINED LETTER RA <span lang="bo">&nbsp;ྲ</span></p>
+	                <p>U+0FB3 TIBETAN SUBJOINED LETTER LA <span lang="bo">&nbsp;ླ</span></p>
+	                <p>U+0FB4 TIBETAN SUBJOINED LETTER SHA <span lang="bo">&nbsp;ྴ</span></p>
+	                <p>U+0FB6 TIBETAN SUBJOINED LETTER SA <span lang="bo">&nbsp;ྶ</span></p></td>
+                  </tr>
+	              <tr>
+	                <td><p>U+0F67 TIBETAN LETTER HA <span lang="bo">ཧ</span></p>
+	                <p>U+0F68 TIBETAN LETTER A <span lang="bo">ཨ</span></p>
+	                </td><td>
+	                <p>U+0FB7 TIBETAN SUBJOINED LETTER HA <span lang="bo">&nbsp;ྷ</span></p>
+	                <p>U+0FB8 TIBETAN SUBJOINED LETTER A <span lang="bo">&nbsp;ྸ</span></p></td>
+                  </tr>
+              </tbody>
+              </table></td>
+          </tr>
+        </tbody>
+	    <tbody>
+	      <tr>
+	        <th>Extensions for Balti</th>
+	        <td><p>U+0F6B TIBETAN LETTER KKA <span lang="bo">ཫ</span></p> <p>U+0F6C TIBETAN LETTER RRA <span lang="bo">ཬ</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Dependent vowel signs</th>
+	        <td><p>U+0F72 TIBETAN VOWEL SIGN I <span lang="bo">&nbsp;ི</p> <p>U+0F74 TIBETAN VOWEL SIGN U <span lang="bo">&nbsp;ུ</span></p> <p>U+0F7A TIBETAN VOWEL SIGN E <span lang="bo">&nbsp;ེ</span></p> <p>U+0F7C TIBETAN VOWEL SIGN O <span lang="bo">&nbsp;ོ</span></p> <p>U+0F71 TIBETAN VOWEL SIGN AA <span lang="bo">&nbsp;ཱ</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Additional consonants for transliteration</th>
+	        <td><table style="margin:0;">
+	          <tbody>
+	            <tr>
+	              <td><p>U+0F4A TIBETAN LETTER TTA <span lang="bo">ཊ</span></p>
+	              <p>U+0F4B TIBETAN LETTER TTHA <span lang="bo">ཋ</span></p>
+	              <p>U+0F4C TIBETAN LETTER DDA <span lang="bo">ཌ</span></p>
+	              <p>U+0F4E TIBETAN LETTER NNA <span lang="bo">ཎ</span></p>
+	              <p>U+0F65 TIBETAN LETTER SSA <span lang="bo">ཥ</span></p>
+	              </td>
+	              <td>
+	              <p>U+0F9A TIBETAN SUBJOINED LETTER TTA <span lang="bo">&nbsp;ྚ</span></p>
+	              <p>U+0F9B TIBETAN SUBJOINED LETTER TTHA <span lang="bo">&nbsp;ྛ</span></p>
+	              <p>U+0F9C TIBETAN SUBJOINED LETTER DDA <span lang="bo">&nbsp;ྜ</span></p>
+	              <p>U+0F9E TIBETAN SUBJOINED LETTER NNA <span lang="bo">&nbsp;ྞ</span></p>
+	              <p>U+0FB5 TIBETAN SUBJOINED LETTER SSA <span lang="bo">&nbsp;ྵ</span></p>
+	              </td>
+                </tr>
+	            <tr>
+	              <td><p>U+0F43 TIBETAN LETTER GHA <span lang="bo">གྷ</span></p>
+	              <p>U+0F4D TIBETAN LETTER DDHA <span lang="bo">ཌྷ</span></p>
+	              <p>U+0F52 TIBETAN LETTER DHA <span lang="bo">དྷ</span></p>
+	              <p>U+0F57 TIBETAN LETTER BHA <span lang="bo">བྷ</span></p>
+	              <p>U+0F5C TIBETAN LETTER DZHA <span lang="bo">ཛྷ</span></p>
+	              <p>U+0F69 TIBETAN LETTER KSSA <span lang="bo">ཀྵ</span></p>
+	              </td>
+	              <td>
+	              <p>U+0F93 TIBETAN SUBJOINED LETTER GHA <span lang="bo">&nbsp;ྒྷ</span></p>
+	              <p>U+0F9D TIBETAN SUBJOINED LETTER DDHA <span lang="bo">&nbsp;ྜྷ</span></p>
+	              <p>U+0FA2 TIBETAN SUBJOINED LETTER DHA <span lang="bo">&nbsp;ྡྷ</span></p>
+	              <p>U+0FA7 TIBETAN SUBJOINED LETTER BHA <span lang="bo">&nbsp;ྦྷ</span></p>
+	              <p>U+0FAC TIBETAN SUBJOINED LETTER DZHA <span lang="bo">&nbsp;ྫྷ</span></p>
+	              <p>U+0FB9 TIBETAN SUBJOINED LETTER KSSA <span lang="bo">&nbsp;ྐྵ</span></p>
+                  </td>
+                </tr>
+              </tbody>
+	          </table></td>
+          </tr>
+	      <tr>
+	        <th>Transliteration, fixed-form  consonants</th>
+	        <td><p>U+0F6A TIBETAN LETTER FIXED-FORM RA <span lang="bo">ཪ</span></p> <p>U+0FBA TIBETAN SUBJOINED LETTER FIXED-FORM WA <span lang="bo">&nbsp;ྺ</span></p> <p>U+0FBB TIBETAN SUBJOINED LETTER FIXED-FORM YA <span lang="bo">&nbsp;ྻ</span></p> <p>U+0FBC TIBETAN SUBJOINED LETTER FIXED-FORM RA <span lang="bo">&nbsp;ྼ</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Additional vowel signs for transliteration</th>
+	        <td><p>U+0F73 TIBETAN VOWEL SIGN II <span lang="bo">&nbsp;ཱི</span></p> <p>U+0F75 TIBETAN VOWEL SIGN UU <span lang="bo">&nbsp;ཱུ</span></p> <p>U+0F76 TIBETAN VOWEL SIGN VOCALIC R <span lang="bo">&nbsp;ྲྀ</span></p> <p>U+0F77 TIBETAN VOWEL SIGN VOCALIC RR <span lang="bo">&nbsp;ཷ</span></p> <p>U+0F78 TIBETAN VOWEL SIGN VOCALIC L <span lang="bo">&nbsp;ླྀ</span></p> <p>U+0F79 TIBETAN VOWEL SIGN VOCALIC LL <span lang="bo">&nbsp;ཹ</span></p> <p>U+0F7B TIBETAN VOWEL SIGN EE <span lang="bo">&nbsp;ཻ</span></p> <p>U+0F7D TIBETAN VOWEL SIGN OO <span lang="bo">&nbsp;ཽ</span></p> <p>U+0F80 TIBETAN VOWEL SIGN REVERSED I <span lang="bo">&nbsp;ྀ</span></p> <p>U+0F81 TIBETAN VOWEL SIGN REVERSED II <span lang="bo">&nbsp;ཱྀ</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Transliteration, vocalic modification</th>
+	        <td><p>U+0F7E TIBETAN SIGN RJES SU NGA RO <span lang="bo">&nbsp;ཾ</span></p> <p>U+0F7F TIBETAN SIGN RNAM BCAD <span lang="bo">&nbsp;ཿ</span></p> <p>U+0F84 TIBETAN MARK HALANTA <span lang="bo">&nbsp;྄</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Transliteration, head letters</th>
+	        <td><p>U+0F88 TIBETAN SIGN LCE TSA CAN <span lang="bo">ྈ</span></p> <p>U+0F89 TIBETAN SIGN MCHU CAN <span lang="bo">ྉ</span></p> <p>U+0F8A TIBETAN SIGN GRU CAN RGYINGS <span lang="bo">ྊ</span></p> <p>U+0F8B TIBETAN SUBJOINED SIGN GRU MED RGYINGS <span lang="bo">ྋ</span></p> <p>U+0F8C TIBETAN SUBJOINED SIGN INVERTED MCHU CAN <span lang="bo">&#x0F8C;</span></p> </td>
+          </tr>
+	      <tr>
+	        <th>Transliteration, subjoined signs</th>
+	        <td>
+            <p>U+0F8D TIBETAN SUBJOINED SIGN LCE TSA CAN <span lang="bo">&#x0F8D;</span></p> 
+            <p>U+0F8E TIBETAN SUBJOINED SIGN MCHU CAN <span lang="bo">&#x0F8E;</span></p> 
+            <p>U+0F8F TIBETAN SUBJOINED SIGN INVERTED MCHU CAN <span lang="bo">&#x0F8F;</span></p> 
+            </td>
+          </tr>
+	      <tr>
+	        <th>Head marks</th>
+	        <td><p>U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A <span lang="bo">༁</span></p> <p>U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA <span lang="bo">༂</span></p> <p>U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA <span lang="bo">༃</span></p> <p>U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA <span lang="bo">༄</span></p> <p>U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA <span lang="bo">༅</span></p> <p>U+0F06 TIBETAN MARK CARET YIG MGO PHUR SHAD MA <span lang="bo">༆</span></p> <p>U+0F07 TIBETAN MARK YIG MGO TSHEG SHAD MA <span lang="bo">༇</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Punctuation</th>
+	        <td><p>U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG <span lang="bo">་</span></p> <p>U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR <span lang="bo">&#x0F0C;</span></p> <p>U+0F0D TIBETAN MARK SHAD <span lang="bo">།</span></p> <p>U+0F0E TIBETAN MARK NYIS SHAD <span lang="bo">༎</span></p> <p>U+0F0F TIBETAN MARK TSHEG SHAD <span lang="bo">༏</span></p> <p>U+0F10 TIBETAN MARK NYIS TSHEG SHAD <span lang="bo">༐</span></p> <p>U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD <span lang="bo">༑</span></p> <p>U+0F08 TIBETAN MARK SBRUL SHAD <span lang="bo">༈</span></p> <p>U+0F14 TIBETAN MARK GTER TSHEG <span lang="bo">༔</span></p> <p>U+0F34 TIBETAN MARK BSDUS RTAGS <span lang="bo">༴</span></p> <p>U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA <span lang="bo">&nbsp;༵</span></p> <p>U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS <span lang="bo">&nbsp;༷</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Paired punctuation</th>
+	        <td><p>U+0F3A TIBETAN MARK GUG RTAGS GYON <span lang="bo">༺</span></p> <p>U+0F3B TIBETAN MARK GUG RTAGS GYAS <span lang="bo">༻</span></p> <p>U+0F3C TIBETAN MARK ANG KHANG GYON <span lang="bo">༼</span></p> <p>U+0F3D TIBETAN MARK ANG KHANG GYAS <span lang="bo">༽</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Annotation marks</th>
+	        <td><p>U+0FD9 TIBETAN MARK LEADING MCHAN RTAGS <span lang="bo">&#x0FD9;</span></p> <p>U+0FDA TIBETAN MARK TRAILING MCHAN RTAGS <span lang="bo">&#x0FDA;</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Om</th>
+	        <td><p>U+0F00 TIBETAN SYLLABLE OM <span lang="bo">ༀ</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Various marks, signs &amp; symbols</th>
+	        <td><p>U+0F09 TIBETAN MARK BSKUR YIG MGO <span lang="bo">༉</span></p> <p>U+0F0A TIBETAN MARK BKA- SHOG YIG MGO <span lang="bo">༊</span></p> <p>U+0F12 TIBETAN MARK RGYA GRAM SHAD <span lang="bo">༒</span></p> <p>U+0F13 TIBETAN MARK CARET -DZUD RTAGS ME LONG CAN <span lang="bo">༓</span></p> <p>U+0F36 TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN <span lang="bo">༶</span></p> <p>U+0F38 TIBETAN MARK CHE MGO <span lang="bo">༸</span></p> <p>U+0F39 TIBETAN MARK TSA -PHRU <span lang="bo">&nbsp;༹</span></p> <p>U+0F82 TIBETAN SIGN NYI ZLA NAA DA <span lang="bo">&nbsp;ྂ</span></p> <p>U+0F83 TIBETAN SIGN SNA LDAN <span lang="bo">&nbsp;ྃ</span></p> <p>U+0F85 TIBETAN MARK PALUTA <span lang="bo">྅</span></p> <p>U+0F86 TIBETAN SIGN LCI RTAGS <span lang="bo">&nbsp;྆</span></p> <p>U+0F87 TIBETAN SIGN YANG RTAGS <span lang="bo">&nbsp;྇</span></p> <p>U+0FBE TIBETAN KU RU KHA <span lang="bo">྾</span></p> <p>U+0FBF TIBETAN KU RU KHA BZHI MIG CAN <span lang="bo">྿</span></p> <p>U+0FD0 TIBETAN MARK BSKA- SHOG GI MGO RGYAN <span lang="bo">࿐</span></p> <p>U+0FD1 TIBETAN MARK MNYAM YIG GI MGO RGYAN <span lang="bo">࿑</span></p> <p>U+0FD2 TIBETAN MARK NYIS TSHEG <span lang="bo">࿒</span></p> <p>U+0FC4 TIBETAN SYMBOL DRIL BU <span lang="bo">࿄</span></p> <p>U+0FC5 TIBETAN SYMBOL RDO RJE <span lang="bo">࿅</span></p> <p>U+0FC6 TIBETAN SYMBOL PADMA GDAN <span lang="bo">&nbsp;࿆</span></p> <p>U+0FC7 TIBETAN SYMBOL RDO RJE RGYA GRAM <span lang="bo">࿇</span></p> <p>U+0FC8 TIBETAN SYMBOL PHUR PA <span lang="bo">࿈</span></p> <p>U+0FC9 TIBETAN SYMBOL NOR BU <span lang="bo">࿉</span></p> <p>U+0FCA TIBETAN SYMBOL NOR BU NYIS -KHYIL <span lang="bo">࿊</span></p> <p>U+0FCB TIBETAN SYMBOL NOR BU GSUM -KHYIL <span lang="bo">࿋</span></p> <p>U+0FCC TIBETAN SYMBOL NOR BU BZHI -KHYIL <span lang="bo">࿌</span></p> <p>U+0FD5 RIGHT-FACING SVASTI SIGN <span lang="bo">࿕</span></p> <p>U+0FD6 LEFT-FACING SVASTI SIGN <span lang="bo">࿖</span></p> <p>U+0FD7 RIGHT-FACING SVASTI SIGN WITH DOTS <span lang="bo">࿗</span></p> <p>U+0FD8 LEFT-FACING SVASTI SIGN WITH DOTS <span lang="bo">࿘</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Astrological signs</th>
+	        <td><p>U+0F15 TIBETAN LOGOTYPE SIGN CHAD RTAGS <span lang="bo">༕</span></p> <p>U+0F16 TIBETAN LOGOTYPE SIGN LHAG RTAGS <span lang="bo">༖</span></p> <p>U+0F17 TIBETAN ASTROLOGICAL SIGN SGRA GCAN -CHAR RTAGS <span lang="bo">༗</span></p> <p>U+0F18 TIBETAN ASTROLOGICAL SIGN -KHYUD PA <span lang="bo">&nbsp;༘</span></p> <p>U+0F19 TIBETAN ASTROLOGICAL SIGN SDONG TSHUGS <span lang="bo">&nbsp;༙</span></p> <p>U+0F1A TIBETAN SIGN RDEL DKAR GCIG <span lang="bo">༚</span></p> <p>U+0F1B TIBETAN SIGN RDEL DKAR GNYIS <span lang="bo">༛</span></p> <p>U+0F1C TIBETAN SIGN RDEL DKAR GSUM <span lang="bo">༜</span></p> <p>U+0F1D TIBETAN SIGN RDEL NAG GCIG <span lang="bo">༝</span></p> <p>U+0F1E TIBETAN SIGN RDEL NAG GNYIS <span lang="bo">༞</span></p> <p>U+0F1F TIBETAN SIGN RDEL DKAR RDEL NAG <span lang="bo">༟</span></p> <p>U+0F3E TIBETAN SIGN YAR TSHES <span lang="bo">&nbsp;༾</span></p> <p>U+0F3F TIBETAN SIGN MAR TSHES <span lang="bo">&nbsp;༿</span></p> <p>U+0FCE TIBETAN SIGN RDEL NAG RDEL DKAR <span lang="bo">࿎</span></p> <p>U+0FCF TIBETAN SIGN RDEL NAG GSUM <span lang="bo">࿏</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Cantillation signs</th>
+	        <td><p>U+0FC0 TIBETAN CANTILLATION SIGN HEAVY BEAT <span lang="bo">࿀</span></p> <p>U+0FC1 TIBETAN CANTILLATION SIGN LIGHT BEAT <span lang="bo">࿁</span></p> <p>U+0FC2 TIBETAN CANTILLATION SIGN CANG TE-U <span lang="bo">࿂</span></p> <p>U+0FC3 TIBETAN CANTILLATION SIGN SBUB -CHAL <span lang="bo">࿃</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Digits</th>
+	        <td><p>U+0F21 TIBETAN DIGIT ONE <span lang="bo">༡</span></p> <p>U+0F22 TIBETAN DIGIT TWO <span lang="bo">༢</span></p> <p>U+0F23 TIBETAN DIGIT THREE <span lang="bo">༣</span></p> <p>U+0F24 TIBETAN DIGIT FOUR <span lang="bo">༤</span></p> <p>U+0F25 TIBETAN DIGIT FIVE <span lang="bo">༥</span></p> <p>U+0F26 TIBETAN DIGIT SIX <span lang="bo">༦</span></p> <p>U+0F27 TIBETAN DIGIT SEVEN <span lang="bo">༧</span></p> <p>U+0F28 TIBETAN DIGIT EIGHT <span lang="bo">༨</span></p> <p>U+0F29 TIBETAN DIGIT NINE <span lang="bo">༩</span></p> <p>U+0F20 TIBETAN DIGIT ZERO <span lang="bo">༠</span></p></td>
+          </tr>
+	      <tr>
+	        <th>Digits minus half</th>
+	        <td><p>U+0F2A TIBETAN DIGIT HALF ONE <span lang="bo">༪</span></p> <p>U+0F2B TIBETAN DIGIT HALF TWO <span lang="bo">༫</span></p> <p>U+0F2C TIBETAN DIGIT HALF THREE <span lang="bo">༬</span></p> <p>U+0F2D TIBETAN DIGIT HALF FOUR <span lang="bo">༭</span></p> <p>U+0F2E TIBETAN DIGIT HALF FIVE <span lang="bo">༮</span></p> <p>U+0F2F TIBETAN DIGIT HALF SIX <span lang="bo">༯</span></p> <p>U+0F30 TIBETAN DIGIT HALF SEVEN <span lang="bo">༰</span></p> <p>U+0F31 TIBETAN DIGIT HALF EIGHT <span lang="bo">༱</span></p> <p>U+0F32 TIBETAN DIGIT HALF NINE <span lang="bo">༲</span></p> <p>U+0F33 TIBETAN DIGIT HALF ZERO <span lang="bo">༳</span></p></td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </section>
+
+<!-- FOR NEW STYLE SHEET -->  
+<p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">&uarr;</abbr></a></p>
 </body>
 </html>
