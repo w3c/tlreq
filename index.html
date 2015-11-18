@@ -95,7 +95,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
   </defs>
     </svg>
 <div id="sotd">
-      <p data-lang="en">This document describes requirements for general Tibetan text layout and typography realized with technologies like CSS, SVG and XSL-FO. The document is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages mainly used in China. The document was originally developed by Tibetan language and typographic experts and standardization experts in China, then translated to English under the guidance of the authors. The Chinese version<!--, and Tibetan version of this document--> is also available and is also the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
+      <p data-lang="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
       <div class="note">
     <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
     <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/tlreq/issues" style="font-size: 120%;">github issues</a><!-- against the <a href="http://www.w3.org/TR/2015/WD-klreq-20150630/" style="font-size: 120%">latest dated version in /TR</a-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
@@ -105,34 +105,39 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
   <button onClick="switch2en();">en</button></p>
     </div>
 <section id="abstract">
-      <p data-lang="en">This document describes requirements for general Tibetan text layout and typography realized with technologies like CSS, SVG and XSL-FO. The document is part of Chinese Layout Requirement Task Force in W3C i18n Activity, which is focusing on language layout requirements for languages mainly used in China.</p>
+      <p data-lang="en">This document describes requirements for the layout and presentation of text in languages that use the Tibetan script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
     </section>
 
 <section id="intro">
-      <h2><span data-lang="en">Introduction</span></h2>
+  <h2><span data-lang="en">Introduction</span></h2>
       <section id="purpose">
     <h3><span data-lang="en">Purpose of this Document</span></h3>
-    <p data-lang="en">Every cultural group has its own language and writing system. Especially between East and West, the difference is great. Thus to digitize the writing system, a lot of data and technology is needed that accurately represents the language and writing system. </p>
-    <p data-lang="en">The purpose of this document is to explain the important differences between the Tibetan writing system and  others, in order to digitize it. However this document does not provide the solution for actual implementations or problems, but only describes the basic information that should be treated as important issues.</p>
+    <p data-lang="en">This document describes requirements for the layout and presentation of text in languages that use the Tibetan script when they are used by Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode.</p>
+    <p data-lang="en">The document does not describe implementations or issues  related to specific technologies, such as CSS. Instead it describes the typographic requirements of Tibetan in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Tibetan text on the Web. </p>
+    <p data-lang="en">In the future other documents or issues may be created by comparing the requirements in this document with the gaps in specific technologies, but that information will be documented elsewhere.  </p>
   </section>
 
       <section id="how-developed">
+      </section>
+      <section id="how-developed">
+      </section>
+      <section id="how-developed">
     <h3><span data-lang="en">How this Document was Created</span></h3>
-    <p data-lang="en">This document uses material from the web page <a href="http://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="http://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussing  Tibetan  issues in the context of China’s National Standards  and surveying needs from actual users and technical experts. </p>
+    <p data-lang="en">This document uses material from the web page <a href="http://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="http://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
     <p data-lang="en">The following types of experts will be involved in the creation of this document:</p>
     <ol>
           <li>
         <p data-lang="en">Tibetan typography experts</p>
       </li>
           <li>
-        <p data-lang="en">International and Domestic (China) Standardization Experts</p>
+        <p data-lang="en">International and Chinese standardization experts</p>
       </li>
           <li>
-        <p data-lang="en">Academic and Industry Experts</p>
+        <p data-lang="en">Academic and industry experts</p>
       </li>
         </ol>
-    <p data-lang="en">As part of Chinese Layout Requirement Task Force of the Internationalization activity, the contents of this document are related to the Tibetan writing system mainly in China and other related areas in the world. Based on existing China national standards on Tibetan language character sets, encoding, typography and layout rules, it is expected that some discussions will take place in Chinese or Tibetan, and will then be translated into English during the development of the document.</p>
-    <p data-lang="en">The technical terms for discussing and describing the Tibetan writing system will be carefully selected after considering  potential differences in nuance even if a direct translation exists, and in some parts  they will be described in both languages so the discussion can be continued in the future. Also many figures are included to promote understanding for  certain parts that are hard to describe in English.</p>
+    <p data-lang="en">In order to facilitate contributions from the Chinese national standards groups, the text of the document will also be available in Chinese, although the English version remains the authoritative version. It is also expected that some discussions will take place in Chinese or Tibetan, and will then be translated into English during the development of the document.</p>
+    <p data-lang="en">The technical terms for discussing and describing the Tibetan writing system will be carefully selected after considering  potential differences in nuance even if a direct translation exists, and   they will be described in both English and Chinese so the discussion can be continued in the future. Also many figures are included to promote understanding for  certain parts that are hard to describe.</p>
   </section>
 
       <section id="basicprinciples">
@@ -143,10 +148,10 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         <p data-lang="en">It does not cover every issue of  Tibetan typography, but only the important differences from the Western language systems.</p>
       </li>
           <li>
-        <p data-lang="en">All text in the figures is in Tibetan, but the technical aspects of actual implementation are not covered by this document.</p>
+        <p data-lang="en">The technical aspects of actual implementation are not covered by this document.</p>
       </li>
           <li>
-        <p data-lang="en">In order to help readers' understanding of how Tibetan is used, typical real life examples are provided to explain the core combination properties.</p>
+        <p data-lang="en">In order to help readers' understanding of how Tibetan is used, typical real life examples are provided.</p>
       </li>
           <li>
         <p data-lang="en">Text layout rules and  recommendations for readable design are different matters, but it is hard to discuss these two aspects separately. In this document, these two issues are separated carefully.</p>
