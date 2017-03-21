@@ -3,7 +3,7 @@
 ### Documents
 - [Editor's copy](https://w3c.github.io/tlreq/)
 
-###Feedback
+### Feedback
 Please use the [GitHub issue list](https://github.com/w3c/tlreq/issues) to send feedback about this document.
 
 ### Following
