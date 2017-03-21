@@ -5,7 +5,7 @@ Combining the English and Chinese text in one document makes it much easier to d
 
 同時包含英語及漢語的文檔結構使平行開發與內容維護得以化繁為簡。需要注意的是，W3C以英文版本为权威版本，因其更方便让世界各地的开发者閱讀。
 
-###Creating or modifying content | 添加或修正内容
+### Creating or modifying content | 添加或修正内容
 
 When creating new content, you should always create markup for both English and Chinese versions.
 
