@@ -35,19 +35,8 @@
 
           wg:           "Internationalization Working Group",
           wgURI:         "https://www.w3.org/International/core/",
-          wgPublicList: "public-i18n-tibetan",
-		  bugTracker: { new: "https://github.com/w3c/tlreq/issues", open: "https://github.com/w3c/tlreq/issues" } ,
-		otherLinks: [
-			{
-			key: "Github",
-			data: [
-				{
-			  	value: "repository",
-			  	href: "https://github.com/w3c/tlreq"
-		 		}
-				]
-			}
-			],
+          //wgPublicList: "public-i18n-tibetan",
+		  github: "w3c/tlreq",
 		  
           
           // URI of the patent status for this WG, for Rec-track documents
@@ -74,7 +63,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 </style>
  <!-- =================== -->
  	</head>
-    <body>
+    <body onload="setFrontMatterIds(); initialiseLang()">
 <!-- THE FOLLOWING SVG CONTAINS STYLE AND DEFS DECLARATIONS FOR THE SVG EXAMPLES -->
 <svg width="10px" height="1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
       <style type="text/css">
@@ -94,26 +83,30 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
   </defs>
     </svg>
 <div id="sotd">
-      <p data-lang="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
+      <p its-locale-filter-list="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
       <div class="note">
-    <p data-lang="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
-    <p data-lang="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/tlreq/issues" style="font-size: 120%;">github issues</a><!-- against the <a href="http://www.w3.org/TR/2015/WD-klreq-20150630/" style="font-size: 120%">latest dated version in /TR</a-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
-    <p data-lang="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
+    <p its-locale-filter-list="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
+    <p its-locale-filter-list="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/tlreq/issues" style="font-size: 120%;">github issues</a><!-- against the <a href="http://www.w3.org/TR/2015/WD-klreq-20150630/" style="font-size: 120%">latest dated version in /TR</a-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
+    <p its-locale-filter-list="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
   </div>
-  <p id="langSwitch"><button id="toZH" onClick="switch2zh();">zh</button> 
-  <button onClick="switch2en();">en</button></p>
+
+  <p id="langSwitch">
+    <button onclick="switchLang('en')">English</button>
+    <button onclick="switchLang('zh')">简体中文</button>
+    <button onclick="switchLang('all')">All</button>
+  </p>
     </div>
 <section id="abstract">
-      <p data-lang="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
+      <p its-locale-filter-list="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
     </section>
 
 <section id="intro">
-  <h2><span data-lang="en">Introduction</span></h2>
+  <h2><span its-locale-filter-list="en">Introduction</span></h2>
       <section id="purpose">
-    <h3><span data-lang="en">Purpose of this Document</span></h3>
-    <p data-lang="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
-    <p data-lang="en">The document does not describe implementations or issues  related to specific technologies, such as CSS. Instead it describes the typographic requirements of Tibetan in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Tibetan text on the Web. </p>
-    <p data-lang="en">In the future other documents or issues may be created by comparing the requirements in this document with the gaps in specific technologies, but that information will be documented elsewhere.  </p>
+    <h3><span its-locale-filter-list="en">Purpose of this Document</span></h3>
+    <p its-locale-filter-list="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
+    <p its-locale-filter-list="en">The document does not describe implementations or issues  related to specific technologies, such as CSS. Instead it describes the typographic requirements of Tibetan in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Tibetan text on the Web. </p>
+    <p its-locale-filter-list="en">In the future other documents or issues may be created by comparing the requirements in this document with the gaps in specific technologies, but that information will be documented elsewhere.  </p>
   </section>
 
       <section id="how-developed">
@@ -121,73 +114,73 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
       <section id="how-developed">
       </section>
       <section id="how-developed">
-    <h3><span data-lang="en">How this Document was Created</span></h3>
-    <p data-lang="en">This document uses material from the web page <a href="https://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="http://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
-    <p data-lang="en">The following types of experts will be involved in the creation of this document:</p>
+    <h3><span its-locale-filter-list="en">How this Document was Created</span></h3>
+    <p its-locale-filter-list="en">This document uses material from the web page <a href="https://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="http://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
+    <p its-locale-filter-list="en">The following types of experts will be involved in the creation of this document:</p>
     <ol>
           <li>
-        <p data-lang="en">Tibetan typography experts</p>
+        <p its-locale-filter-list="en">Tibetan typography experts</p>
       </li>
           <li>
-        <p data-lang="en">International and Chinese standardization experts</p>
+        <p its-locale-filter-list="en">International and Chinese standardization experts</p>
       </li>
           <li>
-        <p data-lang="en">Academic and industry experts</p>
+        <p its-locale-filter-list="en">Academic and industry experts</p>
       </li>
         </ol>
-    <p data-lang="en">In order to facilitate contributions from the Chinese national standards groups, the text of the document will also be available in Chinese, although the English version remains the authoritative version. It is also expected that some discussions will take place in Chinese or Tibetan, and will then be translated into English during the development of the document.</p>
-    <p data-lang="en">The technical terms for discussing and describing the Tibetan writing system will be carefully selected after considering  potential differences in nuance even if a direct translation exists, and   they will be described in both English and Chinese so the discussion can be continued in the future. Also many figures are included to promote understanding for  certain parts that are hard to describe.</p>
+    <p its-locale-filter-list="en">In order to facilitate contributions from the Chinese national standards groups, the text of the document will also be available in Chinese, although the English version remains the authoritative version. It is also expected that some discussions will take place in Chinese or Tibetan, and will then be translated into English during the development of the document.</p>
+    <p its-locale-filter-list="en">The technical terms for discussing and describing the Tibetan writing system will be carefully selected after considering  potential differences in nuance even if a direct translation exists, and   they will be described in both English and Chinese so the discussion can be continued in the future. Also many figures are included to promote understanding for  certain parts that are hard to describe.</p>
   </section>
 
       <section id="basicprinciples">
-    <h3><span data-lang="en">Basic Principles for Document Development</span></h3>
-    <p data-lang="en">This document describes the characteristics of the Tibetan language system along the lines of the  following principles.</p>
+    <h3><span its-locale-filter-list="en">Basic Principles for Document Development</span></h3>
+    <p its-locale-filter-list="en">This document describes the characteristics of the Tibetan language system along the lines of the  following principles.</p>
     <ol>
           <li>
-        <p data-lang="en">It does not cover every issue of  Tibetan typography, but only the important differences from the Western language systems.</p>
+        <p its-locale-filter-list="en">It does not cover every issue of  Tibetan typography, but only the important differences from the Western language systems.</p>
       </li>
           <li>
-        <p data-lang="en">The technical aspects of actual implementation are not covered by this document.</p>
+        <p its-locale-filter-list="en">The technical aspects of actual implementation are not covered by this document.</p>
       </li>
           <li>
-        <p data-lang="en">In order to help readers' understanding of how Tibetan is used, typical real life examples are provided.</p>
+        <p its-locale-filter-list="en">In order to help readers' understanding of how Tibetan is used, typical real life examples are provided.</p>
       </li>
           <li>
-        <p data-lang="en">Text layout rules and  recommendations for readable design are different matters, but it is hard to discuss these two aspects separately. In this document, these two issues are separated carefully.</p>
+        <p its-locale-filter-list="en">Text layout rules and  recommendations for readable design are different matters, but it is hard to discuss these two aspects separately. In this document, these two issues are separated carefully.</p>
       </li>
         </ol>
   </section>
 </section>
 
 <section id="language_overview">
-  <h2><span data-lang="en">Tibetan script overview</span></h2>
-      <p data-lang="en">The Tibetan script is an abugida, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs. Text runs from left to right.</p>
-      <p data-lang="en">The script combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables. Words are made up of one or more syllables.</p>
-      <p data-lang="en">There are no case differences in Tibetan.</p>
-      <p data-lang="zh">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
-      <p data-lang="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
-      <p data-lang="en">Traditionally, Tibetan text was written on <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
-      <p data-lang="en">Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
-      <p data-lang="zh">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
+  <h2><span its-locale-filter-list="en">Tibetan script overview</span></h2>
+      <p its-locale-filter-list="en">The Tibetan script is an abugida, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs. Text runs from left to right.</p>
+      <p its-locale-filter-list="en">The script combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables. Words are made up of one or more syllables.</p>
+      <p its-locale-filter-list="en">There are no case differences in Tibetan.</p>
+      <p its-locale-filter-list="zh">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
+      <p its-locale-filter-list="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
+      <p its-locale-filter-list="en">Traditionally, Tibetan text was written on <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
+      <p its-locale-filter-list="en">Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
+      <p its-locale-filter-list="zh">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
   
       <!--section id="tibetan_alphabet">
-    <h3><span data-lang="en">Tibetan Alphabet</span> <span data-lang="zh">藏文字母</span></h3>
-    <p data-lang="zh">藏文字母（Tibetan alphabet）是用于拼写一个藏文字符或音节的辅音和元音所对应的图形符号。具体包括30个辅音字母及其对应的附加辅音字母、4个元音字母、4个下标字、3个上标字。此外，藏文也有自己的数字表示方法及对应的字母。</p>
+    <h3><span its-locale-filter-list="en">Tibetan Alphabet</span> <span its-locale-filter-list="zh">藏文字母</span></h3>
+    <p its-locale-filter-list="zh">藏文字母（Tibetan alphabet）是用于拼写一个藏文字符或音节的辅音和元音所对应的图形符号。具体包括30个辅音字母及其对应的附加辅音字母、4个元音字母、4个下标字、3个上标字。此外，藏文也有自己的数字表示方法及对应的字母。</p>
   </section-->
 
       <section id="tibetan_characters">
-    <h3><span data-lang="en">Tibetan Characters</span> 
-    <span data-lang="zh">藏文字符</span></h3>
+    <h3><span its-locale-filter-list="en">Tibetan Characters</span> 
+    <span its-locale-filter-list="zh">藏文字符</span></h3>
 
 
 
 <section id="consonants">
-    <h4><span data-lang="en">Consonants</span> 
-    <span data-lang="zh">...</span></h4>
-    <p data-lang="en">Native Tibetan words use 30 consonants, but the Unicode Tibetan block contains many more. Many of the extra consonants (and other characters) are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
+    <h4><span its-locale-filter-list="en">Consonants</span> 
+    <span its-locale-filter-list="zh">...</span></h4>
+    <p its-locale-filter-list="en">Native Tibetan words use 30 consonants, but the Unicode Tibetan block contains many more. Many of the extra consonants (and other characters) are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
 
-          <p data-lang="en">The basic 30 Tibetan consonants are listed below:</p>
-          <p data-lang="zh">藏文有三十个辅音字母，具体如下表所示：</p>
+          <p its-locale-filter-list="en">The basic 30 Tibetan consonants are listed below:</p>
+          <p its-locale-filter-list="zh">藏文有三十个辅音字母，具体如下表所示：</p>
           <figure>
         <!--p><img src="images/consonants.png" alt="consonants"/></p-->
         <table class="chartable">
@@ -238,17 +231,17 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           	<td><span lang="bo">ཨ</span><br/>A p</td>
           </tr>
             </table>
-        <figcaption><span data-lang="en">Tibetan consonants</span></figcaption>
+        <figcaption><span its-locale-filter-list="en">Tibetan consonants</span></figcaption>
       </figure>
 	</section>
     
     
  <section id="vowels">
-    <h4><span data-lang="en">Vowels</span> 
-    <span data-lang="zh">...</span></h4>
-   <p data-lang="en">Standard Tibetan has five vowels, for which there are four characters, since one vowel, <span class="ipa">a</span>, is inherent in the consonant. Non-inherent vowels are indicated by a single mark attached to and typed after a consonant or consonant stack. These are shown with the character KA in the following figure.</p>
-    <p data-lang="zh"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
-<figure data-lang="en" id="vowel_signs">
+    <h4><span its-locale-filter-list="en">Vowels</span> 
+    <span its-locale-filter-list="zh">...</span></h4>
+   <p its-locale-filter-list="en">Standard Tibetan has five vowels, for which there are four characters, since one vowel, <span class="ipa">a</span>, is inherent in the consonant. Non-inherent vowels are indicated by a single mark attached to and typed after a consonant or consonant stack. These are shown with the character KA in the following figure.</p>
+    <p its-locale-filter-list="zh"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
+<figure its-locale-filter-list="en" id="vowel_signs">
         <table class="chartable">
           <tr>
           	<td><span lang="bo">ཀ&#x0F72;</span><br/>
@@ -261,11 +254,11 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           	  KO</td>
           </tr>
 		</table>
-		<figcaption><span data-lang="en">Tibetan vowel signs.</span></figcaption>
+		<figcaption><span its-locale-filter-list="en">Tibetan vowel signs.</span></figcaption>
       </figure>
-    <p data-lang="en">In the example  <span class="ipa">ʧí</span>, <span class="meaning">general</span>, shown in <a href="#vowel_in_stack"></a> the vowel sign that appears above the stack is typed after the three consonants that make up the stack.&nbsp;</p>
+    <p its-locale-filter-list="en">In the example  <span class="ipa">ʧí</span>, <span class="meaning">general</span>, shown in <a href="#vowel_in_stack"></a> the vowel sign that appears above the stack is typed after the three consonants that make up the stack.&nbsp;</p>
       
-     <figure data-lang="en" id="vowel_in_stack">
+     <figure its-locale-filter-list="en" id="vowel_in_stack">
         <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
         <text x="0" y="48" class="svg_bo36">སྤྱིར་</text>
         <text x="70" y="20" class="svg_annotation">Vowel</text>
@@ -273,22 +266,22 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         <text x="70" y="60" class="svg_annotation">Consonant before vowel</text>
         <use xlink:href="#arrow" x="25" y="50"/>
       </svg>
-		<figcaption><span data-lang="en">Vowel sign position in a stack</span></figcaption>
+		<figcaption><span its-locale-filter-list="en">Vowel sign position in a stack</span></figcaption>
         </figure>
 </section>
 
 <section id="a_chung_a_chen">
-    <h4><span data-lang="en">A-chung and a-chen</span> 
-    <span data-lang="zh">...</span></h4>
-<p data-lang="en">The phonological realisation for <span class="uname">U+0F60 TIBETAN LETTER -A</span> <span lang="bo">འ</span> (called <span class="ex" lang="bo">འ་ཆུང་</span>, <span class="trans">'a-chung</span>) and <span class="uname">U+0F68 TIBETAN LETTER A</span> <span lang="bo">ཨ</span> (called <span class="ex" lang="bo">ཨ་ཆེན་</span>, <span class="trans">a-chen</span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
-		<p data-lang="en">Both 'a-chung and a-chen can be used with vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel.</p>
-		<p data-lang="en">'A-chung can also represent a nasal, so <span class="ex" lang="bo">མཚམས་</span> <span class="trans">mtshams</span>  (<span class="meaning">boundary</span>) and  <span class="ex" lang="bo">མཐུན་</span> <span class="trans">mthun</span> (<span class="meaning">agreement</span>) are often written <span class="ex" lang="bo">འཚམས་</span> and <span class="ex" lang="bo">འཐུན་</span>. </p>
-		<p data-lang="en">'A-chung may also nasalise the juncture of two morphemes, as in <span class="ex" lang="bo">དགེ་འདུན་</span> <span class="trans">dge-'dun</span> (<span class="meaning">buddhist community</span>), pronounced <span class="ipa">ɡenyn</span>.</p>
-	  <p data-lang="en">Other than loanwords, Tibetan only allows diphthongs in diminutive expressions. 'A-chung is used to write these, as in the following:  <span class="ex" lang="bo">མི་</span> <span class="trans">mi</span> <span class="meaning">person</span> →   <span class="ex" lang="bo">མེའུ་</span> <span class="trans">me'u</span> <span class="meaning">dwarf</span>;   <span class="ex" lang="bo">རྡོ་</span> <span class="trans">rdo</span> <span class="meaning">stone</span> →   <span class="ex" lang="bo">རྡེའུ་</span> <span class="trans">rde'u</span> <span class="meaning">pebble</span>.</p>
-		<p data-lang="en">A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example,   <span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="meaning">grand lama</span>) (ta from Chinese), and   <span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">śrī</span> (<span class="meaning">wealth</span>) from Sanskrit. For this purpose you should use <span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span> <span lang="bo">&nbsp;ཱ</span>, and not <span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span> <span lang="bo">&nbsp;ྰ</span>.</p>
-		<p data-lang="en">The Unicode Standard says of SUBJOINED LETTER -A: </p>
-		<blockquote data-lang="en">U+0FB0 TIBETAN SUBJOINED LETTER -A ( a-chung ) should be used only in the very rare cases where a full-sized subjoined a-chung letter is required. The small vowel lengthening a-chung encoded as U+0F71 TIBETAN VOWEL SIGN AA is far more frequently used in Tibetan text, and it is therefore recommended that implementations treat this character (rather than U+0FB0) as the normal subjoined a-chung.</blockquote>
-		<p data-lang="en">Finally, <span class="name">'a-chung</span> can be used to disambiguate the location of an inherent vowel in a syllable. The sequence <span class="ex" lang="bo">དག་</span> <span class="trans">dag</span> <span class="ipa">dàg</span> (<span class="meaning">I</span>) is interpreted as CVC. To express CCV add <span class="name">'a-chung</span>, eg. <span class="ex" lang="bo">དགའ་</span> <span class="trans">dga'</span> <span class="ipa">gà</span> (<span class="meaning">virtue</span>).</p>
+    <h4><span its-locale-filter-list="en">A-chung and a-chen</span> 
+    <span its-locale-filter-list="zh">...</span></h4>
+<p its-locale-filter-list="en">The phonological realisation for <span class="uname">U+0F60 TIBETAN LETTER -A</span> <span lang="bo">འ</span> (called <span class="ex" lang="bo">འ་ཆུང་</span>, <span class="trans">'a-chung</span>) and <span class="uname">U+0F68 TIBETAN LETTER A</span> <span lang="bo">ཨ</span> (called <span class="ex" lang="bo">ཨ་ཆེན་</span>, <span class="trans">a-chen</span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
+		<p its-locale-filter-list="en">Both 'a-chung and a-chen can be used with vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel.</p>
+		<p its-locale-filter-list="en">'A-chung can also represent a nasal, so <span class="ex" lang="bo">མཚམས་</span> <span class="trans">mtshams</span>  (<span class="meaning">boundary</span>) and  <span class="ex" lang="bo">མཐུན་</span> <span class="trans">mthun</span> (<span class="meaning">agreement</span>) are often written <span class="ex" lang="bo">འཚམས་</span> and <span class="ex" lang="bo">འཐུན་</span>. </p>
+		<p its-locale-filter-list="en">'A-chung may also nasalise the juncture of two morphemes, as in <span class="ex" lang="bo">དགེ་འདུན་</span> <span class="trans">dge-'dun</span> (<span class="meaning">buddhist community</span>), pronounced <span class="ipa">ɡenyn</span>.</p>
+	  <p its-locale-filter-list="en">Other than loanwords, Tibetan only allows diphthongs in diminutive expressions. 'A-chung is used to write these, as in the following:  <span class="ex" lang="bo">མི་</span> <span class="trans">mi</span> <span class="meaning">person</span> →   <span class="ex" lang="bo">མེའུ་</span> <span class="trans">me'u</span> <span class="meaning">dwarf</span>;   <span class="ex" lang="bo">རྡོ་</span> <span class="trans">rdo</span> <span class="meaning">stone</span> →   <span class="ex" lang="bo">རྡེའུ་</span> <span class="trans">rde'u</span> <span class="meaning">pebble</span>.</p>
+		<p its-locale-filter-list="en">A subjoined 'a-chung is used to express long vowels in loan words (Tibetan doesn't have them natively), such as those borrowed from Chinese, Hindi and Mongolian. For example,   <span class="ex" lang="bo">ཏཱ་བླ་མ་</span> <span class="trans">tā-bla-ma</span> (<span class="meaning">grand lama</span>) (ta from Chinese), and   <span class="ex" lang="bo">ཤྲཱི་</span> <span class="trans">śrī</span> (<span class="meaning">wealth</span>) from Sanskrit. For this purpose you should use <span class="uname">U+0F71 TIBETAN VOWEL SIGN AA</span> <span lang="bo">&nbsp;ཱ</span>, and not <span class="uname">U+0FB0 TIBETAN SUBJOINED LETTER -A</span> <span lang="bo">&nbsp;ྰ</span>.</p>
+		<p its-locale-filter-list="en">The Unicode Standard says of SUBJOINED LETTER -A: </p>
+		<blockquote its-locale-filter-list="en">U+0FB0 TIBETAN SUBJOINED LETTER -A ( a-chung ) should be used only in the very rare cases where a full-sized subjoined a-chung letter is required. The small vowel lengthening a-chung encoded as U+0F71 TIBETAN VOWEL SIGN AA is far more frequently used in Tibetan text, and it is therefore recommended that implementations treat this character (rather than U+0FB0) as the normal subjoined a-chung.</blockquote>
+		<p its-locale-filter-list="en">Finally, <span class="name">'a-chung</span> can be used to disambiguate the location of an inherent vowel in a syllable. The sequence <span class="ex" lang="bo">དག་</span> <span class="trans">dag</span> <span class="ipa">dàg</span> (<span class="meaning">I</span>) is interpreted as CVC. To express CCV add <span class="name">'a-chung</span>, eg. <span class="ex" lang="bo">དགའ་</span> <span class="trans">dga'</span> <span class="ipa">gà</span> (<span class="meaning">virtue</span>).</p>
 	</section>
     
   </section>
@@ -296,15 +289,15 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 
 
 <section id="consonant_stacking">
-    <h3><span data-lang="en">Consonant Stacking</span> 
-    <span data-lang="zh">...</span></h3>
+    <h3><span its-locale-filter-list="en">Consonant Stacking</span> 
+    <span its-locale-filter-list="zh">...</span></h3>
 
-<p data-lang="en">A salient feature of the Tibetan script is the tendency to stack consonant characters belonging to a syllable. A stack  has a standard consonant character at the top (although it may actually be slightly squeezed or adapted slightly in shape), and one or more special <dfn id="subjoined">subjoined consonant characters</dfn> beneath it. </p>
-<p data-lang="en">The word 'head' is often used to refer to either the top-most consonant (ie. spacially) or the root consonant of a syllable, which may be a subjoined consonant. We therefore avoid this term here, and say 'root' or 'topmost'.</p>
-	  <p data-lang="en">The  topmost consonant in a stack always uses the standard character from the Unicode Tibetan block regardless of whether it is a root consonant or not, and consonants below it always use a character from the subjoined range.</p>
-	  <p data-lang="en">The  example  shows a stack with three consonants. (There is also a vowel sign above the stack.)</p>
+<p its-locale-filter-list="en">A salient feature of the Tibetan script is the tendency to stack consonant characters belonging to a syllable. A stack  has a standard consonant character at the top (although it may actually be slightly squeezed or adapted slightly in shape), and one or more special <dfn id="subjoined">subjoined consonant characters</dfn> beneath it. </p>
+<p its-locale-filter-list="en">The word 'head' is often used to refer to either the top-most consonant (ie. spacially) or the root consonant of a syllable, which may be a subjoined consonant. We therefore avoid this term here, and say 'root' or 'topmost'.</p>
+	  <p its-locale-filter-list="en">The  topmost consonant in a stack always uses the standard character from the Unicode Tibetan block regardless of whether it is a root consonant or not, and consonants below it always use a character from the subjoined range.</p>
+	  <p its-locale-filter-list="en">The  example  shows a stack with three consonants. (There is also a vowel sign above the stack.)</p>
     <figure id="stacked_consonants">
-   <div data-lang="en">
+   <div its-locale-filter-list="en">
     <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
       <text x="200" y="48" class="svg_bo36_highlight">སྤྱི</text>
       <text x="224" y="48" class="svg_bo36">ར་</text>
@@ -315,7 +308,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
       <use xlink:href="#arrowRight" x="155" y="55" />
     </svg>
   </div>
-   <div data-lang="zh">
+   <div its-locale-filter-list="zh">
     <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
       <text x="200" y="48" class="svg_bo36_highlight">སྤྱི</text>
       <text x="224" y="48" class="svg_bo36">ར་</text>
@@ -326,10 +319,10 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
       <use xlink:href="#arrowRight" x="155" y="55" />
     </svg>
   </div>
-		<figcaption><span data-lang="en">Stacked consonants in Tibetan.</span> </figcaption>
+		<figcaption><span its-locale-filter-list="en">Stacked consonants in Tibetan.</span> </figcaption>
     </figure>
-	<p data-lang="en">Unlike Indic scripts,  no virama (or halant) is used for Tibetan. Instead, just a full and subjoined form of each consonant. The subjoined forms are combining characters. Avoiding the virama makes sense because the virama is not used by Tibetans, and the approach taken makes it easier to create the large number of stacks contained in Tibetan text.</p>
-          <p data-lang="en">Subjoined forms of the basic 30 Tibetan consonants are listed below:</p>
+	<p its-locale-filter-list="en">Unlike Indic scripts,  no virama (or halant) is used for Tibetan. Instead, just a full and subjoined form of each consonant. The subjoined forms are combining characters. Avoiding the virama makes sense because the virama is not used by Tibetans, and the approach taken makes it easier to create the large number of stacks contained in Tibetan text.</p>
+          <p its-locale-filter-list="en">Subjoined forms of the basic 30 Tibetan consonants are listed below:</p>
     <figure id="subjoined_consonants">
       <table class="chartable">
           <tr>
@@ -381,41 +374,41 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           	<td><span lang="bo"></span><br/></td>
         </tr>
       </table>
-        <figcaption><span data-lang="en">Tibetan subjoined consonants</span></figcaption>
+        <figcaption><span its-locale-filter-list="en">Tibetan subjoined consonants</span></figcaption>
   </figure>
-	  <p data-lang="en">The following list shows the order in which characters should be typed, and stored in memory, for a set of stacked characters.</p>
+	  <p its-locale-filter-list="en">The following list shows the order in which characters should be typed, and stored in memory, for a set of stacked characters.</p>
 	  <ol>
-	    <li><p data-lang="en">Standard consonant shape</p></li>
-	    <li><p data-lang="en">First subjoined consonant</p></li>
-	    <li><p data-lang="en">Any other subjoined consonants, in order of descent</p></li>
-	    <li><p data-lang="en">Subjoined vowel 'a-chung</p></li>
-	    <li><p data-lang="en">Standard or compound vowel sign, or virama</p></li>
+	    <li><p its-locale-filter-list="en">Standard consonant shape</p></li>
+	    <li><p its-locale-filter-list="en">First subjoined consonant</p></li>
+	    <li><p its-locale-filter-list="en">Any other subjoined consonants, in order of descent</p></li>
+	    <li><p its-locale-filter-list="en">Subjoined vowel 'a-chung</p></li>
+	    <li><p its-locale-filter-list="en">Standard or compound vowel sign, or virama</p></li>
       </ol>
-	  <p data-lang="en">Some consonant characters are modified using the character <span class="uname">U+0F39 TIBETAN MARK TSA-PHRU</span> <span lang="bo">&nbsp;༹&nbsp;</span> In these cases, the tsa-phru character should be placed in memory immediately after the consonant it modifies.</p>
+	  <p its-locale-filter-list="en">Some consonant characters are modified using the character <span class="uname">U+0F39 TIBETAN MARK TSA-PHRU</span> <span lang="bo">&nbsp;༹&nbsp;</span> In these cases, the tsa-phru character should be placed in memory immediately after the consonant it modifies.</p>
 </section>
 
 
       <section id="tibetan_syllables">
-    <h3><span data-lang="en">Tibetan Syllables</span> <span data-lang="zh">藏文音节</span></h3>
-    <p data-lang="en">Word boundaries within a section are not indicated, only 'syllables',  known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>. Syllable boundaries are usually separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
-    <p data-lang="en">The pronunciation of Tibetan words is typically much simpler than the orthography, which involves patterns of consonants. These patterns reduce ambiguity and can affect pronunciation and tone. </p>
-    <p data-lang="en">The following diagram shows characters in all of the syllabic positions, and lists the characters that can appear in each of the non-root locations. The two-syllable word in the example is <span class="ex" lang="bo">འགྲེམས་སྟོན་</span> <span class="trans">'grems-ston</span> <span class="ipa">ɖɹem-ton</span> (<span class="meaning">exhibition</span>).</p>
+    <h3><span its-locale-filter-list="en">Tibetan Syllables</span> <span its-locale-filter-list="zh">藏文音节</span></h3>
+    <p its-locale-filter-list="en">Word boundaries within a section are not indicated, only 'syllables',  known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>. Syllable boundaries are usually separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
+    <p its-locale-filter-list="en">The pronunciation of Tibetan words is typically much simpler than the orthography, which involves patterns of consonants. These patterns reduce ambiguity and can affect pronunciation and tone. </p>
+    <p its-locale-filter-list="en">The following diagram shows characters in all of the syllabic positions, and lists the characters that can appear in each of the non-root locations. The two-syllable word in the example is <span class="ex" lang="bo">འགྲེམས་སྟོན་</span> <span class="trans">'grems-ston</span> <span class="ipa">ɖɹem-ton</span> (<span class="meaning">exhibition</span>).</p>
     <figure id="syllable_structure">
-      <div data-lang="en">
-        <p data-lang="en"><img src="images/syllable.png" alt="Picture of syllable composition."></p>
+      <div its-locale-filter-list="en">
+        <p its-locale-filter-list="en"><img src="images/syllable.png" alt="Picture of syllable composition."></p>
       </div>
-      <figcaption><span data-lang="en">Syllable composition in Tibetan</span></figcaption>
+      <figcaption><span its-locale-filter-list="en">Syllable composition in Tibetan</span></figcaption>
     </figure>
     <section id="结构规则">
-        <h4><span data-lang="en">Structural Rules</span> 
-        <span data-lang="zh">结构规则</span></h4>
-          <p data-lang="en">The primary consonant in a syllable is called the root consonant (or radical) (<span lang="bo">མིང་བཞི་</span>), and the other consonants in the syllable ( normally  up to 6  in total) annotate or modify it. The following rules help identify the root:</p>
-          <p data-lang="zh">要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
+        <h4><span its-locale-filter-list="en">Structural Rules</span> 
+        <span its-locale-filter-list="zh">结构规则</span></h4>
+          <p its-locale-filter-list="en">The primary consonant in a syllable is called the root consonant (or radical) (<span lang="bo">མིང་བཞི་</span>), and the other consonants in the syllable ( normally  up to 6  in total) annotate or modify it. The following rules help identify the root:</p>
+          <p its-locale-filter-list="zh">要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
           <ol>
         <li>
-              <p data-lang="en"> A consonant with a vowel is always the root, unless it is the phrase connector <span lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
-              <p data-lang="zh">一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
-              <div data-lang="zh">
+              <p its-locale-filter-list="en"> A consonant with a vowel is always the root, unless it is the phrase connector <span lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
+              <p its-locale-filter-list="zh">一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
+              <div its-locale-filter-list="zh">
             <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="0" y="48" class="svg_bo36">གི་</text>
                   <text x="70" y="40" class="svg_annotation">根字母</text>
@@ -424,9 +417,9 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           </div>
           </li>
             <li>
-              <p data-lang="en">In a 2-consonant syllable with no vowel, the first consonant is always the root.</p>
-              <p data-lang="zh">一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
-              <div data-lang="zh">
+              <p its-locale-filter-list="en">In a 2-consonant syllable with no vowel, the first consonant is always the root.</p>
+              <p its-locale-filter-list="zh">一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
+              <div its-locale-filter-list="zh">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="0" y="48" class="svg_bo36">རྐ</text>
                   <use xlink:href="#arrow" x="25" y="20"/>
@@ -440,9 +433,9 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
                   <text x="270" y="55" class="svg_annotation">上标</text>
                 </svg>
               </div>
-              <p data-lang="zh">在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
-              <p data-lang="zh">例如：</p>
-              <div data-lang="zh">
+              <p its-locale-filter-list="zh">在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
+              <p its-locale-filter-list="zh">例如：</p>
+              <div its-locale-filter-list="zh">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="109" y="48" class="svg_bo36_highlight">ག</text>
                   <text x="130" y="48" class="svg_bo36">བ་</text>
@@ -452,66 +445,66 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
               </div>
             </li>
         <li>
-              <p data-lang="en">In a 3-consonant syllable where the last consonant is not <span class="ex" lang="bo">ས</span>, the second consonant is likely to be the root.</p>
-              <p data-lang="zh">如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
-              <p data-lang="en">For example: <span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
-              <p data-lang="zh">例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
-              <p data-lang="zh"> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
+              <p its-locale-filter-list="en">In a 3-consonant syllable where the last consonant is not <span class="ex" lang="bo">ས</span>, the second consonant is likely to be the root.</p>
+              <p its-locale-filter-list="zh">如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
+              <p its-locale-filter-list="en">For example: <span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
+              <p its-locale-filter-list="zh">例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
+              <p its-locale-filter-list="zh"> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
             </li>
         <li>
-               <p data-lang="en">In a 4-consonant syllable, the second consonant is always the root.</p>
-             <p data-lang="zh">在一个具有四个辅音字母的字中，第二个辅音字母是根字母。</p>
+               <p its-locale-filter-list="en">In a 4-consonant syllable, the second consonant is always the root.</p>
+             <p its-locale-filter-list="zh">在一个具有四个辅音字母的字中，第二个辅音字母是根字母。</p>
             </li>
       </ol>
       </section>
       
    <section id="non_root">
-        <h4><span data-lang="en">Descriptions of Non-root Elements</span> 
-        <span data-lang="zh">...</span></h4>
+        <h4><span its-locale-filter-list="en">Descriptions of Non-root Elements</span> 
+        <span its-locale-filter-list="zh">...</span></h4>
 
       
       <section id="prefixes">
-      <h5><span data-lang="en">Prefixes</span>
-      <span data-lang="zh">...</span></h5>
-          <p data-lang="en">A prefix (<span lang="bo">སྔོ་འཇུག་</span>) appears to the left of the root consonant, and is one the following 5 letters: <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
-        <p data-lang="zh"><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
-          <p data-lang="en">Characters in the prefix position are not pronounced, but de-aspirate aspirated root characters and give a higher tone value to nasal root characters. The consonant <span class="ex" lang="bo">ག </span><span class="trans">g</span> may occur before 11 root characters, <span class="ex" lang="bo">ད</span> <span class="trans">d</span> before 6, <span class="ex" lang="bo">བ </span><span class="trans">b</span> before 10, <span class="ex" lang="bo">མ</span><span class="trans"> m</span> before 11, and <span class="ex" lang="bo">འ </span> <span class="trans">a</span> before 10.</p>
-          <p data-lang="en">Examples: <span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">'khor-lo</span> <span class="ipa">kor-lo</span>  (<span class="meaning">wheel</span>), <span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> (<span class="meaning">killed</span>).</p>
+      <h5><span its-locale-filter-list="en">Prefixes</span>
+      <span its-locale-filter-list="zh">...</span></h5>
+          <p its-locale-filter-list="en">A prefix (<span lang="bo">སྔོ་འཇུག་</span>) appears to the left of the root consonant, and is one the following 5 letters: <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
+        <p its-locale-filter-list="zh"><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
+          <p its-locale-filter-list="en">Characters in the prefix position are not pronounced, but de-aspirate aspirated root characters and give a higher tone value to nasal root characters. The consonant <span class="ex" lang="bo">ག </span><span class="trans">g</span> may occur before 11 root characters, <span class="ex" lang="bo">ད</span> <span class="trans">d</span> before 6, <span class="ex" lang="bo">བ </span><span class="trans">b</span> before 10, <span class="ex" lang="bo">མ</span><span class="trans"> m</span> before 11, and <span class="ex" lang="bo">འ </span> <span class="trans">a</span> before 10.</p>
+          <p its-locale-filter-list="en">Examples: <span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">'khor-lo</span> <span class="ipa">kor-lo</span>  (<span class="meaning">wheel</span>), <span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> (<span class="meaning">killed</span>).</p>
       </section>
 
       <section id="suffixes">
-      <h5><span data-lang="en">Suffixes</span>
-      <span data-lang="zh">...</span></h5>
-      <p data-lang="en">Suffixes (<span lang="bo">རྗེས་འཇུག་</span>) appear to the right of the root letter, and are usually one of the following 10 letters: <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
+      <h5><span its-locale-filter-list="en">Suffixes</span>
+      <span its-locale-filter-list="zh">...</span></h5>
+      <p its-locale-filter-list="en">Suffixes (<span lang="bo">རྗེས་འཇུག་</span>) appear to the right of the root letter, and are usually one of the following 10 letters: <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
       <p>Characters in the suffix position have one of the following effects:</p>
 	  <ol>
 	    <li>
-	      <p data-lang="en">add their own sound ( <span class="ex" lang="bo">ག 	ང 	བ མ 	འ 	ར</span> ) , eg. <span class="ex" lang="bo"> 	དག་</span> <span class="trans">dag</span> <span class="ipa">dag</span> (<span class="meaning">I</span>).</p>
+	      <p its-locale-filter-list="en">add their own sound ( <span class="ex" lang="bo">ག 	ང 	བ མ 	འ 	ར</span> ) , eg. <span class="ex" lang="bo"> 	དག་</span> <span class="trans">dag</span> <span class="ipa">dag</span> (<span class="meaning">I</span>).</p>
 	    </li>
 	    <li>
-	      <p data-lang="en">modify the root's vowel value ( <span class="ex" lang="bo">ད ས</span> ), eg. <span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> (<span class="meaning">killed</span>).</p>
+	      <p its-locale-filter-list="en">modify the root's vowel value ( <span class="ex" lang="bo">ད ས</span> ), eg. <span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> (<span class="meaning">killed</span>).</p>
 	    </li>
 	    <li>
-	      <p data-lang="en">both of the above ( <span class="ex" lang="bo">ན ལ</span> ), eg. <span class="ex" lang="bo">བདུན་</span> <span class="trans">bdun</span> <span class="ipa">dỳn</span> (<span class="meaning">seven</span>).</p></li>
+	      <p its-locale-filter-list="en">both of the above ( <span class="ex" lang="bo">ན ལ</span> ), eg. <span class="ex" lang="bo">བདུན་</span> <span class="trans">bdun</span> <span class="ipa">dỳn</span> (<span class="meaning">seven</span>).</p></li>
         </ol>
       </section>
       
       
       <section id="secondary_suffix">
-      <h5><span data-lang="en">Secondary Suffix</span>
-      <span data-lang="zh">...</span></h5>
-      <p data-lang="en">Secondary suffixes (<span lang="bo">ཡང་འཇུག་</span>) appear to the right of other suffixes.</p>
-        <p data-lang="zh"><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
-          <p data-lang="en">Only two characters can appear in the secondary suffix location, according to Tibetan grammar, <span class="ex" lang="bo">ས</span> and <span class="ex" lang="bo">ད</span>, and the latter is no longer officially found in modern Tibetan. A character in this position adds no sound and nor does it affect the sounds in the rest of the syllable.</p>
-          <p data-lang="en">Examples: <span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsgrubs</span> <span class="ipa">ɖɹúb</span> (<span class="meaning">established</span>), and <span class="ex" lang="bo">གྱུརད་</span> <span class="trans">gyurd</span> <span class="ipa">kjùr</span> (<span class="meaning">became</span>).</p>
+      <h5><span its-locale-filter-list="en">Secondary Suffix</span>
+      <span its-locale-filter-list="zh">...</span></h5>
+      <p its-locale-filter-list="en">Secondary suffixes (<span lang="bo">ཡང་འཇུག་</span>) appear to the right of other suffixes.</p>
+        <p its-locale-filter-list="zh"><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
+          <p its-locale-filter-list="en">Only two characters can appear in the secondary suffix location, according to Tibetan grammar, <span class="ex" lang="bo">ས</span> and <span class="ex" lang="bo">ད</span>, and the latter is no longer officially found in modern Tibetan. A character in this position adds no sound and nor does it affect the sounds in the rest of the syllable.</p>
+          <p its-locale-filter-list="en">Examples: <span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsgrubs</span> <span class="ipa">ɖɹúb</span> (<span class="meaning">established</span>), and <span class="ex" lang="bo">གྱུརད་</span> <span class="trans">gyurd</span> <span class="ipa">kjùr</span> (<span class="meaning">became</span>).</p>
           </section>
           
       <section id="superscripts">
-      <h5><span data-lang="en">Superscripts</span>
-      <span data-lang="zh">...</span></h5>
-          <p data-lang="en">A superscript (<span lang="bo">མགོ་ཅན་</span>) appears above the syllable's root, and is one of the following characters: <span lang="bo" class="large_example">ར ལ ས</span></p>
-          <p data-lang="zh"><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
-          <p data-lang="en">The three characters that appear in the superscript location raise the tone pitch of the syllable, but are not pronounced themselves. Each superscript character can only be used with a specified set of root characters.</p>
+      <h5><span its-locale-filter-list="en">Superscripts</span>
+      <span its-locale-filter-list="zh">...</span></h5>
+          <p its-locale-filter-list="en">A superscript (<span lang="bo">མགོ་ཅན་</span>) appears above the syllable's root, and is one of the following characters: <span lang="bo" class="large_example">ར ལ ས</span></p>
+          <p its-locale-filter-list="zh"><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
+          <p its-locale-filter-list="en">The three characters that appear in the superscript location raise the tone pitch of the syllable, but are not pronounced themselves. Each superscript character can only be used with a specified set of root characters.</p>
           <figure>
             <!--p><img src="images/superscripts.png" alt="Superscripts"/></p-->
             <table class="locations">
@@ -611,18 +604,18 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
                 </tr>
               </tbody>
             </table>
-            <figcaption><span data-lang="en">Tibetan superscripts.</span></figcaption>
+            <figcaption><span its-locale-filter-list="en">Tibetan superscripts.</span></figcaption>
           </figure>
-          <p data-lang="en">Note that RA has a shape slightly different from its nominal shape in all combinations except <span class="ex" lang="bo">རྙ</span> and <span class="ex" lang="bo">རླ.</span> You should still use the normal RA Unicode character for the superscript. The font will make the needed adjustments to the shape.</p>
+          <p its-locale-filter-list="en">Note that RA has a shape slightly different from its nominal shape in all combinations except <span class="ex" lang="bo">རྙ</span> and <span class="ex" lang="bo">རླ.</span> You should still use the normal RA Unicode character for the superscript. The font will make the needed adjustments to the shape.</p>
           </section>
           
           
       <section id="subscripts">
-      <h5><span data-lang="en">Subscripts</span>
-      <span data-lang="zh">...</span></h5>
-        <p data-lang="en">A subscript (<span lang="bo">འདོགས་ཅན་</span>) can be one of the following four characters:<span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
-          <p data-lang="zh"><span lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
-          <p data-lang="en">The four characters that can appear in the subscript location are also each combined with a particular subset of root characters and have different effects.</p>
+      <h5><span its-locale-filter-list="en">Subscripts</span>
+      <span its-locale-filter-list="zh">...</span></h5>
+        <p its-locale-filter-list="en">A subscript (<span lang="bo">འདོགས་ཅན་</span>) can be one of the following four characters:<span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
+          <p its-locale-filter-list="zh"><span lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
+          <p its-locale-filter-list="en">The four characters that can appear in the subscript location are also each combined with a particular subset of root characters and have different effects.</p>
           <figure>
             <!--p><img src="images/subscripts.png" alt="Subscripts"/></p-->
             <table class="locations">
@@ -750,10 +743,10 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
                 </tr>
               </tbody>
             </table>
-            <figcaption><span data-lang="en">Tibetan subscripts</span></figcaption>
+            <figcaption><span its-locale-filter-list="en">Tibetan subscripts</span></figcaption>
           </figure>
-        <p data-lang="en">Note that three of the subscripts have shapes that are significantly different from the nominal shape of the character they represent.</p>
-	  <p data-lang="en">Uniquely, WA can also appear as a sub-subscript as in  <span class="ex" lang="bo">གྲྭ་</span> <span class="trans">grwa</span>.</p>
+        <p its-locale-filter-list="en">Note that three of the subscripts have shapes that are significantly different from the nominal shape of the character they represent.</p>
+	  <p its-locale-filter-list="en">Uniquely, WA can also appear as a sub-subscript as in  <span class="ex" lang="bo">གྲྭ་</span> <span class="trans">grwa</span>.</p>
       </section>
     </section>
 </section>
@@ -761,22 +754,22 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
   
   
   <section id="藏文的字体与字符的Unicode编码">
-    <h3><span data-lang="en">Unicode-encoded Tibetan  Characters</span> <span data-lang="zh">藏文的字体与字符的Unicode编码</span></h3>
-    <p data-lang="en">The figure below shows the arrangement of Tibetan characters in the Unicode Tibetan character block, as of Unicode version 8.0.</p>
-    <p data-lang="zh">藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
+    <h3><span its-locale-filter-list="en">Unicode-encoded Tibetan  Characters</span> <span its-locale-filter-list="zh">藏文的字体与字符的Unicode编码</span></h3>
+    <p its-locale-filter-list="en">The figure below shows the arrangement of Tibetan characters in the Unicode Tibetan character block, as of Unicode version 8.0.</p>
+    <p its-locale-filter-list="zh">藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
     <figure id="unicode_block">
           <p><img src="images/code-chart.png" alt="Picture of Unicode Tibetan block."/></p>
-          <figcaption><span  data-lang="en">Unicode Tibetan block.</span></figcaption>
+          <figcaption><span  its-locale-filter-list="en">Unicode Tibetan block.</span></figcaption>
         </figure>
   </section>
 
 
 
 <section id="transliteration">
-  <h3><span data-lang="en">Tibetan  Characters used for Transliteration</span>
-   <span data-lang="zh">...</span></h3>
-  <p data-lang="en">Many of the characters in the Tibetan block are there for transcribing or transliterating non-Tibetan text. The Tibetan script provides for perfect mappings between Sanskrit and Tibetan, but Tibetan is also used to transliterate other languages, such as Chinese, Mongolian and English.</p>
-	  <p data-lang="en">There are a number of consonants, including a range of aspirated consonants, and the following range of retroflex consonants. </p>
+  <h3><span its-locale-filter-list="en">Tibetan  Characters used for Transliteration</span>
+   <span its-locale-filter-list="zh">...</span></h3>
+  <p its-locale-filter-list="en">Many of the characters in the Tibetan block are there for transcribing or transliterating non-Tibetan text. The Tibetan script provides for perfect mappings between Sanskrit and Tibetan, but Tibetan is also used to transliterate other languages, such as Chinese, Mongolian and English.</p>
+	  <p its-locale-filter-list="en">There are a number of consonants, including a range of aspirated consonants, and the following range of retroflex consonants. </p>
       <figure>
 	  <table>
 	    <tbody><tr>
@@ -825,12 +818,12 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	      <td><a target="c" href="/scripts/tibetan/block#char0FB5"><img src="images/0FB5.png" alt="" title="0FB5"></a></td>
         </tr>
       </tbody></table>
-      <figcaption><span data-lang="en">Additional consonant characters for transliteration.</span></figcaption>
+      <figcaption><span its-locale-filter-list="en">Additional consonant characters for transliteration.</span></figcaption>
       </figure>
       
-    <p data-lang="en">The retroflex consonants, which are reversed versions of Tibetan consonant shapes, are often used to distinguish loan words from sequences of Tibetan syllables. For example,  <span class="ex" lang="bo">ཁ་ཎ་ཌ་</span> <span class="trans">kha-ṇa-ḍa</span>  (<span class="meaning">Canada</span>), <span class="ex" lang="bo">མོ་ཊ་</span> <span class="trans">mo-ṭa</span>  (<span class="meaning">car</span>).</p>
-	  <p data-lang="en">In transliterated text consonants are sometimes stacked in ways that are not allowed in native Tibetan text.</p>
-	  <p data-lang="en">There are also additional vowel signs between U+0F71 and U+0F7D  for Sanskrit transcriptions, and several are compound shapes. The component parts of these compounds should normally be typed individually, rather than using the compound codepoints. The table below shows the characters, and indicates those whose use is  discouraged and strongly discouraged.</p>
+    <p its-locale-filter-list="en">The retroflex consonants, which are reversed versions of Tibetan consonant shapes, are often used to distinguish loan words from sequences of Tibetan syllables. For example,  <span class="ex" lang="bo">ཁ་ཎ་ཌ་</span> <span class="trans">kha-ṇa-ḍa</span>  (<span class="meaning">Canada</span>), <span class="ex" lang="bo">མོ་ཊ་</span> <span class="trans">mo-ṭa</span>  (<span class="meaning">car</span>).</p>
+	  <p its-locale-filter-list="en">In transliterated text consonants are sometimes stacked in ways that are not allowed in native Tibetan text.</p>
+	  <p its-locale-filter-list="en">There are also additional vowel signs between U+0F71 and U+0F7D  for Sanskrit transcriptions, and several are compound shapes. The component parts of these compounds should normally be typed individually, rather than using the compound codepoints. The table below shows the characters, and indicates those whose use is  discouraged and strongly discouraged.</p>
     <figure>
 	    <table>
 	      <tbody><tr>
@@ -889,30 +882,30 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         </tbody></table>
 	    <figcaption>Additional vowel sign characters for transliteration.</figcaption>
     </figure>
-    <p data-lang="en"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> ( <span class="name">nam chay</span> ) is the visarga, and <span class="uname">U+0F7E TIBETAN SIGN RJES SU NGA RO</span> <span lang="bo">&nbsp;ཾ</span> ( <span class="name">ngaro</span> ) is the anusvara. </p>
+    <p its-locale-filter-list="en"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> ( <span class="name">nam chay</span> ) is the visarga, and <span class="uname">U+0F7E TIBETAN SIGN RJES SU NGA RO</span> <span lang="bo">&nbsp;ཾ</span> ( <span class="name">ngaro</span> ) is the anusvara. </p>
     
     	<section id="compound_consonants">
-        <h4><span data-lang="en">Compound Consonants</span></h4>
-		<p data-lang="en"> The six compound consonants GHA, DDHA, DHA, BHA, DZHA and KSSA in the table above, used to represent the Indic consonants during transliteration, can be created<span class="ref"></span> by combining a head consonant with a subjoined HA, but the Unicode Standard recommends that the precomposed characters be used in order to maximise effectiveness of transmission and searching. I have suggested that this recommendation be changed in version 7, since many applications silently normalise text to the decomposed sequence.</p>
+        <h4><span its-locale-filter-list="en">Compound Consonants</span></h4>
+		<p its-locale-filter-list="en"> The six compound consonants GHA, DDHA, DHA, BHA, DZHA and KSSA in the table above, used to represent the Indic consonants during transliteration, can be created<span class="ref"></span> by combining a head consonant with a subjoined HA, but the Unicode Standard recommends that the precomposed characters be used in order to maximise effectiveness of transmission and searching. I have suggested that this recommendation be changed in version 7, since many applications silently normalise text to the decomposed sequence.</p>
 </section>
 
     	<section id="fixed_form_letters">
-        <h4><span data-lang="en">Fixed Form Letters</span></h4>
-	  <p data-lang="en"><span class="uname">U+0F62 TIBETAN LETTER RA</span> at the top of a stack usually has a reduced form, eg. <span class="ex" lang="bo">རྐ</span> <span class="trans">rka</span>. For transliterations it is sometimes desirable to retain the full form of RA where in Tibetan words it would be reduced. To do this use <span class="uname">U+0F6A TIBETAN LETTER FIXED-FORM RA</span> <span lang="bo">ཪ</span> instead of the normal RA, but only where the normal RA would not produce the full form anyway, ie. do not use eg. <span class="ex" lang="bo">རྙ</span> <span class="trans">rnya</span>, which has the full form already.</p>
-    <p data-lang="en">There are also fixed form variants of subjoined RA, YA and WA.</p>
+        <h4><span its-locale-filter-list="en">Fixed Form Letters</span></h4>
+	  <p its-locale-filter-list="en"><span class="uname">U+0F62 TIBETAN LETTER RA</span> at the top of a stack usually has a reduced form, eg. <span class="ex" lang="bo">རྐ</span> <span class="trans">rka</span>. For transliterations it is sometimes desirable to retain the full form of RA where in Tibetan words it would be reduced. To do this use <span class="uname">U+0F6A TIBETAN LETTER FIXED-FORM RA</span> <span lang="bo">ཪ</span> instead of the normal RA, but only where the normal RA would not produce the full form anyway, ie. do not use eg. <span class="ex" lang="bo">རྙ</span> <span class="trans">rnya</span>, which has the full form already.</p>
+    <p its-locale-filter-list="en">There are also fixed form variants of subjoined RA, YA and WA.</p>
 </section>
 </section>
 <section>
 </section>
 
 <section id="numerals">
-    <h3><span data-lang="en">Tibetan Numerals</span>
-    <span data-lang="zh">藏文的数字</span></h3>
-    <p data-lang="en">Tibetan has its own set of digits, although publications may also use European numerals. The basic Tibetan numbers are used in the same way as European numerals. They differ only in shape.</p>
-    <p data-lang="zh">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
-    <p data-lang="en">The Unicode Tibetan block also contains a set of half-numbers. These are very rarely used, and there is some ambiguity about how they are used. By some interpretations, the following shapes each have the value of 0.5 less than the number within which it appears. Used only in some traditional contexts, they appear as the last digit of a multidigit number, eg. <span class="ex" lang="bo">༤༬</span> represents 42.5.</p>
-    <p data-lang="zh">藏文的半数字是指1到9数字一半的表达方式。例如：1的一半是0.5，2的一半是1，3的一半是1.5等等。在藏文中，可以通过半数字直接表达而不用书写小数树。例如，43.5在藏文中可以直接书写为<span lang="bo"> ༤༬</span>。</p>
-    <p data-lang="zh">下表是藏文数字（及半数字）与阿拉伯数字表示方法的对应： </p>
+    <h3><span its-locale-filter-list="en">Tibetan Numerals</span>
+    <span its-locale-filter-list="zh">藏文的数字</span></h3>
+    <p its-locale-filter-list="en">Tibetan has its own set of digits, although publications may also use European numerals. The basic Tibetan numbers are used in the same way as European numerals. They differ only in shape.</p>
+    <p its-locale-filter-list="zh">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
+    <p its-locale-filter-list="en">The Unicode Tibetan block also contains a set of half-numbers. These are very rarely used, and there is some ambiguity about how they are used. By some interpretations, the following shapes each have the value of 0.5 less than the number within which it appears. Used only in some traditional contexts, they appear as the last digit of a multidigit number, eg. <span class="ex" lang="bo">༤༬</span> represents 42.5.</p>
+    <p its-locale-filter-list="zh">藏文的半数字是指1到9数字一半的表达方式。例如：1的一半是0.5，2的一半是1，3的一半是1.5等等。在藏文中，可以通过半数字直接表达而不用书写小数树。例如，43.5在藏文中可以直接书写为<span lang="bo"> ༤༬</span>。</p>
+    <p its-locale-filter-list="zh">下表是藏文数字（及半数字）与阿拉伯数字表示方法的对应： </p>
     <figure>
       <table class="chartable">
           <tr>
@@ -950,18 +943,18 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         </tr>
       </table>
           <!--p><img src="images/numbers.png" alt="Numbers"/></p-->
-          <figcaption><span data-lang="en">Tibetan numbers.</span></figcaption>
+          <figcaption><span its-locale-filter-list="en">Tibetan numbers.</span></figcaption>
     </figure>
 </section>
 
 <section id="head_marks">
-    <h3><span data-lang="en">Head Marks</span>
-    <span data-lang="zh">藏文的数字</span></h3>
-    <p data-lang="en">In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
-	  <p data-lang="en">Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
-	  <p data-lang="en">Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
-	  <p data-lang="en">A common head mark is <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span> <span lang="bo">༄</span>, and there is also the extension character <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span> <span lang="bo">༅</span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two shads, eg.<span class="ex" lang="bo">༄༅། །</span>.</p>
-    <p data-lang="en">Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
+    <h3><span its-locale-filter-list="en">Head Marks</span>
+    <span its-locale-filter-list="zh">藏文的数字</span></h3>
+    <p its-locale-filter-list="en">In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
+	  <p its-locale-filter-list="en">Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
+	  <p its-locale-filter-list="en">Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
+	  <p its-locale-filter-list="en">A common head mark is <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span> <span lang="bo">༄</span>, and there is also the extension character <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span> <span lang="bo">༅</span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two shads, eg.<span class="ex" lang="bo">༄༅། །</span>.</p>
+    <p its-locale-filter-list="en">Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
     <ul>
       <li><span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span> <span lang="bo">༁</span></li>
         <li><span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span> <span lang="bo">༂</span></li>
@@ -972,64 +965,64 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 
 
 <section id="punctuation">
-    <h3><span data-lang="en">Tibetan Punctuation</span>
-    <span data-lang="zh">藏文的标点符号</span></h3>
+    <h3><span its-locale-filter-list="en">Tibetan Punctuation</span>
+    <span its-locale-filter-list="zh">藏文的标点符号</span></h3>
 
 <section id="syllable_breaks">
-          <h4><span data-lang="en">Syllable Breaks</span>
-          <span data-lang="zh">音节符</span></h4>
-          <p data-lang="en">The <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> is used to indicate syllable boundaries. Note that this is not necessarily equivalent to word boundaries.</p>
-          <p data-lang="zh">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
-          <p data-lang="en">For more information about the use of the tsek see <a href="#text_segmentation"></a>.</p>
-          <p data-lang="zh">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
+          <h4><span its-locale-filter-list="en">Syllable Breaks</span>
+          <span its-locale-filter-list="zh">音节符</span></h4>
+          <p its-locale-filter-list="en">The <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> is used to indicate syllable boundaries. Note that this is not necessarily equivalent to word boundaries.</p>
+          <p its-locale-filter-list="zh">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
+          <p its-locale-filter-list="en">For more information about the use of the tsek see <a href="#text_segmentation"></a>.</p>
+          <p its-locale-filter-list="zh">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
         </section>
 
 <section id="section_breaks">
-          <h4><span data-lang="en">Section Breaks</span>
-          <span data-lang="zh">...</span></h4>
-    <p data-lang="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
+          <h4><span its-locale-filter-list="en">Section Breaks</span>
+          <span its-locale-filter-list="zh">...</span></h4>
+    <p its-locale-filter-list="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
     <figure>
 	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
-	    <figcaption><span data-lang="en">Examples of double shay.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Examples of double shay.</span></figcaption>
 	    </figure>
-	    <p data-lang="en">For more information about the use of  this punctuation and various similar punctuation marks, see  <a href="#text_segmentation"></a>.</p>
+	    <p its-locale-filter-list="en">For more information about the use of  this punctuation and various similar punctuation marks, see  <a href="#text_segmentation"></a>.</p>
 </section>
         
         
 
 <section id="other_punctuation">
-          <h4><span data-lang="en">Other Punctuation &amp; Signs</span>
-          <span data-lang="zh">...</span></h4>
-    <p data-lang="en">Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
+          <h4><span its-locale-filter-list="en">Other Punctuation &amp; Signs</span>
+          <span its-locale-filter-list="zh">...</span></h4>
+    <p its-locale-filter-list="en">Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
 	  <ul>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span> <span lang="bo">༈</span> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span> <span lang="bo">༈</span> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en">This <span class="name">drul-shay</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified). The <span class="name">drul-shay</span> should not appear at the beginning of a new line and the whole structure of spacing-plus- shay needs to be kept together.</p>
+	      <p its-locale-filter-list="en">This <span class="name">drul-shay</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified). The <span class="name">drul-shay</span> should not appear at the beginning of a new line and the whole structure of spacing-plus- shay needs to be kept together.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span> <span lang="bo">༼</span> and <span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span> <span lang="bo">༽</span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span> <span lang="bo">༼</span> and <span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span> <span lang="bo">༽</span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0F3E TIBETAN SIGN YAR TSHES</span> <span lang="bo">༾</span> and <span class="uname">U+0F3F TIBETAN SIGN MAR TSHES</span> <span lang="bo">༿</span> are also paired characters used in combination with digits.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0F3E TIBETAN SIGN YAR TSHES</span> <span lang="bo">༾</span> and <span class="uname">U+0F3F TIBETAN SIGN MAR TSHES</span> <span lang="bo">༿</span> are also paired characters used in combination with digits.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0F34   TIBETAN MARK BSDUS RTAGS</span> <span lang="bo">༴</span> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0F34   TIBETAN MARK BSDUS RTAGS</span> <span lang="bo">༴</span> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0FBE   TIBETAN KU RU KHA</span> <span lang="bo">྾</span> (often repeated three times) indicates a refrain.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0FBE   TIBETAN KU RU KHA</span> <span lang="bo">྾</span> (often repeated three times) indicates a refrain.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+0F36   TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span> <span lang="bo">༶</span> and <span class="uname">U+0FBF   TIBETAN KU RU KHA BZHI MIG CAN</span> <span lang="bo">྿</span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+0F36   TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span> <span lang="bo">༶</span> and <span class="uname">U+0FBF   TIBETAN KU RU KHA BZHI MIG CAN</span> <span lang="bo">྿</span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
 	    </li>
 	    <li>
-	      <p data-lang="en"><span class="uname">U+2638   WHEEL OF DHARMA</span> <span lang="bo">☸</span> which occurs sometimes in Tibetan texts is encoded in the Miscellaneous Symbols block.</p>
+	      <p its-locale-filter-list="en"><span class="uname">U+2638   WHEEL OF DHARMA</span> <span lang="bo">☸</span> which occurs sometimes in Tibetan texts is encoded in the Miscellaneous Symbols block.</p>
 	    </li>
       </ul>
     </section>
 <div class="issue">
-  <p data-lang="en">How are quotations demarcated in Tibetan?</p>
+  <p its-locale-filter-list="en">How are quotations demarcated in Tibetan?</p>
 </div>
         
 </section>
@@ -1038,169 +1031,169 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 
 
 <section id="characters">
-  <h2><span data-lang="en">Typography for Tibetan characters</span></h2>
+  <h2><span its-locale-filter-list="en">Typography for Tibetan characters</span></h2>
   
 
       <section id="text_segmentation">
-    <h3><span data-lang="en">Text Segmentation in Tibetan</span>
-    <span data-lang="zh">...</span></h3>
-  <p data-lang="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
+    <h3><span its-locale-filter-list="en">Text Segmentation in Tibetan</span>
+    <span its-locale-filter-list="zh">...</span></h3>
+  <p its-locale-filter-list="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
 	  <figure>
 	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
-	    <figcaption><span data-lang="en">Examples of double shay.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Examples of double shay.</span></figcaption>
 	    </figure>  
         <div class="issue">  
-        <p data-lang="en">Unicode provides <span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear  how that would work when using NYIS SHAD.</span></p>
+        <p its-locale-filter-list="en">Unicode provides <span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear  how that would work when using NYIS SHAD.</span></p>
         </div>
       <div class="note">
-	  <p data-lang="en">In Chinese magazine publications  articles may contain no double shay as a delimiter. (The text is formatted in paragraphs.) The double shay may still be found at the very end of some articles, or at the end of each line on a page containing some verse-formatted folk literature. The  applies for large parts of  Bhutanese newspapers, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.</p>
+	  <p its-locale-filter-list="en">In Chinese magazine publications  articles may contain no double shay as a delimiter. (The text is formatted in paragraphs.) The double shay may still be found at the very end of some articles, or at the end of each line on a page containing some verse-formatted folk literature. The  applies for large parts of  Bhutanese newspapers, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.</p>
       </div>
-      </div>
-	  <p data-lang="en">A line that ends with the root consonant <span class="uname">U+0F40 TIBETAN LETTER KA</span> <span lang="bo">ཀ</span> or <span class="uname">U+0F42 TIBETAN LETTER GA</span> <span lang="bo">ག</span> will normally swallow up the shay that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shay, you might see <span class="ex" style="white-space:nowrap;" lang="bo">ཀུ །</span> and <span class="ex" style="white-space:nowrap;" lang="bo">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" style="white-space:nowrap;" lang="bo">གྲུ། །</span>. </p>
+      
+	  <p its-locale-filter-list="en">A line that ends with the root consonant <span class="uname">U+0F40 TIBETAN LETTER KA</span> <span lang="bo">ཀ</span> or <span class="uname">U+0F42 TIBETAN LETTER GA</span> <span lang="bo">ག</span> will normally swallow up the shay that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shay, you might see <span class="ex" style="white-space:nowrap;" lang="bo">ཀུ །</span> and <span class="ex" style="white-space:nowrap;" lang="bo">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" style="white-space:nowrap;" lang="bo">གྲུ། །</span>. </p>
 	  <figure>
 	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ། །དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅི<span class="char_highlight">ག །</span>བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན། །རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད།།</p>
-	    <figcaption><span data-lang="en">Example of GA swallowing up a shay at the end of a topic.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Example of GA swallowing up a shay at the end of a topic.</span></figcaption>
       </figure>
 	  <figure>
 	    <p lang="bo">རྩོམ་པ་པོ། ལྡོང་ཕྲུ<span class="char_highlight">ག </span>པར་སྐྲུན་ཁང་། གངས་ཅན་པ་ཚོང་འཕྲིན་ཇུས་འགོད་ཞབས་ཞུ་ལྟེ་གནས་ནས་དཔར།</p>
-	    <figcaption><span data-lang="en">Example of GA swallowing up a shay at the end of a section.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Example of GA swallowing up a shay at the end of a section.</span></figcaption>
       </figure>
-	  <p data-lang="en">Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
-	  <p data-lang="en">The tsek is not used before a shay, except after <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span>. For example, note the end of the three sections in this example:</p>
+	  <p its-locale-filter-list="en">Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
+	  <p its-locale-filter-list="en">The tsek is not used before a shay, except after <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span>. For example, note the end of the three sections in this example:</p>
 	  <figure>
       <p lang="bo">དོན་ཚན་དང་<span class="char_highlight">པོ།</span>&nbsp;འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་ད<span class="char_highlight">ང༌།</span>&nbsp;ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་<span class="char_highlight">ལ།</span></p>
-      <figcaption><span data-lang="en">Examples of tsek not being used before shay, and of U+0F0C being used between NGA and shay.</span></figcaption>
+      <figcaption><span its-locale-filter-list="en">Examples of tsek not being used before shay, and of U+0F0C being used between NGA and shay.</span></figcaption>
       </figure>
-	  <p data-lang="en">Users may use an ordinary TSHEG between NGA and SHAD, but Unicode also provides a special non-breaking character that can be used instead, <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span> <span lang="bo">༌</span>. The word 'delimiter' in the name is a misnomer.</p>
+	  <p its-locale-filter-list="en">Users may use an ordinary TSHEG between NGA and SHAD, but Unicode also provides a special non-breaking character that can be used instead, <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span> <span lang="bo">༌</span>. The word 'delimiter' in the name is a misnomer.</p>
 	  <figure>
 	    <p lang="bo">སུ་གང་གིས་གང་ཞིག་གི་རྒྱལ་ཁབ་ཐོབ་ཐང་བཙན་ཤེད་ཀྱིས་འཕྲོག་པ་ད<span class="char_highlight">ང༌།</span> ཡང་ན་དེའི་རྒྱལ་ཁབ་བརྗེ་བསྒྱུར་གྱི་ཐོབ་ཐང་བཀག་འགོག་བྱེདཔའི་རིགས་མི་ཆོག །</p>
-	    <figcaption><span data-lang="en">Example of U+0F0C being used between NGA and shay.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Example of U+0F0C being used between NGA and shay.</span></figcaption>
       </figure>
-	  <p data-lang="en">Whitespace in Tibetan text should use U+00A0   NO-BREAK SPACE. Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following: <span class="ex" lang="bo">།</span>, <span class="ex" lang="bo">༑</span>, <span class="ex" lang="bo">༔</span> or <span class="ex" lang="bo">ཿ</span>. However, numbers and embedded Western text are surrounded by smaller spaces, eg. <span class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</span>.</p>
+	  <p its-locale-filter-list="en">Whitespace in Tibetan text should use U+00A0   NO-BREAK SPACE. Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following: <span class="ex" lang="bo">།</span>, <span class="ex" lang="bo">༑</span>, <span class="ex" lang="bo">༔</span> or <span class="ex" lang="bo">ཿ</span>. However, numbers and embedded Western text are surrounded by smaller spaces, eg. <span class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</span>.</p>
 	  <div class="issue">
-	    <p data-lang="en">What effect should double-clicking on text produce? Should the whole syllable be selected? Does that include the tsek? Or should the application just highlight the grapheme clusters?</p>
+	    <p its-locale-filter-list="en">What effect should double-clicking on text produce? Should the whole syllable be selected? Does that include the tsek? Or should the application just highlight the grapheme clusters?</p>
 	    </div>
     </section>
     
     
     <section id="emphasis_and_highlighting">
-          <h3><span data-lang="en">Text Emphasis and Highlighting</span>
-          <span data-lang="zh">...</span></h3>
+          <h3><span its-locale-filter-list="en">Text Emphasis and Highlighting</span>
+          <span its-locale-filter-list="zh">...</span></h3>
 
-          <p data-lang="en"><span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span> <span lang="bo">&nbsp;༵</span> and <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span> <span lang="bo">&nbsp;༷</span> can be used to create a similar effect to underlining or to mark emphasis.</p>
-	  <p data-lang="en">These marks  attach to a syllable rather than a character and therefore to place them correctly it is necessary to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
-	  <p data-lang="en">Application software  has to ignore these characters for text processing operations such as search and collation.</p>
-	  <p data-lang="en">Alternative methods of emphasis include use of a different colour, or the use of the prefix <span class="ex" lang="bo">༸</span>.</p>
+          <p its-locale-filter-list="en"><span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span> <span lang="bo">&nbsp;༵</span> and <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span> <span lang="bo">&nbsp;༷</span> can be used to create a similar effect to underlining or to mark emphasis.</p>
+	  <p its-locale-filter-list="en">These marks  attach to a syllable rather than a character and therefore to place them correctly it is necessary to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
+	  <p its-locale-filter-list="en">Application software  has to ignore these characters for text processing operations such as search and collation.</p>
+	  <p its-locale-filter-list="en">Alternative methods of emphasis include use of a different colour, or the use of the prefix <span class="ex" lang="bo">༸</span>.</p>
 	  <figure>
 	    <p style="text-align:center;" lang="bo">སྐལ་ལྡན་གདུལ་བྱར་སྣང་བའི་<span class="ex" style="color:#768029">བསོ༵ད་ནམ༵ས་</span>གཟུགས།</p>
-	    <figcaption><span data-lang="en">Use of colour and diacritics to emphasise text.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Use of colour and diacritics to emphasise text.</span></figcaption>
       </figure>
-	  <p data-lang="en">These characters may also be used in interspersed commentaries to tag the root text that is being commented on. An alternative is to set the tsek-bar being commented on in large type and the commentary in small type.</p>
+	  <p its-locale-filter-list="en">These characters may also be used in interspersed commentaries to tag the root text that is being commented on. An alternative is to set the tsek-bar being commented on in large type and the commentary in small type.</p>
 	  <figure>
 	    <p style="text-align:center;" lang="bo"><span class="ex" lang="bo">སྐུ༷</span>་ག<span class="ex" lang="bo">སུ༷</span>ང་ཐུ<span class="ex" lang="bo">ག༷</span>ས།.</p>
-	    <figcaption><span data-lang="en">Marks being used to identify root text.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Marks being used to identify root text.</span></figcaption>
       </figure>
-    <p data-lang="en">Modern texts tend to bold text for emphasis.</p>
+    <p its-locale-filter-list="en">Modern texts tend to bold text for emphasis.</p>
   </section>
     
     
     <section id="baseline_alignment">
-          <h3><span data-lang="en">Baseline alignment</span>
-          <span data-lang="zh">...</span></h3>
+          <h3><span its-locale-filter-list="en">Baseline alignment</span>
+          <span its-locale-filter-list="zh">...</span></h3>
 
-      <p data-lang="en">When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
+      <p its-locale-filter-list="en">When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
   </section>
 </section>
 
-    </section>
+    
 
 <section id="paragraphs">
-      <h2><span data-lang="en">Typography for Tibetan paragraphs</span></h2>
+      <h2><span its-locale-filter-list="en">Typography for Tibetan paragraphs</span></h2>
 
 
       <section id="藏文的书写方式">
-    <h3><span data-lang="en">Tibetan Writing Mode</span>
-    <span data-lang="zh">藏文的书写方式</span></h3>
-    <p data-lang="en">Tibetan is written horizontally and read from left to right.</p>
-    <p data-lang="zh">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
+    <h3><span its-locale-filter-list="en">Tibetan Writing Mode</span>
+    <span its-locale-filter-list="zh">藏文的书写方式</span></h3>
+    <p its-locale-filter-list="en">Tibetan is written horizontally and read from left to right.</p>
+    <p its-locale-filter-list="zh">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
     <div class="issue">
-      <p data-lang="en">Is Tibetan written vertically with upright glyphs at all (eg. in table headings, in pictures, etc.)? If so, does it require that all elements composing a syllable be kept together in horizontal fashion, placing just syllables one above the other? Or does each non-subjoined/combining character move to the next line? etc.</p>
+      <p its-locale-filter-list="en">Is Tibetan written vertically with upright glyphs at all (eg. in table headings, in pictures, etc.)? If so, does it require that all elements composing a syllable be kept together in horizontal fashion, placing just syllables one above the other? Or does each non-subjoined/combining character move to the next line? etc.</p>
     </div>
   </section>
 
       <section id="line_breaking">
-    <h3><span data-lang="en">Line breaking</span> <span data-lang="zh">...</span></h3>
-    <p data-lang="en">Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
-	  <p data-lang="en">Line breaks do not occur after a tsek
+    <h3><span its-locale-filter-list="en">Line breaking</span> <span its-locale-filter-list="zh">...</span></h3>
+    <p its-locale-filter-list="en">Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
+	  <p its-locale-filter-list="en">Line breaks do not occur after a tsek
 	    when it follows <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span> (with or without a vowel sign) and precedes a shay (<span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>).</p>
 	  <div class="issue">
 	    <p>The Unicode Standard also talks of other instances where Tibetan grammatical rules do not permit a break, but it isn't clear what those are.</p>
       </div>
-	  <p data-lang="en">If the character after NGA is an ordinary tsek, then  lines should not break between the tsek and the shay. Text is likely to be more portable if content authors use the  TSHEG BSTAR in these locations, instead of the normal tsek.</p>
-	  <p data-lang="en">Line breaks are also possible after:</p>
+	  <p its-locale-filter-list="en">If the character after NGA is an ordinary tsek, then  lines should not break between the tsek and the shay. Text is likely to be more portable if content authors use the  TSHEG BSTAR in these locations, instead of the normal tsek.</p>
+	  <p its-locale-filter-list="en">Line breaks are also possible after:</p>
 	  <ul>
-	    <li><p  data-lang="en"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span> - as long as the next line starts with a consonant (ie. not a second shad).</p></li>
-	    <li><p data-lang="en"><span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span> <span lang="bo">༔</span></p></li>
+	    <li><p  its-locale-filter-list="en"><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span> - as long as the next line starts with a consonant (ie. not a second shad).</p></li>
+	    <li><p its-locale-filter-list="en"><span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span> <span lang="bo">༔</span></p></li>
       </ul>
 	  <ul>
-	    <li><p data-lang="en"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> (used to represent the visarga in transliterations). There is never a tsek after this character, eg. <span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>.</p></li>
+	    <li><p its-locale-filter-list="en"><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> (used to represent the visarga in transliterations). There is never a tsek after this character, eg. <span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>.</p></li>
       </ul>
-	  <p data-lang="en">Tibetan never breaks inside a syllable, and has no hyphenation. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
-	  <p data-lang="en">A line must never start with a shad.</p>
+	  <p its-locale-filter-list="en">Tibetan never breaks inside a syllable, and has no hyphenation. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
+	  <p its-locale-filter-list="en">A line must never start with a shad.</p>
 
 
       <section id="rin_chen_spungs_shad">
-    <h4><span data-lang="en">Line breaks and rin chen spungs shad</span> <span data-lang="zh">...</span></h4>
-	  <p data-lang="en">In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span>. </p>
-	  <p data-lang="en">At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
-	  <p data-lang="en">This varies in the following cases:</p>
+    <h4><span its-locale-filter-list="en">Line breaks and rin chen spungs shad</span> <span its-locale-filter-list="zh">...</span></h4>
+	  <p its-locale-filter-list="en">In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span>. </p>
+	  <p its-locale-filter-list="en">At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
+	  <p its-locale-filter-list="en">This varies in the following cases:</p>
 	  <ul>
 	    <li>
-	      <p data-lang="en">when a line starts with <span class="ex" style="white-space:nowrap;" lang="bo">ལེའུ། །</span>, no rin chen spungs shad would be used, since <span class="ipa">le'u</span> is pronounced as two syllables.</p></li>
-	    <li><p data-lang="en">sometimes  only the first of two shays is replaced, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ །</span>, but this style is considered less attractive.</p></li>
-	    <li> <p data-lang="en">some printed books do not use rin chen spungs shad replacements, however the majority of books  apply the same rules as are used with pechas.</p></li>
+	      <p its-locale-filter-list="en">when a line starts with <span class="ex" style="white-space:nowrap;" lang="bo">ལེའུ། །</span>, no rin chen spungs shad would be used, since <span class="ipa">le'u</span> is pronounced as two syllables.</p></li>
+	    <li><p its-locale-filter-list="en">sometimes  only the first of two shays is replaced, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ །</span>, but this style is considered less attractive.</p></li>
+	    <li> <p its-locale-filter-list="en">some printed books do not use rin chen spungs shad replacements, however the majority of books  apply the same rules as are used with pechas.</p></li>
 	  </ul>
-	  <p data-lang="en">In an environment where the width or content of the page can change, this feature poses a problem for the content author. The application needs to be able to automatically switch between the two styles of shad as a syllable moves on or off a new line when the page is resized or when preceding content is modified.</p>
-	  <p data-lang="en">The Unicode Standard adds: "Not only is rin-chen-spungs-shad used as the replacement for the shay but a whole class of “ornamental shays ” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it."</p>
+	  <p its-locale-filter-list="en">In an environment where the width or content of the page can change, this feature poses a problem for the content author. The application needs to be able to automatically switch between the two styles of shad as a syllable moves on or off a new line when the page is resized or when preceding content is modified.</p>
+	  <p its-locale-filter-list="en">The Unicode Standard adds: "Not only is rin-chen-spungs-shad used as the replacement for the shay but a whole class of “ornamental shays ” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it."</p>
       </section>
       <div class="issue">
-        <p data-lang="en">What are the rules for line-wrap for other symbols? Are there rules about certain characters not starting/ending a line?</p>
+        <p its-locale-filter-list="en">What are the rules for line-wrap for other symbols? Are there rules about certain characters not starting/ending a line?</p>
       </div>
   </section>
 
       <section id="punctuation_marks">
-    <h3><span data-lang="en">Justification</span> <span data-lang="zh">...</span></h3>
-    <p data-lang="en">There are two alternative methods of justification.</p>
+    <h3><span its-locale-filter-list="en">Justification</span> <span its-locale-filter-list="zh">...</span></h3>
+    <p its-locale-filter-list="en">There are two alternative methods of justification.</p>
 
 
       <section id="inter_character_spacing">
-    <h4><span data-lang="en">Inter-character spacing</span> <span data-lang="zh">...</span></h4>
-	  <p data-lang="en">Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
+    <h4><span its-locale-filter-list="en">Inter-character spacing</span> <span its-locale-filter-list="zh">...</span></h4>
+	  <p its-locale-filter-list="en">Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
       </section>
       
 
 
       <section id="tsek_padding">
-    <h4><span data-lang="en">Tsek padding</span> <span data-lang="zh">...</span></h4>
-	  <p data-lang="en">  While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
-	  <figure><img src="images/tsek-justification.jpg" alt="" height="475" width="313"><figcaption><span data-lang="en">A page of a booklet showing tsek padding.</span></figcaption></figure>
-	  <p data-lang="en">There are a couple of detailed rules about the use of tsek padding. </p>
-	  <p data-lang="en">Justifying tseks are almost always used when the line ends in a tsek. If, however, the line ends in a shay, there are a number of alternatives.</p>
-	  <p data-lang="en">If the line ends with a single shay the shay is followed by spaces. Tsek padding is never applied after spaces. (See examples in the figure above.)</p>
-	  <p data-lang="en">If the line ends in a double shay (with space between), it is unusual (though possible) to add tsek padding. Instead, the space between the shays is stretched or narrowed. (See examples in the figure below.) The same applies if the second shay was removed because it was preceded by a KA or GA.</p>
-	  <figure><img src="images/shay-justification.jpg" alt="" height="440" width="600"><figcaption><span data-lang="en">Booklet pages showing double shay usage at the end of a line.</span></figcaption></figure>
+    <h4><span its-locale-filter-list="en">Tsek padding</span> <span its-locale-filter-list="zh">...</span></h4>
+	  <p its-locale-filter-list="en">  While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
+	  <figure><img src="images/tsek-justification.jpg" alt="" height="475" width="313"><figcaption><span its-locale-filter-list="en">A page of a booklet showing tsek padding.</span></figcaption></figure>
+	  <p its-locale-filter-list="en">There are a couple of detailed rules about the use of tsek padding. </p>
+	  <p its-locale-filter-list="en">Justifying tseks are almost always used when the line ends in a tsek. If, however, the line ends in a shay, there are a number of alternatives.</p>
+	  <p its-locale-filter-list="en">If the line ends with a single shay the shay is followed by spaces. Tsek padding is never applied after spaces. (See examples in the figure above.)</p>
+	  <p its-locale-filter-list="en">If the line ends in a double shay (with space between), it is unusual (though possible) to add tsek padding. Instead, the space between the shays is stretched or narrowed. (See examples in the figure below.) The same applies if the second shay was removed because it was preceded by a KA or GA.</p>
+	  <figure><img src="images/shay-justification.jpg" alt="" height="440" width="600"><figcaption><span its-locale-filter-list="en">Booklet pages showing double shay usage at the end of a line.</span></figcaption></figure>
       </section>
   </section>
   
  
 <section id="counters_lists">
-          <h3><span data-lang="en">Lists and counters</span>
-          <span data-lang="zh">...</span></h3>
+          <h3><span its-locale-filter-list="en">Lists and counters</span>
+          <span its-locale-filter-list="zh">...</span></h3>
 
         <div class="note">
-        <p data-lang="en">This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
+        <p its-locale-filter-list="en">This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
         </div>
-      <p data-lang="en">Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals. They differ only in shape.</p>
+      <p its-locale-filter-list="en">Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals. They differ only in shape.</p>
 	  <figure>
    		
       <div style="text-align:left;">
@@ -1208,7 +1201,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	    <p lang="bo">༢ ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
 	    <p lang="bo">༣ ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
         </div>
-	    <figcaption><span data-lang="en">Examples of Tibetan counters in a list.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Examples of Tibetan counters in a list.</span></figcaption>
 	    </figure>  
       <p>European numerals can be used for list counters. The European numeral is followed by a period.</p>
 	  <figure>
@@ -1217,7 +1210,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	    <p lang="bo">2. ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
 	    <p lang="bo">3. ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
         </div>
-	    <figcaption><span data-lang="en">Examples of European numeral counters in a list.</span></figcaption>
+	    <figcaption><span its-locale-filter-list="en">Examples of European numeral counters in a list.</span></figcaption>
 	    </figure>  
   </section> 
   
@@ -1225,76 +1218,76 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 
 
 <section id="besidespara">
-  <h2><span data-lang="en">Components Besides Paragraphs</span></h2>
-      <p data-lang="zh">段间组件的布局规则。</p>
+  <h2><span its-locale-filter-list="en">Components Besides Paragraphs</span></h2>
+      <p its-locale-filter-list="zh">段间组件的布局规则。</p>
       <section id="notes">
-    <h3><span data-lang="en">Notes (Footnote, Endnote)</span></h3>
+    <h3><span its-locale-filter-list="en">Notes (Footnote, Endnote)</span></h3>
     <p>tbd</p>
   </section>
 
       <section id="tables">
-    <h3><span data-lang="en">Tables</span></h3>
+    <h3><span its-locale-filter-list="en">Tables</span></h3>
     <p>tbd</p>
   </section>
 
       <section id="images">
-    <h3><span data-lang="en">Images</span></h3>
+    <h3><span its-locale-filter-list="en">Images</span></h3>
     <p>tbd</p>
   </section>
       <section id="lists_numbering">
-    <h3><span data-lang="en">Block quotations</span></h3>
+    <h3><span its-locale-filter-list="en">Block quotations</span></h3>
     <div class="issue">
     <p>Are there any special rules about how to handle block quotations? Are such things common in Tibetan content?</p>
     </div>
   </section>
 
   <section id="other_components">
-    <h3><span data-lang="en">Other components</span></h3>
-    <p data-lang="zh">科学公式?</p>
+    <h3><span its-locale-filter-list="en">Other components</span></h3>
+    <p its-locale-filter-list="zh">科学公式?</p>
   </section>
 
     </section>
 
 <section id="page_layout">
-      <h2><span data-lang="en">Page Layout</span></h2>
+      <h2><span its-locale-filter-list="en">Page Layout</span></h2>
       <section id="text_layout">
-    <h3><span data-lang="en">Designing the Tibetan Text Layout System</span></h3>
-    <p data-lang="en">The Tibetan text layout system is approached from two perspectives: overall page layout design and page body design.</p>
+    <h3><span its-locale-filter-list="en">Designing the Tibetan Text Layout System</span></h3>
+    <p its-locale-filter-list="en">The Tibetan text layout system is approached from two perspectives: overall page layout design and page body design.</p>
   </section>
 
       <section id="page_format">
-    <h3><span data-lang="en">Elements of Designing Page Format</span></h3>
+    <h3><span its-locale-filter-list="en">Elements of Designing Page Format</span></h3>
     <p>tbd</p>
   </section>
 
       <section id="page_body">
-    <h3><span data-lang="en">Designing the Page Body</span></h3>
+    <h3><span its-locale-filter-list="en">Designing the Page Body</span></h3>
     <p>tbd</p>
   </section>
 
       <section id="running_head">
-    <h3><span data-lang="en">Running Heads and Page Numbers</span></h3>
-    <p data-lang="en">Running heads and page numbers are placed outside of the page body, and typical positions are as shown below.</p>
+    <h3><span its-locale-filter-list="en">Running Heads and Page Numbers</span></h3>
+    <p its-locale-filter-list="en">Running heads and page numbers are placed outside of the page body, and typical positions are as shown below.</p>
     <p>tbd</p>
   </section>
 
       <section id="pagination_multi_column">
-    <h3><span data-lang="en">Pagination and Multi-Column Text</span></h3>
-    <p data-lang="zh">分页与多栏文本.</p>
+    <h3><span its-locale-filter-list="en">Pagination and Multi-Column Text</span></h3>
+    <p its-locale-filter-list="zh">分页与多栏文本.</p>
   </section>
 
     </section>
 
 <section class="appendix" id="terminology">
-      <h2><span data-lang="en">Terminology</span></h2>
-      <p data-lang="zh">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
+      <h2><span its-locale-filter-list="en">Terminology</span></h2>
+      <p its-locale-filter-list="zh">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
       <table id="terminology_table">
     <tbody>
           <tr>
-        <th><span data-lang="en">Term</span></th>
-        <th><span data-lang="en">Chinese Tibetan</span></th>
-        <th><span data-lang="en">Romanized transliteration</span></th>
-        <th><span data-lang="en">Definition</span></th>
+        <th><span its-locale-filter-list="en">Term</span></th>
+        <th><span its-locale-filter-list="en">Chinese Tibetan</span></th>
+        <th><span its-locale-filter-list="en">Romanized transliteration</span></th>
+        <th><span its-locale-filter-list="en">Definition</span></th>
       </tr>
           <tr>
         <td>back matter</td>
@@ -1307,8 +1300,8 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
     </section>
 
 <section class="appendix" id="references">
-      <h2><span data-lang="en">References</span></h2>
-      <p data-lang="zh">报告中引用到的中国国家标准，或其他标准文本</p>
+      <h2><span its-locale-filter-list="en">References</span></h2>
+      <p its-locale-filter-list="zh">报告中引用到的中国国家标准，或其他标准文本</p>
       <ul>
     <li>China National Standards . 《信息技术信息交换用藏文编码字符集基本集》 </li>
     <li>China National Standards. 《信息技术藏文编码字符集点阵字形-第一部分：白体》 </li>
@@ -1321,20 +1314,20 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
     </section>
 
 <section class="appendix" id="revision_log">
-      <h2><span data-lang="en">Revision Log</span></h2>
+      <h2><span its-locale-filter-list="en">Revision Log</span></h2>
       <ul>
-    <li><span data-lang="en">new document</span></li>
+    <li><span its-locale-filter-list="en">new document</span></li>
   </ul>
     </section>
 
 <section id="acknowledgements" class="appendix">
-      <h2><span data-lang="en">Acknowledgements</span></h2>
-      <p data-lang="en">This document has been developed with contributions from participants of the <a href="https://www.w3.org/International/groups/chinese-layout/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
+      <h2><span its-locale-filter-list="en">Acknowledgements</span></h2>
+      <p its-locale-filter-list="en">This document has been developed with contributions from participants of the <a href="https://www.w3.org/International/groups/chinese-layout/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
     </section>
 
 <section id="character_list" class="appendix">
-      <h2><span data-lang="en">Character List</span></h2>
-      <p data-lang="en">This appendix lists the characters in the Unicode Tibetan block, and sorts them into various groups that describe how they are used.</p>
+      <h2><span its-locale-filter-list="en">Character List</span></h2>
+      <p its-locale-filter-list="en">This appendix lists the characters in the Unicode Tibetan block, and sorts them into various groups that describe how they are used.</p>
       
       <table id="character_list_table">
 	    <tbody>
