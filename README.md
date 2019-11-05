@@ -1,4 +1,4 @@
-# Tibetan Layout Task Force
+# Tibetan Layout Task Force (tlreq)
 
 This group is planned, but not yet active. It will exist to explore gaps and requirements for support of languages using the Tibetan script on the Web and in eBooks.
 
