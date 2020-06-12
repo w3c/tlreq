@@ -3,14 +3,13 @@
     <head>
     <title>Requirements for Tibetan Text Layout and Typography</title>
     <meta charset="utf-8"/>
-	<script src="script.js" type="application/javascript"></script>
+	<script src="script.js"></script>
     <script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
     <script class="remove">
       var respecConfig = {
-          useExperimentalStyles: true,
           // specification status (e.g. WD, LCWD, WG-NOTE, etc.). If in doubt use ED.
           specStatus:           "ED",
-          //publishDate:  "2015-07-21",
+          //publishDate:  "2020-06-16",
           //previousPublishDate:  "2014-12-16",
           //previousMaturity:  "ED",
 
@@ -34,7 +33,7 @@
          
 
           wg:           "Internationalization Working Group",
-          wgURI:         "https://www.w3.org/International/core/",
+          wgURI:        "https://www.w3.org/International/core/",
           //wgPublicList: "public-i18n-tibetan",
 		  github: "w3c/tlreq",
 		  
@@ -48,7 +47,7 @@
           // !!!! IMPORTANT !!!! MAKE THE ABOVE BLINK IN YOUR HEAD
       };
     </script>
-    <link rel="stylesheet" href="local.css" type="text/css" />
+    <link rel="stylesheet" href="local.css" />
 	<style id="languageStyling">
     .translateme { background-color: #F3F3C3; }
     [data-lang = zh] { border-left: 3px solid #F88A05; padding-left: 10px;  }
@@ -57,16 +56,36 @@
 <!-- STUFF FOR NEW STYLESHEET 
 <meta name="viewport" content="width=device-width, initial-scale=1, width = content-width, initial-scale = 1.0, shrink-to-fit=no">
 <style>
-body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-restyle/2016/logos/REC.png); }
+body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-restyle/2016/logos/REC.png); }
 .example::before { content: "Example"; content: "Example " counter(example); }
 #example + p + p.example::before { content: ""; }
 </style>
  <!-- =================== -->
  	</head>
     <body onload="setFrontMatterIds(); initialiseLang()">
+	
+<div id="abstract">
+<p its-locale-filter-list="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
+</div>
+
+
+<div id="sotd">
+<p its-locale-filter-list="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
+<p its-locale-filter-list="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
+<p id="langSwitch">
+<button onclick="switchLang('en')">English</button>
+<button onclick="switchLang('zh')">简体中文</button>
+<button onclick="switchLang('all')">All</button>
+</p>
+</div>
+
+
+
+
+
 <!-- THE FOLLOWING SVG CONTAINS STYLE AND DEFS DECLARATIONS FOR THE SVG EXAMPLES -->
 <svg width="10px" height="1px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
-      <style type="text/css">
+      <style>
 	.svg_bo36 { fill:#ED1C24; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
 	.svg_bo36_highlight { fill:#0000DD; font-family:'Tibetan_Machine_Uni'; font-size:36px; }
 	.svg_annotation { font-size:14px; }
@@ -82,23 +101,11 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         </g>
   </defs>
     </svg>
-<div id="sotd">
-      <p its-locale-filter-list="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
-      <div class="note">
-    <p its-locale-filter-list="en" style="font-weight: bold; font-size: 120%">Sending comments on this document</p>
-    <p its-locale-filter-list="en">If you wish to make comments regarding this document, please raise them as <a href="https://github.com/w3c/tlreq/issues" style="font-size: 120%;">github issues</a><!-- against the <a href="http://www.w3.org/TR/2015/WD-klreq-20150630/" style="font-size: 120%">latest dated version in /TR</a-->. Only send comments by email if you are unable to raise issues on github (see links below).   All comments are welcome.</p>
-    <p its-locale-filter-list="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
-  </div>
 
-  <p id="langSwitch">
-    <button onclick="switchLang('en')">English</button>
-    <button onclick="switchLang('zh')">简体中文</button>
-    <button onclick="switchLang('all')">All</button>
-  </p>
-    </div>
-<section id="abstract">
-      <p its-locale-filter-list="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
-    </section>
+
+
+
+
 
 <section id="intro">
   <h2><span its-locale-filter-list="en">Introduction</span></h2>
@@ -109,13 +116,12 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
     <p its-locale-filter-list="en">In the future other documents or issues may be created by comparing the requirements in this document with the gaps in specific technologies, but that information will be documented elsewhere.  </p>
   </section>
 
-      <section id="how-developed">
-      </section>
-      <section id="how-developed">
-      </section>
-      <section id="how-developed">
+
+
+
+<section id="how-developed">
     <h3><span its-locale-filter-list="en">How this Document was Created</span></h3>
-    <p its-locale-filter-list="en">This document uses material from the web page <a href="https://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="http://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
+    <p its-locale-filter-list="en">This document uses material from the web page <a href="https://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="https://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
     <p its-locale-filter-list="en">The following types of experts will be involved in the creation of this document:</p>
     <ol>
           <li>
@@ -159,7 +165,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
       <p its-locale-filter-list="en">There are no case differences in Tibetan.</p>
       <p its-locale-filter-list="zh">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
       <p its-locale-filter-list="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
-      <p its-locale-filter-list="en">Traditionally, Tibetan text was written on <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
+      <p its-locale-filter-list="en">Traditionally, Tibetan text was written on <a href="https://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
       <p its-locale-filter-list="en">Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
       <p its-locale-filter-list="zh">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
   
@@ -229,6 +235,8 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           <tr>
           	<td><span lang="bo">ཧ</span><br/>HA e</td>
           	<td><span lang="bo">ཨ</span><br/>A p</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
           </tr>
             </table>
         <figcaption><span its-locale-filter-list="en">Tibetan consonants</span></figcaption>
@@ -789,33 +797,33 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
         </tr>
 	    <tr>
 	      <th scope="row">head</th>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F43"><img src="images/0F43.png" alt="" title="0F43"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F4D"><img src="images/0F4D.png" alt="" title="0F4D"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F52"><img src="images/0F52.png" alt="" title="0F52"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F57"><img src="images/0F57.png" alt="" title="0F57"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F5C"><img src="images/0F5C.png" alt="" title="0F5C"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F69"><img src="images/0F69.png" alt="" title="0F69"></a></td>
+	      <td><img src="images/0F43.png" alt="" title="0F43"></td>
+	      <td><img src="images/0F4D.png" alt="" title="0F4D"></td>
+	      <td><img src="images/0F52.png" alt="" title="0F52"></td>
+	      <td><img src="images/0F57.png" alt="" title="0F57"></td>
+	      <td><img src="images/0F5C.png" alt="" title="0F5C"></td>
+	      <td><img src="images/0F69.png" alt="" title="0F69"></td>
 	      <td style="border:0;">&nbsp;</td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F4A"><img src="images/0F4A.png" alt="" title="0F4A"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F4B"><img src="images/0F4B.png" alt="" title="0F4B"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F4C"><img src="images/0F4C.png" alt="" title="0F4C"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F4E"><img src="images/0F4E.png" alt="" title="0F4E"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F65"><img src="images/0F65.png" alt="" title="0F65"></a></td>
+	      <td><img src="images/0F4A.png" alt="" title="0F4A"></td>
+	      <td><img src="images/0F4B.png" alt="" title="0F4B"></td>
+	      <td><img src="images/0F4C.png" alt="" title="0F4C"></td>
+	      <td><img src="images/0F4E.png" alt="" title="0F4E"></td>
+	      <td><img src="images/0F65.png" alt="" title="0F65"></td>
         </tr>
 	    <tr>
 	      <th scope="row">subjoined</th>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F93"><img src="images/0F93.png" alt="" title="0F93"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F9D"><img src="images/0F9D.png" alt="" title="0F9D"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0FA2"><img src="images/0FA2.png" alt="" title="0FA2"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0FA7"><img src="images/0FA7.png" alt="" title="0FA7"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0FAC"><img src="images/0FAC.png" alt="" title="0FAC"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0FB9"><img src="images/0FB9.png" alt="" title="0FB9"></a></td>
+	      <td><img src="images/0F93.png" alt="" title="0F93"></td>
+	      <td><img src="images/0F9D.png" alt="" title="0F9D"></td>
+	      <td><img src="images/0FA2.png" alt="" title="0FA2"></td>
+	      <td><img src="images/0FA7.png" alt="" title="0FA7"></td>
+	      <td><img src="images/0FAC.png" alt="" title="0FAC"></td>
+	      <td><img src="images/0FB9.png" alt="" title="0FB9"></td>
 	      <td style="width: 30px; border:0;">&nbsp;</td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F9A"><img src="images/0F9A.png" alt="" title="0F9A"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F9B"><img src="images/0F9B.png" alt="" title="0F9B"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F9C"><img src="images/0F9C.png" alt="" title="0F9C"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0F9E"><img src="images/0F9E.png" alt="" title="0F9E"></a></td>
-	      <td><a target="c" href="/scripts/tibetan/block#char0FB5"><img src="images/0FB5.png" alt="" title="0FB5"></a></td>
+	      <td><img src="images/0F9A.png" alt="" title="0F9A"></td>
+	      <td><img src="images/0F9B.png" alt="" title="0F9B"></td>
+	      <td><img src="images/0F9C.png" alt="" title="0F9C"></td>
+	      <td><img src="images/0F9E.png" alt="" title="0F9E"></td>
+	      <td><img src="images/0FB5.png" alt="" title="0FB5"></td>
         </tr>
       </tbody></table>
       <figcaption><span its-locale-filter-list="en">Additional consonant characters for transliteration.</span></figcaption>
@@ -841,11 +849,11 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           </tr>
 	      <tr>
 	        <th>Ok</th>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F7B"><img src="images/0F7B.png" alt="" title="U+0F7B TIBETAN VOWEL SIGN EE"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F7D"><img src="images/0F7D.png" alt="" title="U+0F7D TIBETAN VOWEL SIGN OO"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F80"><img src="images/0F80.png" alt="" title="U+0F80 TIBETAN VOWEL SIGN REVERSED I"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F76"><img src="images/0F76.png" alt="" title="U+0F76 TIBETAN VOWEL SIGN VOCALIC R"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F78"><img src="images/0F78.png" alt="" title="U+0F78 TIBETAN VOWEL SIGN VOCALIC L"></a></td>
+	        <td><img src="images/0F7B.png" alt="" title="U+0F7B TIBETAN VOWEL SIGN EE"></td>
+	        <td><img src="images/0F7D.png" alt="" title="U+0F7D TIBETAN VOWEL SIGN OO"></td>
+	        <td><img src="images/0F80.png" alt="" title="U+0F80 TIBETAN VOWEL SIGN REVERSED I"></td>
+	        <td><img src="images/0F76.png" alt="" title="U+0F76 TIBETAN VOWEL SIGN VOCALIC R"></td>
+	        <td><img src="images/0F78.png" alt="" title="U+0F78 TIBETAN VOWEL SIGN VOCALIC L"></td>
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
@@ -859,9 +867,9 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F73"><img src="images/0F73.png" alt="" title="U+0F73 TIBETAN VOWEL SIGN II"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F75"><img src="images/0F75.png" alt="" title="U+0F75 TIBETAN VOWEL SIGN UU"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F81"><img src="images/0F81.png" alt="" title="U+0F81 TIBETAN VOWEL SIGN REVERSED II"></a></td>
+	        <td><img src="images/0F73.png" alt="" title="U+0F73 TIBETAN VOWEL SIGN II"></td>
+	        <td><img src="images/0F75.png" alt="" title="U+0F75 TIBETAN VOWEL SIGN UU"></td>
+	        <td><img src="images/0F81.png" alt="" title="U+0F81 TIBETAN VOWEL SIGN REVERSED II"></td>
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
           </tr>
@@ -876,8 +884,8 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
 	        <td>&nbsp;</td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F77"><img src="images/0F77.png" alt="" title="U+0F77 TIBETAN VOWEL SIGN VOCALIC RR"></a></td>
-	        <td><a target="c" href="/scripts/tibetan/block#char0F79"><img src="images/0F79.png" alt="" title="U+0F79 TIBETAN VOWEL SIGN VOCALIC LL"></a></td>
+	        <td><img src="images/0F77.png" alt="" title="U+0F77 TIBETAN VOWEL SIGN VOCALIC RR"></td>
+	        <td><img src="images/0F79.png" alt="" title="U+0F79 TIBETAN VOWEL SIGN VOCALIC LL"></td>
           </tr>
         </tbody></table>
 	    <figcaption>Additional vowel sign characters for transliteration.</figcaption>
@@ -895,11 +903,12 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
     <p its-locale-filter-list="en">There are also fixed form variants of subjoined RA, YA and WA.</p>
 </section>
 </section>
-<section>
-</section>
+
+
+
 
 <section id="numerals">
-    <h3><span its-locale-filter-list="en">Tibetan Numerals</span>
+<h3><span its-locale-filter-list="en">Tibetan Numerals</span>
     <span its-locale-filter-list="zh">藏文的数字</span></h3>
     <p its-locale-filter-list="en">Tibetan has its own set of digits, although publications may also use European numerals. The basic Tibetan numbers are used in the same way as European numerals. They differ only in shape.</p>
     <p its-locale-filter-list="zh">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
@@ -1217,68 +1226,14 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
   </section>
 
 
-<section id="besidespara">
-  <h2><span its-locale-filter-list="en">Components Besides Paragraphs</span></h2>
-      <p its-locale-filter-list="zh">段间组件的布局规则。</p>
-      <section id="notes">
-    <h3><span its-locale-filter-list="en">Notes (Footnote, Endnote)</span></h3>
-    <p>tbd</p>
-  </section>
 
-      <section id="tables">
-    <h3><span its-locale-filter-list="en">Tables</span></h3>
-    <p>tbd</p>
-  </section>
 
-      <section id="images">
-    <h3><span its-locale-filter-list="en">Images</span></h3>
-    <p>tbd</p>
-  </section>
-      <section id="lists_numbering">
-    <h3><span its-locale-filter-list="en">Block quotations</span></h3>
-    <div class="issue">
-    <p>Are there any special rules about how to handle block quotations? Are such things common in Tibetan content?</p>
-    </div>
-  </section>
 
-  <section id="other_components">
-    <h3><span its-locale-filter-list="en">Other components</span></h3>
-    <p its-locale-filter-list="zh">科学公式?</p>
-  </section>
 
-    </section>
 
-<section id="page_layout">
-      <h2><span its-locale-filter-list="en">Page Layout</span></h2>
-      <section id="text_layout">
-    <h3><span its-locale-filter-list="en">Designing the Tibetan Text Layout System</span></h3>
-    <p its-locale-filter-list="en">The Tibetan text layout system is approached from two perspectives: overall page layout design and page body design.</p>
-  </section>
 
-      <section id="page_format">
-    <h3><span its-locale-filter-list="en">Elements of Designing Page Format</span></h3>
-    <p>tbd</p>
-  </section>
 
-      <section id="page_body">
-    <h3><span its-locale-filter-list="en">Designing the Page Body</span></h3>
-    <p>tbd</p>
-  </section>
-
-      <section id="running_head">
-    <h3><span its-locale-filter-list="en">Running Heads and Page Numbers</span></h3>
-    <p its-locale-filter-list="en">Running heads and page numbers are placed outside of the page body, and typical positions are as shown below.</p>
-    <p>tbd</p>
-  </section>
-
-      <section id="pagination_multi_column">
-    <h3><span its-locale-filter-list="en">Pagination and Multi-Column Text</span></h3>
-    <p its-locale-filter-list="zh">分页与多栏文本.</p>
-  </section>
-
-    </section>
-
-<section class="appendix" id="terminology">
+<!--section class="appendix" id="terminology">
       <h2><span its-locale-filter-list="en">Terminology</span></h2>
       <p its-locale-filter-list="zh">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
       <table id="terminology_table">
@@ -1297,7 +1252,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
       </tr>
         </tbody>
   </table>
-    </section>
+    </section-->
 
 <section class="appendix" id="references">
       <h2><span its-locale-filter-list="en">References</span></h2>
@@ -1322,7 +1277,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 
 <section id="acknowledgements" class="appendix">
       <h2><span its-locale-filter-list="en">Acknowledgements</span></h2>
-      <p its-locale-filter-list="en">This document has been developed with contributions from participants of the <a href="https://www.w3.org/International/groups/chinese-layout/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
+      <p its-locale-filter-list="en">This document has been developed with contributions from participants of the <a href="https://w3c.github.io/clreq/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
     </section>
 
 <section id="character_list" class="appendix">
@@ -1344,7 +1299,7 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
 	                <p>U+0F90 TIBETAN SUBJOINED LETTER KA <span lang="bo">&nbsp;ྐ</span></p>
 	                <p>U+0F91 TIBETAN SUBJOINED LETTER KHA <span lang="bo">&nbsp;ྑ</span></p>
 	                <p>U+0F92 TIBETAN SUBJOINED LETTER GA <span lang="bo">&nbsp;ྒ</span></p>
-	                <p>U+0F94 TIBETAN SUBJOINED LETTER NGA <span lang="bo">&nbsp;ྔ</span></p>
+	                <p>U+0F94 TIBETAN SUBJOINED LETTER NGA <span lang="bo">&nbsp;ྔ</span></p></td>
                   </tr>
 	              <tr>
                   	<td>
@@ -1432,7 +1387,11 @@ body { background-image: url(http://fantasai.inkedblade.net/style/design/w3c-res
           </tr>
 	      <tr>
 	        <th>Dependent vowel signs</th>
-	        <td><p>U+0F72 TIBETAN VOWEL SIGN I <span lang="bo">&nbsp;ི</p> <p>U+0F74 TIBETAN VOWEL SIGN U <span lang="bo">&nbsp;ུ</span></p> <p>U+0F7A TIBETAN VOWEL SIGN E <span lang="bo">&nbsp;ེ</span></p> <p>U+0F7C TIBETAN VOWEL SIGN O <span lang="bo">&nbsp;ོ</span></p> <p>U+0F71 TIBETAN VOWEL SIGN AA <span lang="bo">&nbsp;ཱ</span></p></td>
+	        <td><p>U+0F72 TIBETAN VOWEL SIGN I <span lang="bo">&nbsp;ི</span></p>
+			<p>U+0F74 TIBETAN VOWEL SIGN U <span lang="bo">&nbsp;ུ</span></p>
+			<p>U+0F7A TIBETAN VOWEL SIGN E <span lang="bo">&nbsp;ེ</span></p>
+			<p>U+0F7C TIBETAN VOWEL SIGN O <span lang="bo">&nbsp;ོ</span></p>
+			<p>U+0F71 TIBETAN VOWEL SIGN AA <span lang="bo">&nbsp;ཱ</span></p></td>
           </tr>
 	      <tr>
 	        <th>Additional consonants for transliteration</th>
