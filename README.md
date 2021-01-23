@@ -10,6 +10,7 @@ For more details about scope, deliverables, work methods, etc., see the [group's
 
 
 ### Documents
+- [Tibetan Gap Analysis](https://w3c.github.io/tlreq/gap-analysis/)
 - [Tibetan Layout Requirements](https://w3c.github.io/tlreq/)
 
 
