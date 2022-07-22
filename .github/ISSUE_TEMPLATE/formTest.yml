@@ -1,3 +1,4 @@
+name: "Form test"
 - type: textarea
   attributes:
     label: Operating System
