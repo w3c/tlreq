@@ -36,10 +36,7 @@
       };
     </script>
     <link rel="stylesheet" href="local.css" />
-	<style id="languageStyling">
-    .translateme { background-color: #F3F3C3; }
-    [data-lang = zh] { border-left: 3px solid #F88A05; padding-left: 10px;  }
-    </style>
+    <link rel="stylesheet" href="print.css" />
     
 <!-- STUFF FOR NEW STYLESHEET 
 <meta name="viewport" content="width=device-width, initial-scale=1, width = content-width, initial-scale = 1.0, shrink-to-fit=no">
@@ -61,9 +58,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 <p its-locale-filter-list="en">This document  is produced by the Chinese Layout Requirement Task Force in the W3C i18n Activity, which is focusing on language layout requirements for languages  used in China, but wishes to also incorporate information relevant to the use of Tibetan in other places around the world. The document contains English and Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version<!--, and Tibetan version of this document--> is  the authoritative version. The Working Group expects this document to become a Working Group Note.</p>
 <p its-locale-filter-list="en">To make it easier to track comments, please raise separate issues or emails for each comment, and point to the section you are commenting on&nbsp; using  a URL for the dated version of the document.</p>
 <p id="langSwitch">
-<button onclick="switchLang('en')">English</button>
-<button onclick="switchLang('zh')">简体中文</button>
-<button onclick="switchLang('all')">All</button>
+<button onclick="switchLang('en')" lang="en">English</button>
+<button onclick="switchLang('zh-hans')" lang="zh-hans">简体中文</button>
+<button onclick="switchLang('all')" lang="en">All</button>
 </p>
 </div>
 
@@ -151,30 +148,30 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
       <p its-locale-filter-list="en">The Tibetan script is an <span class="newterm"><a class="termref" href="https://www.unicode.org/glossary/#abugida">abugida</a></span>, ie. consonants carry an inherent vowel sound <span class="ipa">a</span> that is overridden using vowel signs. Text runs from left to right.</p>
       <p its-locale-filter-list="en">The script combines consonants, vowels, superscripts, and subscripts letters in combinations that conform to the basic rules of Tibetan spelling to form syllables. Words are made up of one or more syllables.</p>
       <p its-locale-filter-list="en">There are no case differences in Tibetan.</p>
-      <p its-locale-filter-list="zh">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
+      <p its-locale-filter-list="zh-hans">藏文是拼音字母文字，由辅音、元音、下标字、上标字等基本字母按照藏文拼写规律组合而成，形成藏文的字符和音节。</p>
       <p its-locale-filter-list="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
       <p its-locale-filter-list="en">Traditionally, Tibetan text was written on <a href="https://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
       <p its-locale-filter-list="en">Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
-      <p its-locale-filter-list="zh">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
+      <p its-locale-filter-list="zh-hans">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
   
       <!--section id="tibetan_alphabet">
-    <h3><span its-locale-filter-list="en">Tibetan Alphabet</span> <span its-locale-filter-list="zh">藏文字母</span></h3>
-    <p its-locale-filter-list="zh">藏文字母（Tibetan alphabet）是用于拼写一个藏文字符或音节的辅音和元音所对应的图形符号。具体包括30个辅音字母及其对应的附加辅音字母、4个元音字母、4个下标字、3个上标字。此外，藏文也有自己的数字表示方法及对应的字母。</p>
+    <h3><span its-locale-filter-list="en">Tibetan Alphabet</span> <span its-locale-filter-list="zh-hans">藏文字母</span></h3>
+    <p its-locale-filter-list="zh-hans">藏文字母（Tibetan alphabet）是用于拼写一个藏文字符或音节的辅音和元音所对应的图形符号。具体包括30个辅音字母及其对应的附加辅音字母、4个元音字母、4个下标字、3个上标字。此外，藏文也有自己的数字表示方法及对应的字母。</p>
   </section-->
 
       <section id="tibetan_characters">
     <h3><span its-locale-filter-list="en">Tibetan Characters</span> 
-    <span its-locale-filter-list="zh">藏文字符</span></h3>
+    <span its-locale-filter-list="zh-hans">藏文字符</span></h3>
 
 
 
 <section id="consonants">
     <h4><span its-locale-filter-list="en">Consonants</span> 
-    <span its-locale-filter-list="zh">...</span></h4>
+    <span its-locale-filter-list="zh-hans">...</span></h4>
     <p its-locale-filter-list="en">Native Tibetan words use 30 consonants, but the Unicode Tibetan block contains many more. Many of the extra consonants (and other characters) are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
 
           <p its-locale-filter-list="en">The basic 30 Tibetan consonants are listed below:</p>
-          <p its-locale-filter-list="zh">藏文有三十个辅音字母，具体如下表所示：</p>
+          <p its-locale-filter-list="zh-hans">藏文有三十个辅音字母，具体如下表所示：</p>
           <figure>
         <!--p><img src="images/consonants.png" alt="consonants"/></p-->
         <table class="chartable">
@@ -234,9 +231,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     
  <section id="vowels">
     <h4><span its-locale-filter-list="en">Vowels</span> 
-    <span its-locale-filter-list="zh">...</span></h4>
+    <span its-locale-filter-list="zh-hans">...</span></h4>
    <p its-locale-filter-list="en">Standard Tibetan has five vowels, for which there are four characters, since one vowel, <span class="ipa">a</span>, is inherent in the consonant. Non-inherent vowels are indicated by a single mark attached to and typed after a consonant or consonant stack. These are shown with the character KA in the following figure.</p>
-    <p its-locale-filter-list="zh"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
+    <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
 <figure its-locale-filter-list="en" id="vowel_signs">
         <table class="chartable">
           <tr>
@@ -268,7 +265,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="a_chung_a_chen">
     <h4><span its-locale-filter-list="en">A-chung and a-chen</span> 
-    <span its-locale-filter-list="zh">...</span></h4>
+    <span its-locale-filter-list="zh-hans">...</span></h4>
 <p its-locale-filter-list="en">The phonological realisation for <span class="uname">U+0F60 TIBETAN LETTER -A</span> <span lang="bo">འ</span> (called <span class="ex" lang="bo">འ་ཆུང་</span>, <span class="trans">'a-chung</span>) and <span class="uname">U+0F68 TIBETAN LETTER A</span> <span lang="bo">ཨ</span> (called <span class="ex" lang="bo">ཨ་ཆེན་</span>, <span class="trans">a-chen</span>) is <span class="ipa">a</span>. In the Lhasa dialect, the former has a high and the latter a low tone.</p>
 		<p its-locale-filter-list="en">Both 'a-chung and a-chen can be used with vowel signs, in which case the <span class="ipa">a</span> sound is replaced by that of the vowel.</p>
 		<p its-locale-filter-list="en">'A-chung can also represent a nasal, so <span class="ex" lang="bo">མཚམས་</span> <span class="trans">mtshams</span>  (<span class="meaning">boundary</span>) and  <span class="ex" lang="bo">མཐུན་</span> <span class="trans">mthun</span> (<span class="meaning">agreement</span>) are often written <span class="ex" lang="bo">འཚམས་</span> and <span class="ex" lang="bo">འཐུན་</span>. </p>
@@ -286,7 +283,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="consonant_stacking">
     <h3><span its-locale-filter-list="en">Consonant Stacking</span> 
-    <span its-locale-filter-list="zh">...</span></h3>
+    <span its-locale-filter-list="zh-hans">...</span></h3>
 
 <p its-locale-filter-list="en">A salient feature of the Tibetan script is the tendency to stack consonant characters belonging to a syllable. A stack  has a standard consonant character at the top (although it may actually be slightly squeezed or adapted slightly in shape), and one or more special <dfn id="subjoined">subjoined consonant characters</dfn> beneath it. </p>
 <p its-locale-filter-list="en">The word 'head' is often used to refer to either the top-most consonant (ie. spacially) or the root consonant of a syllable, which may be a subjoined consonant. We therefore avoid this term here, and say 'root' or 'topmost'.</p>
@@ -304,7 +301,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
       <use xlink:href="#arrowRight" x="155" y="55" />
     </svg>
   </div>
-   <div its-locale-filter-list="zh">
+   <div its-locale-filter-list="zh-hans">
     <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
       <text x="200" y="48" class="svg_bo36_highlight">སྤྱི</text>
       <text x="224" y="48" class="svg_bo36">ར་</text>
@@ -385,7 +382,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 
       <section id="tibetan_syllables">
-    <h3><span its-locale-filter-list="en">Tibetan Syllables</span> <span its-locale-filter-list="zh">藏文音节</span></h3>
+    <h3><span its-locale-filter-list="en">Tibetan Syllables</span> <span its-locale-filter-list="zh-hans">藏文音节</span></h3>
     <p its-locale-filter-list="en">Word boundaries within a section are not indicated, only 'syllables',  known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>. Syllable boundaries are usually separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
     <p its-locale-filter-list="en">The pronunciation of Tibetan words is typically much simpler than the orthography, which involves patterns of consonants. These patterns reduce ambiguity and can affect pronunciation and tone. </p>
     <p its-locale-filter-list="en">The following diagram shows characters in all of the syllabic positions, and lists the characters that can appear in each of the non-root locations. The two-syllable word in the example is <span class="ex" lang="bo">འགྲེམས་སྟོན་</span> <span class="trans">'grems-ston</span> <span class="ipa">ɖɹem-ton</span> (<span class="meaning">exhibition</span>).</p>
@@ -397,14 +394,14 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     </figure>
     <section id="结构规则">
         <h4><span its-locale-filter-list="en">Structural Rules</span> 
-        <span its-locale-filter-list="zh">结构规则</span></h4>
+        <span its-locale-filter-list="zh-hans">结构规则</span></h4>
           <p its-locale-filter-list="en">The primary consonant in a syllable is called the root consonant (or radical) (<span lang="bo">མིང་བཞི་</span>), and the other consonants in the syllable ( normally  up to 6  in total) annotate or modify it. The following rules help identify the root:</p>
-          <p its-locale-filter-list="zh">要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
+          <p its-locale-filter-list="zh-hans">要分析藏文结构必须先得找出根字母，然后其他的部分根据结构规则就能找到。根字母的判断方法如下：</p>
           <ol>
         <li>
               <p its-locale-filter-list="en"> A consonant with a vowel is always the root, unless it is the phrase connector <span lang="bo">འི</span>, and letters with superscripts or subscripts are root consonants.</p>
-              <p its-locale-filter-list="zh">一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
-              <div its-locale-filter-list="zh">
+              <p its-locale-filter-list="zh-hans">一个辅音上有元音字母，那就是根字母，除非是<span lang="bo">འི</span>如下上面是元音字母下面是辅音字母，在此中是根字母。</p>
+              <div its-locale-filter-list="zh-hans">
             <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="0" y="48" class="svg_bo36">གི་</text>
                   <text x="70" y="40" class="svg_annotation">根字母</text>
@@ -414,8 +411,8 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
           </li>
             <li>
               <p its-locale-filter-list="en">In a 2-consonant syllable with no vowel, the first consonant is always the root.</p>
-              <p its-locale-filter-list="zh">一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
-              <div its-locale-filter-list="zh">
+              <p its-locale-filter-list="zh-hans">一个辅音上有上标字或者下标字那么这个辅音字母也是根字母。</p>
+              <div its-locale-filter-list="zh-hans">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="0" y="48" class="svg_bo36">རྐ</text>
                   <use xlink:href="#arrow" x="25" y="20"/>
@@ -429,9 +426,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
                   <text x="270" y="55" class="svg_annotation">上标</text>
                 </svg>
               </div>
-              <p its-locale-filter-list="zh">在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
-              <p its-locale-filter-list="zh">例如：</p>
-              <div its-locale-filter-list="zh">
+              <p its-locale-filter-list="zh-hans">在一个具有两个辅音字母且没有元音字母的字中，第一个字母是根字母。</p>
+              <p its-locale-filter-list="zh-hans">例如：</p>
+              <div its-locale-filter-list="zh-hans">
                 <svg width="600px" height="100px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268 72.5" >
                   <text x="109" y="48" class="svg_bo36_highlight">ག</text>
                   <text x="130" y="48" class="svg_bo36">བ་</text>
@@ -442,35 +439,35 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
             </li>
         <li>
               <p its-locale-filter-list="en">In a 3-consonant syllable where the last consonant is not <span class="ex" lang="bo">ས</span>, the second consonant is likely to be the root.</p>
-              <p its-locale-filter-list="zh">如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
+              <p its-locale-filter-list="zh-hans">如果一个字是由三个辅音字母构成且最后一个字母若不是<span lang="bo">ས</span> ，则中间的那个字母即第二个最可能是根字母。</p>
               <p its-locale-filter-list="en">For example: <span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
-              <p its-locale-filter-list="zh">例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
-              <p its-locale-filter-list="zh"> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
+              <p its-locale-filter-list="zh-hans">例如：<span lang="bo" class="large_example">ག<span class="highlight_bo">ས</span>ལ་</span> /tsla/ <span lang="bo" class="large_example" style="margin-left: 30px;">ག<span class="highlight_bo">ན</span>ས་</span> /nla/</p>
+              <p its-locale-filter-list="zh-hans"> 但是当末尾出现<span lang="bo">ས</span>时中间的字母不一定是根字母。例如： <span lang="bo" class="large_example"><span class="highlight_bo">ལ</span>གས་</span>/lag/ 从这个发现最末尾是<span lang="bo">ས</span>所以根字母是第一个字母。</p>
             </li>
         <li>
                <p its-locale-filter-list="en">In a 4-consonant syllable, the second consonant is always the root.</p>
-             <p its-locale-filter-list="zh">在一个具有四个辅音字母的字中，第二个辅音字母是根字母。</p>
+             <p its-locale-filter-list="zh-hans">在一个具有四个辅音字母的字中，第二个辅音字母是根字母。</p>
             </li>
       </ol>
       </section>
       
    <section id="non_root">
         <h4><span its-locale-filter-list="en">Descriptions of Non-root Elements</span> 
-        <span its-locale-filter-list="zh">...</span></h4>
+        <span its-locale-filter-list="zh-hans">...</span></h4>
 
       
       <section id="prefixes">
       <h5><span its-locale-filter-list="en">Prefixes</span>
-      <span its-locale-filter-list="zh">...</span></h5>
+      <span its-locale-filter-list="zh-hans">...</span></h5>
           <p its-locale-filter-list="en">A prefix (<span lang="bo">སྔོ་འཇུག་</span>) appears to the left of the root consonant, and is one the following 5 letters: <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
-        <p its-locale-filter-list="zh"><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
+        <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">སྔོ་འཇུག་</span> 即前缀（prefix），放在第一个位置，即放在根字母前面，通常有五个字母，分别是 <span lang="bo" class="large_example">ག   ད  བ  མ  འ</span></p>
           <p its-locale-filter-list="en">Characters in the prefix position are not pronounced, but de-aspirate aspirated root characters and give a higher tone value to nasal root characters. The consonant <span class="ex" lang="bo">ག </span><span class="trans">g</span> may occur before 11 root characters, <span class="ex" lang="bo">ད</span> <span class="trans">d</span> before 6, <span class="ex" lang="bo">བ </span><span class="trans">b</span> before 10, <span class="ex" lang="bo">མ</span><span class="trans"> m</span> before 11, and <span class="ex" lang="bo">འ </span> <span class="trans">a</span> before 10.</p>
           <p its-locale-filter-list="en">Examples: <span class="ex" lang="bo">འཁོར་ལོ་</span> <span class="trans">'khor-lo</span> <span class="ipa">kor-lo</span>  (<span class="meaning">wheel</span>), <span class="ex" lang="bo">བསད་</span> <span class="trans">bsad</span> <span class="ipa">sɛ́</span> (<span class="meaning">killed</span>).</p>
       </section>
 
       <section id="suffixes">
       <h5><span its-locale-filter-list="en">Suffixes</span>
-      <span its-locale-filter-list="zh">...</span></h5>
+      <span its-locale-filter-list="zh-hans">...</span></h5>
       <p its-locale-filter-list="en">Suffixes (<span lang="bo">རྗེས་འཇུག་</span>) appear to the right of the root letter, and are usually one of the following 10 letters: <span lang="bo" class="large_example">ག ང ད ན བ མ འ ར ལ ས</span></p>
       <p>Characters in the suffix position have one of the following effects:</p>
 	  <ol>
@@ -488,18 +485,18 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
       
       <section id="secondary_suffix">
       <h5><span its-locale-filter-list="en">Secondary Suffix</span>
-      <span its-locale-filter-list="zh">...</span></h5>
+      <span its-locale-filter-list="zh-hans">...</span></h5>
       <p its-locale-filter-list="en">Secondary suffixes (<span lang="bo">ཡང་འཇུག་</span>) appear to the right of other suffixes.</p>
-        <p its-locale-filter-list="zh"><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
+        <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">ཡང་འཇུག་</span> 即后后缀（secondary suffix），放在后缀字母后的字母。通常只有两个  。即： <span lang="bo" class="large_example">ད ས</span></p>
           <p its-locale-filter-list="en">Only two characters can appear in the secondary suffix location, according to Tibetan grammar, <span class="ex" lang="bo">ས</span> and <span class="ex" lang="bo">ད</span>, and the latter is no longer officially found in modern Tibetan. A character in this position adds no sound and nor does it affect the sounds in the rest of the syllable.</p>
           <p its-locale-filter-list="en">Examples: <span class="ex" lang="bo">བསྒྲུབས་</span> <span class="trans">bsgrubs</span> <span class="ipa">ɖɹúb</span> (<span class="meaning">established</span>), and <span class="ex" lang="bo">གྱུརད་</span> <span class="trans">gyurd</span> <span class="ipa">kjùr</span> (<span class="meaning">became</span>).</p>
           </section>
           
       <section id="superscripts">
       <h5><span its-locale-filter-list="en">Superscripts</span>
-      <span its-locale-filter-list="zh">...</span></h5>
+      <span its-locale-filter-list="zh-hans">...</span></h5>
           <p its-locale-filter-list="en">A superscript (<span lang="bo">མགོ་ཅན་</span>) appears above the syllable's root, and is one of the following characters: <span lang="bo" class="large_example">ར ལ ས</span></p>
-          <p its-locale-filter-list="zh"><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
+          <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">མགོ་ཅན་</span> 即上标字（superscript），放在根字母上面，通常有三个字母  。即： <span lang="bo" class="large_example">ར ལ ས</span></p>
           <p its-locale-filter-list="en">The three characters that appear in the superscript location raise the tone pitch of the syllable, but are not pronounced themselves. Each superscript character can only be used with a specified set of root characters.</p>
           <figure>
             <!--p><img src="images/superscripts.png" alt="Superscripts"/></p-->
@@ -608,9 +605,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
           
       <section id="subscripts">
       <h5><span its-locale-filter-list="en">Subscripts</span>
-      <span its-locale-filter-list="zh">...</span></h5>
+      <span its-locale-filter-list="zh-hans">...</span></h5>
         <p its-locale-filter-list="en">A subscript (<span lang="bo">འདོགས་ཅན་</span>) can be one of the following four characters:<span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
-          <p its-locale-filter-list="zh"><span lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
+          <p its-locale-filter-list="zh-hans"><span lang="bo">འདོགས་ཅན་</span> 即下标字（subscript），放在根字母下面。即右边两个： <span lang="bo" class="large_example"> ྲ ྱ ླ ྭ</span></p>
           <p its-locale-filter-list="en">The four characters that can appear in the subscript location are also each combined with a particular subset of root characters and have different effects.</p>
           <figure>
             <!--p><img src="images/subscripts.png" alt="Subscripts"/></p-->
@@ -750,9 +747,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
   
   
   <section id="藏文的字体与字符的Unicode编码">
-    <h3><span its-locale-filter-list="en">Unicode-encoded Tibetan  Characters</span> <span its-locale-filter-list="zh">藏文的字体与字符的Unicode编码</span></h3>
+    <h3><span its-locale-filter-list="en">Unicode-encoded Tibetan  Characters</span> <span its-locale-filter-list="zh-hans">藏文的字体与字符的Unicode编码</span></h3>
     <p its-locale-filter-list="en">The figure below shows the arrangement of Tibetan characters in the Unicode Tibetan character block, as of Unicode version 8.0.</p>
-    <p its-locale-filter-list="zh">藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
+    <p its-locale-filter-list="zh-hans">藏文目前的字形字体为喜马拉雅字体。根据《GB？？？》，藏文字符编码覆盖了Unicode的U+0F00至U+0F0E、U+0F10至U+0F1E、U+0F20至U+0F2E  U+0F30+范围。具体如下：</p>
     <figure id="unicode_block">
           <p><img src="images/code-chart.png" alt="Picture of Unicode Tibetan block."/></p>
           <figcaption><span  its-locale-filter-list="en">Unicode Tibetan block.</span></figcaption>
@@ -763,7 +760,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="transliteration">
   <h3><span its-locale-filter-list="en">Tibetan  Characters used for Transliteration</span>
-   <span its-locale-filter-list="zh">...</span></h3>
+   <span its-locale-filter-list="zh-hans">...</span></h3>
   <p its-locale-filter-list="en">Many of the characters in the Tibetan block are there for transcribing or transliterating non-Tibetan text. The Tibetan script provides for perfect mappings between Sanskrit and Tibetan, but Tibetan is also used to transliterate other languages, such as Chinese, Mongolian and English.</p>
 	  <p its-locale-filter-list="en">There are a number of consonants, including a range of aspirated consonants, and the following range of retroflex consonants. </p>
       <figure>
@@ -897,12 +894,12 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="numerals">
 <h3><span its-locale-filter-list="en">Tibetan Numerals</span>
-    <span its-locale-filter-list="zh">藏文的数字</span></h3>
+    <span its-locale-filter-list="zh-hans">藏文的数字</span></h3>
     <p its-locale-filter-list="en">Tibetan has its own set of digits, although publications may also use European numerals. The basic Tibetan numbers are used in the same way as European numerals. They differ only in shape.</p>
-    <p its-locale-filter-list="zh">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
+    <p its-locale-filter-list="zh-hans">藏文有自己的数字表示。藏文数字跟阿拉伯数字本质上没有不同，只是符号表示形式不同而已，但是在藏文中增加了半数字的表示形式。</p>
     <p its-locale-filter-list="en">The Unicode Tibetan block also contains a set of half-numbers. These are very rarely used, and there is some ambiguity about how they are used. By some interpretations, the following shapes each have the value of 0.5 less than the number within which it appears. Used only in some traditional contexts, they appear as the last digit of a multidigit number, eg. <span class="ex" lang="bo">༤༬</span> represents 42.5.</p>
-    <p its-locale-filter-list="zh">藏文的半数字是指1到9数字一半的表达方式。例如：1的一半是0.5，2的一半是1，3的一半是1.5等等。在藏文中，可以通过半数字直接表达而不用书写小数树。例如，43.5在藏文中可以直接书写为<span lang="bo"> ༤༬</span>。</p>
-    <p its-locale-filter-list="zh">下表是藏文数字（及半数字）与阿拉伯数字表示方法的对应： </p>
+    <p its-locale-filter-list="zh-hans">藏文的半数字是指1到9数字一半的表达方式。例如：1的一半是0.5，2的一半是1，3的一半是1.5等等。在藏文中，可以通过半数字直接表达而不用书写小数树。例如，43.5在藏文中可以直接书写为<span lang="bo"> ༤༬</span>。</p>
+    <p its-locale-filter-list="zh-hans">下表是藏文数字（及半数字）与阿拉伯数字表示方法的对应： </p>
     <figure>
       <table class="chartable">
           <tr>
@@ -946,7 +943,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="head_marks">
     <h3><span its-locale-filter-list="en">Head Marks</span>
-    <span its-locale-filter-list="zh">藏文的数字</span></h3>
+    <span its-locale-filter-list="zh-hans">藏文的数字</span></h3>
     <p its-locale-filter-list="en">In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
 	  <p its-locale-filter-list="en">Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
 	  <p its-locale-filter-list="en">Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
@@ -963,20 +960,20 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="punctuation">
     <h3><span its-locale-filter-list="en">Tibetan Punctuation</span>
-    <span its-locale-filter-list="zh">藏文的标点符号</span></h3>
+    <span its-locale-filter-list="zh-hans">藏文的标点符号</span></h3>
 
 <section id="syllable_breaks">
           <h4><span its-locale-filter-list="en">Syllable Breaks</span>
-          <span its-locale-filter-list="zh">音节符</span></h4>
+          <span its-locale-filter-list="zh-hans">音节符</span></h4>
           <p its-locale-filter-list="en">The <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> is used to indicate syllable boundaries. Note that this is not necessarily equivalent to word boundaries.</p>
-          <p its-locale-filter-list="zh">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
+          <p its-locale-filter-list="zh-hans">音节符<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> ，加在每个音节之后，起划分音节的作用，让读者正确读出文字。如果缺少音节符文字混论无法读出正确的字，也不构成字。</p>
           <p its-locale-filter-list="en">For more information about the use of the tsek see <a href="#text_segmentation"></a>.</p>
-          <p its-locale-filter-list="zh">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
+          <p its-locale-filter-list="zh-hans">藏文音节符必须出现在每个音节之后，才能构成一个完整的音节。在排版时，每行都是由完整的音节组成，行末音节不能拆分。藏文的行首不能出现音节符。当最末尾的一个音节不能完整排下时，要把该音节移到下一行，同时该行末用音节符补齐，如果需要补齐的音节点较多而影响排版美观时，则把该行段句符距离拉大进行调节。</p>
         </section>
 
 <section id="section_breaks">
           <h4><span its-locale-filter-list="en">Section Breaks</span>
-          <span its-locale-filter-list="zh">...</span></h4>
+          <span its-locale-filter-list="zh-hans">...</span></h4>
     <p its-locale-filter-list="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
     <figure>
 	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
@@ -989,7 +986,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="other_punctuation">
           <h4><span its-locale-filter-list="en">Other Punctuation &amp; Signs</span>
-          <span its-locale-filter-list="zh">...</span></h4>
+          <span its-locale-filter-list="zh-hans">...</span></h4>
     <p its-locale-filter-list="en">Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
 	  <ul>
 	    <li>
@@ -1033,7 +1030,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
       <section id="text_segmentation">
     <h3><span its-locale-filter-list="en">Text Segmentation in Tibetan</span>
-    <span its-locale-filter-list="zh">...</span></h3>
+    <span its-locale-filter-list="zh-hans">...</span></h3>
   <p its-locale-filter-list="en">Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
 	  <figure>
 	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
@@ -1075,7 +1072,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     
     <section id="emphasis_and_highlighting">
           <h3><span its-locale-filter-list="en">Text Emphasis and Highlighting</span>
-          <span its-locale-filter-list="zh">...</span></h3>
+          <span its-locale-filter-list="zh-hans">...</span></h3>
 
           <p its-locale-filter-list="en"><span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span> <span lang="bo">&nbsp;༵</span> and <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span> <span lang="bo">&nbsp;༷</span> can be used to create a similar effect to underlining or to mark emphasis.</p>
 	  <p its-locale-filter-list="en">These marks  attach to a syllable rather than a character and therefore to place them correctly it is necessary to take syllable boundary positions into account. If entered as combining characters they can be added after the vowel-sign in a stack.</p>
@@ -1096,7 +1093,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     
     <section id="baseline_alignment">
           <h3><span its-locale-filter-list="en">Baseline alignment</span>
-          <span its-locale-filter-list="zh">...</span></h3>
+          <span its-locale-filter-list="zh-hans">...</span></h3>
 
       <p its-locale-filter-list="en">When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
   </section>
@@ -1110,16 +1107,16 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
       <section id="藏文的书写方式">
     <h3><span its-locale-filter-list="en">Tibetan Writing Mode</span>
-    <span its-locale-filter-list="zh">藏文的书写方式</span></h3>
+    <span its-locale-filter-list="zh-hans">藏文的书写方式</span></h3>
     <p its-locale-filter-list="en">Tibetan is written horizontally and read from left to right.</p>
-    <p its-locale-filter-list="zh">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
+    <p its-locale-filter-list="zh-hans">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
     <div class="issue">
       <p its-locale-filter-list="en">Is Tibetan written vertically with upright glyphs at all (eg. in table headings, in pictures, etc.)? If so, does it require that all elements composing a syllable be kept together in horizontal fashion, placing just syllables one above the other? Or does each non-subjoined/combining character move to the next line? etc.</p>
     </div>
   </section>
 
       <section id="line_breaking">
-    <h3><span its-locale-filter-list="en">Line breaking</span> <span its-locale-filter-list="zh">...</span></h3>
+    <h3><span its-locale-filter-list="en">Line breaking</span> <span its-locale-filter-list="zh-hans">...</span></h3>
     <p its-locale-filter-list="en">Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
 	  <p its-locale-filter-list="en">Line breaks do not occur after a tsek
 	    when it follows <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span> (with or without a vowel sign) and precedes a shay (<span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>).</p>
@@ -1140,7 +1137,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 
       <section id="rin_chen_spungs_shad">
-    <h4><span its-locale-filter-list="en">Line breaks and rin chen spungs shad</span> <span its-locale-filter-list="zh">...</span></h4>
+    <h4><span its-locale-filter-list="en">Line breaks and rin chen spungs shad</span> <span its-locale-filter-list="zh-hans">...</span></h4>
 	  <p its-locale-filter-list="en">In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span>. </p>
 	  <p its-locale-filter-list="en">At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
 	  <p its-locale-filter-list="en">This varies in the following cases:</p>
@@ -1159,19 +1156,19 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
   </section>
 
       <section id="punctuation_marks">
-    <h3><span its-locale-filter-list="en">Justification</span> <span its-locale-filter-list="zh">...</span></h3>
+    <h3><span its-locale-filter-list="en">Justification</span> <span its-locale-filter-list="zh-hans">...</span></h3>
     <p its-locale-filter-list="en">There are two alternative methods of justification.</p>
 
 
       <section id="inter_character_spacing">
-    <h4><span its-locale-filter-list="en">Inter-character spacing</span> <span its-locale-filter-list="zh">...</span></h4>
+    <h4><span its-locale-filter-list="en">Inter-character spacing</span> <span its-locale-filter-list="zh-hans">...</span></h4>
 	  <p its-locale-filter-list="en">Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
       </section>
       
 
 
       <section id="tsek_padding">
-    <h4><span its-locale-filter-list="en">Tsek padding</span> <span its-locale-filter-list="zh">...</span></h4>
+    <h4><span its-locale-filter-list="en">Tsek padding</span> <span its-locale-filter-list="zh-hans">...</span></h4>
 	  <p its-locale-filter-list="en">  While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
 	  <figure><img src="images/tsek-justification.jpg" alt="" height="475" width="313"><figcaption><span its-locale-filter-list="en">A page of a booklet showing tsek padding.</span></figcaption></figure>
 	  <p its-locale-filter-list="en">There are a couple of detailed rules about the use of tsek padding. </p>
@@ -1185,7 +1182,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
  
 <section id="counters_lists">
           <h3><span its-locale-filter-list="en">Lists and counters</span>
-          <span its-locale-filter-list="zh">...</span></h3>
+          <span its-locale-filter-list="zh-hans">...</span></h3>
 
         <div class="note">
         <p its-locale-filter-list="en">This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
@@ -1223,7 +1220,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <!--section class="appendix" id="terminology">
       <h2><span its-locale-filter-list="en">Terminology</span></h2>
-      <p its-locale-filter-list="zh">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
+      <p its-locale-filter-list="zh-hans">报告中用到的专用词汇及其英文、汉字、藏文对照，及含义。TBD。</p>
       <table id="terminology_table">
     <tbody>
           <tr>
@@ -1244,7 +1241,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section class="appendix" id="references">
       <h2><span its-locale-filter-list="en">References</span></h2>
-      <p its-locale-filter-list="zh">报告中引用到的中国国家标准，或其他标准文本</p>
+      <p its-locale-filter-list="zh-hans">报告中引用到的中国国家标准，或其他标准文本</p>
       <ul>
     <li>China National Standards . 《信息技术信息交换用藏文编码字符集基本集》 </li>
     <li>China National Standards. 《信息技术藏文编码字符集点阵字形-第一部分：白体》 </li>
