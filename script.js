@@ -1,142 +1,130 @@
-
-function switchLang (lang) {
-// hides all elements with its-locale-filter-list set to the other language
-
-	var langs = { 'zh': true, 'en':true } // en must come last (for all to work in front matter)
-	if (lang==='zh') langs.en = false
-	if (lang==='en') langs.zh = false
-
-	var translations = {
-		'en': {
-			'abstract': 'Abstract',
-			'sotd': 'Status of This Document',
-			'toc': 'Table of Contents',
-			'note': 'Note',
-			'fig': 'Figure ',
-			'thisversion': 'This version:',
-			'latestpublished': 'Latest published version:',
-			'editorsdraft': "Latest editor's draft:",
-			'authors': 'Authors:',
-			'editors': "Editors:",
-			'formerEditors': "Former editors",
-			'participate': "Participate:",
-			'fileABug': "File a bug",
-			'commitHistory': "Commit history",
-			'pullRequests': "Pull requests"
-			},
-		'zh': {
-			'abstract': 'Abstract',
-			'sotd': 'Status of This Document',
-			'toc': '内容大纲',
-			'note': '注',
-			'fig': '图',
-			'thisversion': '本版本：',
-			'latestpublished': '最新发布草稿：',
-			'editorsdraft': "最新编辑草稿：",
-			'authors': '编辑：',
-			'editors': "编辑：",
-			'formerEditors': "Former editors",
-			'participate': "Participate:",
-			'fileABug': "File a bug",
-			'commitHistory': "Commit history",
-			'pullRequests': "Pull requests"
-			},
-		}
-	
-	// show all hidden elements
-	var els = document.querySelectorAll('.hidden')
-	for (var i=0;i<els.length;i++) els[i].classList.remove('hidden') 
-
-	Object.keys(langs).forEach( function (lang) {
-		if (langs[lang]) {
-			// set the default language in html tag
-			document.documentElement.lang = lang
-			
-			// change boilerplate text
-			document.getElementById('abstract').firstChild.textContent = translations[lang].abstract
-			document.getElementById('sotd').firstChild.textContent = translations[lang].sotd
-			document.getElementById('table-of-contents').textContent = translations[lang].toc
-
-			document.getElementById('thisversion').textContent = translations[lang].thisversion
-			document.getElementById('latestpublished').textContent = translations[lang].latestpublished
-			document.getElementById('editorsdraft').textContent = translations[lang].editorsdraft
-			document.getElementById('editors').textContent = translations[lang].editors
-			document.getElementById('participate').textContent = translations[lang].participate
-			document.getElementById('fileABug').textContent = translations[lang].fileABug
-			document.getElementById('commitHistory').textContent = translations[lang].commitHistory
-			document.getElementById('pullRequests').textContent = translations[lang].pullRequests
-			
-			// change note and figure titles
-			var notes = document.querySelectorAll('.note-title')
-			for (let i=0;i<notes.length;i++) notes[i].textContent = translations[lang].note
-			var figcaptions = document.querySelectorAll('figcaption')
-			for (let i=0;i<figcaptions.length;i++) figcaptions[i].firstChild.textContent = translations[lang].fig
-			}
-			
-		// hide relevant elements
-		else {
-			els = document.querySelectorAll('[its-locale-filter-list='+lang+']')
-			for (var i=0;i<els.length;i++) els[i].classList.add('hidden') 
-			}
-		})
-	}
-
-
-
-function setFrontMatterIds () {
-	// adds ids to dt elements in front matter to facilitate language switching
-	
-	var dts = document.querySelectorAll('dt')
-	for (let i=0;i<dts.length;i++) {
-		switch (dts[i].textContent.trim()) {
-			case 'This version:': dts[i].id = "thisversion"; break;
-			case 'Latest published version:': dts[i].id = "latestpublished"; break;
-			case 'Latest editor\'s draft:': dts[i].id = "editorsdraft"; break;
-			case 'Authors:': dts[i].id = "authors"; break;
-			case 'Editor:': dts[i].id = "editor"; break;
-			case 'Editors:': dts[i].id = "editors"; break;
-			case 'Participate:': dts[i].id = "participate"; break;
-			}
-		}
-	var anchors = document.querySelectorAll('.head a')
-	for (let i=0;i<anchors.length;i++) {
-		switch (anchors[i].textContent) {
-			case 'File a bug': anchors[i].id = "fileABug"; break;
-			case 'Commit history': anchors[i].id = "commitHistory"; break;
-			case 'Pull requests': anchors[i].id = "pullRequests"; break;
-			}
-		}
-	}
-
-
-
-
-function addLangAttrs () { console.log("THIS FUNCTION IS NO LONGER NEEDED")
-	// adds lang attributes wherever there is a data-lang attribute
-	// this is done by js to reduce burden on editors
-	// if there's already a lang attribute in the tag, that tag is skipped
-	// note that this may still produce temporarily incorrect labelling where text is awaiting translation
-	
-	var zh = document.querySelectorAll('[its-locale-filter-list=zh]')
-	for (i=0;i<zh.length;i++) { if (zh[i].lang == '') { zh[i].lang='zh'} }
-	var en = document.querySelectorAll('[its-locale-filter-list=en]')
-	for (i=0;i<en.length;i++) { if (en[i].lang == '') { en[i].lang='en'} }
-	}
-
-
-function initialiseLang () {
-	// if a lang= parameter is passed with the URL, show in that language
-	var parameters = location.search.split('&')
-	parameters[0] = parameters[0].substring(1)
-	for (var p=0;p<parameters.length;p++) {  
-		var pairs = parameters[p].split('=')
-		if (pairs[0] === 'lang') { 
-			if (pairs[1]) { 
-				switchLang(pairs[1]) 
-				} 
-			}
-		}
-	}
-
-//figures = document.querySelectorAll('figure')
-//for (let i=0;i<figures.length;i++) console.log(figures[i].id)
+"use strict";
+(() => {
+  void function() {
+    const LANG_LIST = ["en", "zh-hans"];
+    const L10N = {
+      "en": {
+        selector: {
+          "head > title": "Requirements for Tibetan Text Layout and Typography",
+          "#abstract > h2": "Abstract",
+          "#toc > ol > li:nth-child(1) > a": "Abstract",
+          "#sotd > h2": "Status of This Document",
+          "#toc > ol > li:nth-child(2) > a": "Status of This Document",
+          "#table-of-contents": "Table of Contents",
+          ".note-title": "Note"
+        },
+        "fig": "Fig. ",
+        dt: {},
+        dd: {
+          "Bug tracker:": '<a href="https://github.com/w3c/tlreq/issues">file a bug</a> (<a href="https://github.com/w3c/tlreq/issues">open bugs</a>)'
+        }
+      },
+      "zh-hans": {
+        selector: {
+          "head > title": "藏文排版需求",
+          "#abstract > h2": "\u6458\u8981",
+          "#toc > ol > li:nth-child(1) > a": "\u6458\u8981",
+          "#sotd > h2": "\u5173\u4E8E\u672C\u6587\u6863",
+          "#toc > ol > li:nth-child(2) > a": "\u5173\u4E8E\u672C\u6587\u6863",
+          "#table-of-contents": "\u5185\u5BB9\u5927\u7EB2",
+          ".note-title": "\u6CE8"
+        },
+        "fig": "\u56FE",
+        "summary": "\u5173\u4E8E\u6B64\u6587\u6863",
+        dt: {
+          "This version:": "\u672C\u7248\u672C\uFF1A",
+          "History:": "\u5386\u53F2\uFF1A",
+          "Previous version:": "\u4E0A\u4E00\u7248\uFF1A",
+          "Latest published version:": "\u6700\u65B0\u53D1\u5E03\u8349\u7A3F\uFF1A",
+          "Latest editor's draft:": "\u6700\u65B0\u7F16\u8F91\u8349\u7A3F\uFF1A",
+          "Editors:": "\u7F16\u8F91\uFF1A",
+          "Former editors:": "\u539F\u7F16\u8F91\uFF1A",
+          "Participate:": "\u534F\u52A9\u53C2\u4E0E\uFF1A",
+          "Feedback:": "\u53CD\u9988\uFF1A"
+        },
+        dd: {
+          "Bug tracker:": '<a href="https://github.com/w3c/tlreq/issues">\u53CD\u9988\u9519\u8BEF</a>\uFF08<a href="https://github.com/w3c/tlreq/issues">\u4FEE\u6B63\u4E2D\u7684\u9519\u8BEF</a>\uFF09'
+        }
+      }
+    };
+    const $root = document.documentElement;
+    let $$hidden = [];
+    function arrayify(obj) {
+      return Array.from ? Array.from(obj) : Array.prototype.slice.call(obj);
+    }
+    function $$(selector) {
+      return arrayify(document.querySelectorAll(selector));
+    }
+    function toggle$rootClass(lang) {
+      $root.lang = lang === "all" ? "en" : lang;
+      if (lang === "all") {
+        $root.classList.add("is-multilingual");
+        $root.classList.remove("isnt-multilingual");
+      } else {
+        $root.classList.remove("is-multilingual");
+        $root.classList.add("isnt-multilingual");
+      }
+    }
+    function showAndHideLang(lang) {
+      $$hidden.forEach(function($elmt) {
+        Object.assign($elmt, { hidden: false });
+      });
+      if (lang === "all") {
+        return;
+      }
+      $$hidden = LANG_LIST.filter(function(it) {
+        return it !== lang;
+      }).reduce(function(result, it) {
+        return result.concat($$('[its-locale-filter-list="' + it + '"]'));
+      }, []).map(function($elmt) {
+        return Object.assign($elmt, { hidden: true });
+      });
+    }
+    function replaceBoilerplateText(lang) {
+      const l10n = L10N[lang === "all" ? "en" : lang];
+      Object.keys(l10n.selector).forEach(function(s) {
+        $$(s).forEach(function($elmt) {
+          Object.assign($elmt, { textContent: l10n.selector[s] });
+        });
+      });
+      $$("figcaption, .fig-ref").forEach(function($elmt) {
+        Object.assign($elmt.firstChild, { textContent: l10n["fig"] });
+      });
+      $$("body > div.head > details > summary").forEach(function($summary) {
+        let originalText = $summary.dataset.originalText || $summary.textContent.trim();
+        let text = l10n["summary"] || originalText;
+        if (text) {
+          $summary.textContent = text;
+          $summary.dataset.originalText = originalText;
+        }
+      });
+      $$("body > div.head > details > dl > dt").forEach(function($dt) {
+        let originalText = $dt.dataset.originalText || $dt.textContent.trim();
+        let text = l10n.dt[originalText] || originalText;
+        if (text) {
+          $dt.textContent = text;
+          $dt.dataset.originalText = originalText;
+        }
+        if (originalText === "Bug tracker:") {
+          $dt.nextElementSibling.innerHTML = l10n.dd["Bug tracker:"];
+        }
+      });
+    }
+    window.switchLang = function(lang) {
+      toggle$rootClass(lang);
+      showAndHideLang(lang);
+      replaceBoilerplateText(lang);
+    };
+    function addLangAttr() {
+      toggle$rootClass("all");
+      LANG_LIST.forEach(function(lang) {
+        $$('[its-locale-filter-list="' + lang + '"]').forEach(function($elmt) {
+          if (!$elmt.lang) {
+            $elmt.lang = lang;
+          }
+        });
+      });
+    }
+    addLangAttr();
+  }();
+})();
