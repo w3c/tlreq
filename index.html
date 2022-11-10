@@ -93,9 +93,15 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 
 <section id="intro">
-  <h2><span its-locale-filter-list="en">Introduction</span></h2>
+  <h2>
+    <span its-locale-filter-list="en">Introduction</span>
+    <span its-locale-filter-list="zh-hans">绪论</span>
+  </h2>
       <section id="purpose">
-    <h3><span its-locale-filter-list="en">Purpose of this Document</span></h3>
+    <h3>
+      <span its-locale-filter-list="en">Purpose of this Document</span>
+      <span its-locale-filter-list="zh-hans">目的</span>
+    </h3>
     <p its-locale-filter-list="en">This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to Tibet and China, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
     <p its-locale-filter-list="en">The document does not describe implementations or issues  related to specific technologies, such as CSS. Instead it describes the typographic requirements of Tibetan in a technology-agnostic manner, so that the content remains evergreen and is equally relevant to all technologies that aim to represent Tibetan text on the Web. </p>
     <p its-locale-filter-list="en">In the future other documents or issues may be created by comparing the requirements in this document with the gaps in specific technologies, but that information will be documented elsewhere.  </p>
@@ -105,7 +111,10 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 
 <section id="how-developed">
-    <h3><span its-locale-filter-list="en">How this Document was Created</span></h3>
+    <h3>
+      <span its-locale-filter-list="en">How this Document was Created</span>
+      <span its-locale-filter-list="zh-hans">撰写方针</span>
+    </h3>
     <p its-locale-filter-list="en">This document uses material from the web page <a href="https://r12a.github.io/scripts/tibetan/">Tibetan script notes</a> and from a <a href="https://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a> to establish a base of information that will be developed and refined by discussion, including in the context of China’s National Standards,  and by surveying needs from actual users and technical experts. </p>
     <p its-locale-filter-list="en">The following types of experts will be involved in the creation of this document:</p>
     <ol>
@@ -152,7 +161,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
       <p its-locale-filter-list="en">There are various different Tibetan scripts, of two basic types: <span class="ex" lang="bo">དབུ་ཅན་</span> <span class="trans">dbu-can</span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="ex" lang="bo">དབུ་མེད་</span> <span class="trans">dbu-med</span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This document concentrates on the former. Pronunciations are based on the central, Lhasa dialect.&nbsp;</p>
       <p its-locale-filter-list="en">Traditionally, Tibetan text was written on <a href="https://en.wikipedia.org/wiki/Pecha">pechas</a> (<span class="trans">dpe-cha</span> <span class="ex" lang="bo">དཔེ་ཆ་</span>), loose-leaf sheets. Some of the characters used and formatting approaches are different in books and pechas.&nbsp;</p>
       <p its-locale-filter-list="en">Tibetan structural elements include prefixes, root characters, subscripts, superscripts, suffixes, secondary suffixes, vowels and intersyllabic marks.</p>
-      <p its-locale-filter-list="zh-hans">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音(vowel)及音节符（intersyllabic mark）。</p>
+      <p its-locale-filter-list="zh-hans">藏文的结构元素包括前缀（prefix），根（root），下标（subscript），上标（superscript），后缀(suffix)，后后缀（secondary suffix），元音（vowel）及音节符（intersyllabic mark）。</p>
   
       <!--section id="tibetan_alphabet">
     <h3><span its-locale-filter-list="en">Tibetan Alphabet</span> <span its-locale-filter-list="zh-hans">藏文字母</span></h3>
@@ -167,7 +176,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="consonants">
     <h4><span its-locale-filter-list="en">Consonants</span> 
-    <span its-locale-filter-list="zh-hans">...</span></h4>
+    <span its-locale-filter-list="zh-hans">辅音字母</span></h4>
     <p its-locale-filter-list="en">Native Tibetan words use 30 consonants, but the Unicode Tibetan block contains many more. Many of the extra consonants (and other characters) are used for transliteration of other languages, principally Sanskrit and Chinese. These include the retroflex and voiced aspirated consonants. A couple of characters are extensions for Balti.</p>
 
           <p its-locale-filter-list="en">The basic 30 Tibetan consonants are listed below:</p>
@@ -231,9 +240,9 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     
  <section id="vowels">
     <h4><span its-locale-filter-list="en">Vowels</span> 
-    <span its-locale-filter-list="zh-hans">...</span></h4>
+    <span its-locale-filter-list="zh-hans">元音字母</span></h4>
    <p its-locale-filter-list="en">Standard Tibetan has five vowels, for which there are four characters, since one vowel, <span class="ipa">a</span>, is inherent in the consonant. Non-inherent vowels are indicated by a single mark attached to and typed after a consonant or consonant stack. These are shown with the character KA in the following figure.</p>
-    <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音  /a/，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
+    <p its-locale-filter-list="zh-hans"><span class="leadin" lang="bo">དབྱངས་བཞི་</span> 即元音字母（vowel），标准的藏文有五个元音，其中一个是发声固定的音 <span class="ipa">a</span>，此音在通常带在各辅音字母后面，所以不需要加，除非文字结构需要加，其他的四个元音为非固定发声音，元音字母跟辅音字母通过上下形式相叠加，产生特定的音同时与其他相对结构较近似字区分。例如：<span lang="bo">སྤྱིར་</span> /tji/(一般)</p>
 <figure its-locale-filter-list="en" id="vowel_signs">
         <table class="chartable">
           <tr>
@@ -760,7 +769,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="transliteration">
   <h3><span its-locale-filter-list="en">Tibetan  Characters used for Transliteration</span>
-   <span its-locale-filter-list="zh-hans">...</span></h3>
+   <span its-locale-filter-list="zh-hans">用于音译的藏文字符</span></h3>
   <p its-locale-filter-list="en">Many of the characters in the Tibetan block are there for transcribing or transliterating non-Tibetan text. The Tibetan script provides for perfect mappings between Sanskrit and Tibetan, but Tibetan is also used to transliterate other languages, such as Chinese, Mongolian and English.</p>
 	  <p its-locale-filter-list="en">There are a number of consonants, including a range of aspirated consonants, and the following range of retroflex consonants. </p>
       <figure>
@@ -937,7 +946,10 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
         </tr>
       </table>
           <!--p><img src="images/numbers.png" alt="Numbers"/></p-->
-          <figcaption><span its-locale-filter-list="en">Tibetan numbers.</span></figcaption>
+          <figcaption>
+            <span its-locale-filter-list="en">Tibetan numbers.</span>
+            <span its-locale-filter-list="zh-hans">藏文的数字</span>
+          </figcaption>
     </figure>
 </section>
 
@@ -986,7 +998,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 <section id="other_punctuation">
           <h4><span its-locale-filter-list="en">Other Punctuation &amp; Signs</span>
-          <span its-locale-filter-list="zh-hans">...</span></h4>
+          <span its-locale-filter-list="zh-hans">其他标点符号</span></h4>
     <p its-locale-filter-list="en">Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
 	  <ul>
 	    <li>
@@ -1116,7 +1128,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
   </section>
 
       <section id="line_breaking">
-    <h3><span its-locale-filter-list="en">Line breaking</span> <span its-locale-filter-list="zh-hans">...</span></h3>
+    <h3><span its-locale-filter-list="en">Line breaking</span> <span its-locale-filter-list="zh-hans">行首行尾禁则</span></h3>
     <p its-locale-filter-list="en">Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
 	  <p its-locale-filter-list="en">Line breaks do not occur after a tsek
 	    when it follows <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span> (with or without a vowel sign) and precedes a shay (<span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>).</p>
@@ -1161,7 +1173,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
 
 
       <section id="inter_character_spacing">
-    <h4><span its-locale-filter-list="en">Inter-character spacing</span> <span its-locale-filter-list="zh-hans">...</span></h4>
+    <h4><span its-locale-filter-list="en">Inter-character spacing</span> <span its-locale-filter-list="zh-hans">字距</span></h4>
 	  <p its-locale-filter-list="en">Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
       </section>
       
@@ -1182,7 +1194,7 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
  
 <section id="counters_lists">
           <h3><span its-locale-filter-list="en">Lists and counters</span>
-          <span its-locale-filter-list="zh-hans">...</span></h3>
+          <span its-locale-filter-list="zh-hans">列表和计数器</span></h3>
 
         <div class="note">
         <p its-locale-filter-list="en">This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
@@ -1240,7 +1252,10 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     </section-->
 
 <section class="appendix" id="references">
-      <h2><span its-locale-filter-list="en">References</span></h2>
+      <h2>
+        <span its-locale-filter-list="en">References</span>
+        <span its-locale-filter-list="zh-hans">参考文献</span>
+      </h2>
       <p its-locale-filter-list="zh-hans">报告中引用到的中国国家标准，或其他标准文本</p>
       <ul>
     <li>China National Standards . 《信息技术信息交换用藏文编码字符集基本集》 </li>
@@ -1254,19 +1269,28 @@ body { background-image: url(https://fantasai.inkedblade.net/style/design/w3c-re
     </section>
 
 <section class="appendix" id="revision_log">
-      <h2><span its-locale-filter-list="en">Revision Log</span></h2>
+      <h2>
+        <span its-locale-filter-list="en">Revision Log</span>
+        <span its-locale-filter-list="zh-hans">修订记录</span>
+      </h2>
       <ul>
     <li><span its-locale-filter-list="en">new document</span></li>
   </ul>
     </section>
 
 <section id="acknowledgements" class="appendix">
-      <h2><span its-locale-filter-list="en">Acknowledgements</span></h2>
+      <h2>
+        <span its-locale-filter-list="en">Acknowledgements</span>
+        <span its-locale-filter-list="zh-hans">致谢</span>
+      </h2>
       <p its-locale-filter-list="en">This document has been developed with contributions from participants of the <a href="https://w3c.github.io/clreq/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
     </section>
 
 <section id="character_list" class="appendix">
-      <h2><span its-locale-filter-list="en">Character List</span></h2>
+      <h2>
+        <span its-locale-filter-list="en">Character List</span>
+        <span its-locale-filter-list="zh-hans">字符列表</span>
+      </h2>
       <p its-locale-filter-list="en">This appendix lists the characters in the Unicode Tibetan block, and sorts them into various groups that describe how they are used.</p>
       
       <table id="character_list_table">
