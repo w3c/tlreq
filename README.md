@@ -11,6 +11,18 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 [GitHub repo](https://github.com/w3c/tlreq) • [Discussion threads](https://github.com/w3c/tlreq/issues) • [Issue tracker](https://www.w3.org/International/i18n-activity/textlayout/?filter=tlreq) (with tlreq filter) • [Charter](https://www.w3.org/International/tlreq/charter/)
 
 
+---
+## Help wanted! ###
+**We're looking for information about this writing system. Follow the link for specific questions.**
+
+**[Tibetan](https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)**
+
+---
+
+
+
+
+
 ### Documents
 - [**Tibetan Gap Analysis**](https://www.w3.org/TR/tibt-gap) • [*Editor's draft*](https://www.w3.org/International/tlreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/gap-analysis/index.html) • [*Edit/comment on GitHub*](https://github.com/w3c/tlreq/labels/doc%3Atibt)
 - [**Tibetan Layout Requirements**](https://www.w3.org/TR/tlreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/index.html)
