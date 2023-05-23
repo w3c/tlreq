@@ -24,8 +24,17 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 ### Documents
-- [**Tibetan Gap Analysis**](https://www.w3.org/TR/tibt-gap) • [*Editor's draft*](https://www.w3.org/International/tlreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/gap-analysis/index.html) • [*Edit/comment on GitHub*](https://github.com/w3c/tlreq/labels/doc%3Atibt)
-- [**Tibetan Layout Requirements**](https://www.w3.org/TR/tlreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/index.html)
+- **Tibetan Gap Analysis** • [DNOTE](https://www.w3.org/TR/tibt-gap) • [*Editor's draft*](https://www.w3.org/International/tlreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/gap-analysis/index.html)
+- **Tibetan Layout Requirements** • [DNOTE](https://www.w3.org/TR/tlreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/index.html)
+
+
+
+### Discussions
+- **Tibetan** • [*Questions*](https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion)
+• [*Gap reports*](https://github.com/w3c/tlreq/labels/doc%3Atlreq)
+• [*Other*](https://github.com/w3c/tlreq/issues?q=is%3Aopen+-label%3Agap+-label%3Aquestion) 
+• [*Spec issues*](https://github.com/w3c/i18n-activity/issues?q=is%3Aopen+label%3Atlreq+label%3Aspec-type-issue)
+
 
 
 ### Feedback
