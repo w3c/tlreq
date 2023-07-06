@@ -271,7 +271,13 @@ ol li li li {
 	}
 
 
-
+.figureSub summary {
+    font-weight: normal;
+    margin-block-start: -2rem;
+    font-size: 80%;
+    cursor: pointer;
+    text-align: center;
+    }
 
 
 

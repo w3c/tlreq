@@ -206,16 +206,16 @@ postProcess: [
 <section id="language_overview">
 <h2>Tibetan script overview</h2>
 
-<p>There are various different Tibetan orthographies, falling into two basic types: <span class="charExample" translate="no"><span class="ex" lang="bo">དབུ་ཅན</span> <span class="transc">dbu can</span></span>, pronounced <span class="ipa">uchen</span> (<span class="meaning">with a head</span>), and <span class="charExample" translate="no"><span class="ex" lang="bo">དབུ་མེད</span> <span class="transc">dbu med</span></span>, pronounced <span class="ipa">ume</span> (<span class="meaning">headless</span>). This page concentrates on the former. Pronunciations are based on the central, Lhasa dialect.</p>
+<p>Tibetan can be written using two different styles: <span class="charExample inline" translate="no"><span class="ex" lang="bo">དབུ་ཅན</span> <span class="transc">dbu can</span> <span class="meaning">with a head</span></span>, the block style of the Tibetan script used in print, pronounced <span class="ipa">u.cen</span>; and <span class="charExample inline" translate="no"><span class="ex" lang="bo">དབུ་མེད</span> <span class="transc">dbu med</span> <span class="meaning">headless</span></span>, the cursive style of the Tibetan script used in shorthand and calligraphy, pronounced <span class="ipa">u.me</span>. This page concentrates on the former. Pronunciations are based on the central, Lhasa dialect.</p>
 
 <p>Historically, Tibetan text was written on loose-leaf sheets called <a href="http://en.wikipedia.org/wiki/Pecha">pechas</a>, ( <span class="charExample" translate="no"><bdi class="ex" lang="bo">དཔེ་ཆ</bdi> <bdi class="ipa">pé.t͡ɕʰá</bdi> <bdi class="meaning">book, scripture</bdi></span> ). Some of the characters used and formatting approaches are different in books and pechas.</p>
 
 
 <p>Tibetan text runs left to right in horizontal lines.</p>
 
-<p>Words boundaries are not indicated. However, Tibetan words are made up of one or more units called <span class="name">tsheg-bar</span> which are roughly equivalent to phonological syllables. <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0B;</bdi> <span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span></span> is used after the <span class="name">tsheg-bar</span> to show the boundaries.</p>
+<p>Words boundaries are not indicated. However, Tibetan words are made up of one or more units called <span class="name">tsheg-bar</span> which are basically equivalent to phonological syllables. The <span class="name">tsheg-bar</span> units are separated using <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0B;</bdi> <span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span></span>.</p>
 
-<p>These <span class="name">tsheg-bar</span> units are composed of  structural elements that include vowel signs and consonants used as prefixes, root characters, subscripts, superscripts, suffixes, and secondary suffixes. A common realisation includes a stack and additional consonants to either side of the root consonant. These may indicate syllable-final consonant sounds, but more often than not they qualify or modify the root value, and are not associated with their nominal sound value. The actual pronunciation is usually much more simple than a transliteration would suggest.  For example, the word  <span class="charExample inline" translate="no"><bdi class="ex" lang="bo">བཀོད</bdi> <bdi class="ipa">kǿː</bdi> <bdi class="meaning">to create</bdi></span> is transcribed as <span class="transc">bkod</span>.</p>
+<p>These <span class="name">tsheg-bar</span> units are composed of  structural elements that include vowel signs and consonants used as prefixes, root characters, subscripts, superscripts, suffixes, and secondary suffixes. A common realisation includes a stack and additional consonants to either side of the root consonant. These may indicate syllable-final consonant sounds, but more often than not they qualify or modify the root value, and are not associated with their nominal sound value. The actual pronunciation of Tibetan is usually much more simple than a typical romanisation would suggest.  For example, the word  <span class="charExample inline" translate="no"><bdi class="ex" lang="bo">བཀོད</bdi> <bdi class="ipa">kǿː</bdi> <bdi class="meaning">to create</bdi></span> is transcribed as <span class="transc">bkod</span>.</p>
 
 
 <figure id="fig_stack" class="sideCaption">
@@ -280,53 +280,33 @@ postProcess: [
 
 <section id="characters">
 <h2>Structural boundaries &amp; markers</h2>
+ 
 
 
 
-<section id="head_marks">
-<h3>Head Marks</h3>
+    
+<section id="headmark">
+<h3>Head marks</h3>
 
-    <p>In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front. </p>
-	  <p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
-	  <p>Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
-	  <p>A common head mark is <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span> <span lang="bo">༄</span>, and there is also the extension character <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span> <span lang="bo">༅</span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two shads, eg.<span class="ex" lang="bo">༄༅། །</span>.</p>
-    <p>Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
-    <ul>
-      <li><span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span> <span lang="bo">༁</span></li>
-        <li><span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span> <span lang="bo">༂</span></li>
-        <li><span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span> <span lang="bo">༃</span></li>
-    </ul>
-</section>
+<p>In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front.</p>
+
+<p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
+
+<p>[[[#fig_head_marks]]] shows a common head mark, <span class="codepoint" translate="no"><bdi lang="bo">&#x0F04;</bdi> <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span></span>, and the extension character <span class="codepoint" translate="no"><bdi lang="bo">&#x0F05;</bdi> <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span></span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two <span class="name">shads</span>.</p>
 
 
-
-
-
-
-
-
-<section id="punctuation">
-<h3>Tibetan Punctuation</h3>
-
-<section id="syllable_breaks">
-          <h4>Syllable Breaks</h4>
-          <p>The <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG [<span lang="bo">་</span>]</span> is used to indicate syllable boundaries. Note that this is not necessarily equivalent to word boundaries.</p>
-          <p>For more information about the use of the tsek see <a href="#text_segmentation"></a>.</p>
-</section>
-
-
-
-
-
-
-<section id="section_breaks">
-<h4>Section Breaks</h4>
-    <p>Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
-    <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
-	    <figcaption>Examples of double shay.</figcaption>
+<figure id="fig_head_marks" class="sideCaption">
+<p style="font-size:2rem; line-height: 2;" lang="bo"><span class="fig_highlight">༄༅༎</span> ཡོངས་ཁྱབ་གསལ་བསྒྲགས་འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</p>
+<figcaption>Example of use of head marks at the start of the Universal Declaration of Human Rights.</figcaption>
 </figure>
-	    <p>For more information about the use of  this punctuation and various similar punctuation marks, see  <a href="#text_segmentation"></a>.</p>
+
+
+<p>Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
+
+<p>Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
+<p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F01;</bdi> <span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span></span><br>
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F02;</bdi> <span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span></span><br>
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F03;</bdi> <span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span></span></p>
 </section>
 
 
@@ -334,85 +314,196 @@ postProcess: [
 
 
 
-<section id="other_punctuation">
-<h4>Other Punctuation &amp; Signs</h4>
-<p>Over and above that just described, traditional Tibetan text uses very little punctuation, but there a number of signs and symbols to choose from.</p>
-	  <ul>
-	    <li>
-        <p><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span> <span lang="bo">༈</span> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
-	    </li>
-	    <li>
-        <p>This <span class="name">drul-shay</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified). The <span class="name">drul-shay</span> should not appear at the beginning of a new line and the whole structure of spacing-plus- shay needs to be kept together.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+0F3C TIBETAN MARK ANG KHANG GYON</span> <span lang="bo">༼</span> and <span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span> <span lang="bo">༽</span> are paired punctuation used to form a roof over one or more digits or words. The right-hand character can also be used much like a single parenthesis in list counters.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+0F3E TIBETAN SIGN YAR TSHES</span> <span lang="bo">༾</span> and <span class="uname">U+0F3F TIBETAN SIGN MAR TSHES</span> <span lang="bo">༿</span> are also paired characters used in combination with digits.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+0F34   TIBETAN MARK BSDUS RTAGS</span> <span lang="bo">༴</span> means 'etc.', and is used after the first few tsek-bar of a recurring phrase.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+0FBE   TIBETAN KU RU KHA</span> <span lang="bo">྾</span> (often repeated three times) indicates a refrain.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+0F36   TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span> <span lang="bo">༶</span> and <span class="uname">U+0FBF   TIBETAN KU RU KHA BZHI MIG CAN</span> <span lang="bo">྿</span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
-	    </li>
-	    <li>
-        <p><span class="uname">U+2638   WHEEL OF DHARMA</span> <span lang="bo">☸</span> which occurs sometimes in Tibetan texts is encoded in the Miscellaneous Symbols block.</p>
-	    </li>
-      </ul>
+
+
+
+<section id="word">
+<h3>Word &amp; syllable boundaries</h3>
+<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+
+<p>Word boundaries  are not indicated by the Tibetan orthography. However, phonetic syllables, represented by a sequence of letters known as a <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0B;</bdi> <span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span></span>.</p> 
+
+
+<figure id="fig_tsek" class="sideCaption">
+<img src="images/fig_tsek.svg" alt="གློག་བརྙན་ཁང" class="ex" lang="bo" data-notes="Tibetan Machine Uni" style="height:7rem;">
+<figcaption>The tsek in use to separate the component <span class="name">tsheg-bar</span> units within a single word.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p><span class="charExample" translate="no"><bdi class="ex" lang="bo">གློག་བརྙན་ཁང</bdi> <bdi class="ipa">lô.ȵɛ̃́.kʰáŋ</bdi> <bdi class="meaning">cinema</bdi></span></p>
+</details>
+
+
+<figure id="fig_tsek_sentence" class="sideCaption">
+<img src="images/fig_tsek_sentence.png" alt="ཡོངས་ཁྱབ་གསལ་བསྒྲགས་
+འགྲོ་བ་མིའི་ཐོབ་ཐང༌།" class="ex" lang="bo" data-notes="Tibetan Machine Uni" style="height:8rem;">
+<figcaption>This figure shows the use of the <span class="name">tsheg-bar</span> across a whole sentence. There is no indication of word boundaries.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p><span class="charExample" translate="no"><bdi class="ex" lang="bo">ཡོངས་ཁྱབ་གསལ་བསྒྲགས་
+འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</bdi></span></p>
+</details>
+
+
+<p>See also <a href="#text_segmentation"></a>.</p>
 </section>
-<div class="issue">
-  <p>How are quotations demarcated in Tibetan?</p>
+
+
+
+
+
+
+
+
+
+
+<section id="phrase">
+<h3>Phrase &amp; section boundaries</h3>
+
+
+
+<section id="sections_topics">
+<h4>Sections &amp; topics</h4>
+
+<p>Key divisions of the text include expressions (<span class="name">brjod-pa</span>) and topics (<span class="name">don-tshan</span>). They do not necessarily equate to English phrases, sentences and paragraphs. </p>
+
+<p>Sections normally end with <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0D;</bdi> <span class="uname">U+0F0D TIBETAN MARK SHAD</span></span> (called <span class="name">shad</span> but pronounced <span class="ipa">ʃe</span>) followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated with a double <span class="name">shad</span> or separated with <span class="name">shad</span>+space+<span class="name">shad</span>.</p>
+
+
+<figure id="fig_double_shad" class="sideCaption">
+<img src="images/fig_double_shad.png" alt="" style="height: 10rem;">
+<figcaption>Examples of double shad.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="fig_highlight">།&nbsp;།</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག&nbsp;།བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="fig_highlight">།&nbsp;།</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="fig_highlight">།།</span></p>
+</details>
+
+
+<p>A phrase that ends with the root consonant <span class="codepoint" translate="no"><bdi lang="bo">&#x0F40;</bdi> <span class="uname">U+0F40 TIBETAN LETTER KA</span></span> or <span class="codepoint" translate="no"><bdi lang="bo">&#x0F42;</bdi> <span class="uname">U+0F42 TIBETAN LETTER GA</span></span> will normally swallow up the shad that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shad, you might see <span class="ex" lang="bo" style="white-space:nowrap;">ཀུ །</span> and <span class="ex" lang="bo" style="white-space:nowrap;">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" lang="bo" style="white-space:nowrap;">གྲུ། །</span>.</p>
+
+
+<figure id="fig_ga_double_shad" class="sideCaption">
+<img src="images/fig_ga_double_shad.png" alt="" style="height: 10rem;">
+<figcaption>GA swallowing up a shad at the end of a topic.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ།&nbsp;།དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅི<span class="fig_highlight">ག&nbsp;།</span>བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན།&nbsp;།རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད།།</p>
+</details>
+
+
+<figure id="fig_ga_shad_section" class="sideCaption">
+<img src="images/fig_ga_shad_section.png" alt="" style="height: 7rem;">
+<figcaption>GA swallowing up a shad at the end of a section.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">རྩོམ་པ་པོ།&nbsp;ལྡོང་ཕྲུ<span class="fig_highlight">ག&nbsp;</span>པར་སྐྲུན་ཁང་།&nbsp;གངས་ཅན་པ་ཚོང་འཕྲིན་ཇུས་འགོད་ཞབས་ཞུ་ལྟེ་གནས་ནས་དཔར།</p>
+</details>
+
+
+<p>When a phrase ends with <span class="name">shad</span>+space+<span class="name">shad</span> the space between the shad marks is normally reduced in Tibetan pechas, down to 1/4 or 1/3 of the normal width, or made to fit the space available. Some space is retained to avoid the appearance of a double-<span class="name">shad</span>.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p39">§</a></p>
+
+<p>Boundaries between chapters or significant sections may also be represented by a double-<span class="name">shad</span> followed by 5-6 spaces and another double-<span class="name">shad</span>.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p38">§</a></p>
+
+
+<figure id="fig_double_shad_section" class="sideCaption">
+<img src="images/fig_double_shad_section.png" alt="" style="height: 7rem;">
+<figcaption>Double shads separated by several spaces between chapters or significant sections.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">དང་འཇམ་པའི་དབྱངས་དང་པ་བྱང་ཆུབ་སེམས་དཔའ་ཡིན<span class="fig_highlight">༎     ༎</span>སང་རྒྱས་བཅོམ་ལྔན་འདས་དགྲ་བཅོམ་པ་་་་་་</p>
+</details>
+
+
+<p><span class="codepoint" translate="no"><bdi lang="bo">༎</bdi><span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span></span> can be used for the double-<span class="name">shad</span>.</p>
+
+
+<div class="note">
+<p>In Chinese magazine publications  articles may contain no double shay as a delimiter. (The text is formatted in paragraphs.) The double shay may still be found at the very end of some articles, or at the end of each line on a page containing some verse-formatted folk literature. The  applies for large parts of  Bhutanese newspapers, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.</p>
 </div>
-        
+
+
+<div class="issue">  
+<p>Unicode provides <span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear  how that would work when using NYIS SHAD.</span></p>
+</div>
+
+
+<p><span class="codepoint" translate="no"><bdi lang="bo">༈</bdi><span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span></span> is used to separate texts that are equivalent to topics and subtopics, such as the start of a smaller text, the start of a prayer, a chapter boundary, or to mark the beginning and end of insertions into text in pechas.</p>
+
+<p>This <span class="name">drul-shad</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified).<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p35">§</a> The <span class="name">drul-shad</span> should not appear at the beginning of a new line and the whole structure of spacing-plus-shad needs to be kept together.</p>
+
+<p>For <span class="codepoint" translate="no"><bdi lang="bo">༑</bdi><span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span></span> see <a class="secref">rin_chen_spung_shad</a>.</p>
+
+<p><span class="codepoint" translate="no"><bdi lang="bo">྾</bdi><span class="uname">U+0FBE TIBETAN KU RU KHA</span></span> (often repeated three times) indicates a refrain.</p> 
 </section>
 
 
 
 
-<section id="text_segmentation">
-<h3>Text Segmentation in Tibetan</h3>
 
-  <p>Key divisions of the text are sections (or expressions (<span class="name">brjod-pa</span>)) and topics (<span class="name">don-tshan</span>), which do not necessarily equate to English phrases, sentences and paragraphs. Sections normally end with a shay, <span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>, followed by a space. Topics (eg. headlines, verses, and longer paragraphs) are often terminated or separated with shay+space+shay.</p>
-	  <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ<span class="char_highlight">། །</span>དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅིག །བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན<span class="char_highlight">། །</span>རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད<span class="char_highlight">།།</span></p>
-	    <figcaption>Examples of double shay.</figcaption>
-      </figure>  
-        <div class="issue">  
-        <p>Unicode provides <span class="uname">U+0F0E TIBETAN MARK NYIS SHAD</span> <span lang="bo">༎</span> as a means of regularising the spacing between the two shad marks, which tends to be slightly bigger than a normal space. <span class="ed">The space between the shad marks can be stretched during justification, however, and it's not clear  how that would work when using NYIS SHAD.</span></p>
-        </div>
-      <div class="note">
-	  <p>In Chinese magazine publications  articles may contain no double shay as a delimiter. (The text is formatted in paragraphs.) The double shay may still be found at the very end of some articles, or at the end of each line on a page containing some verse-formatted folk literature. The  applies for large parts of  Bhutanese newspapers, however there are other pages with plenty of double shays - some at the end of paragraphs, some inside paragraphs.</p>
-      </div>
-      
-	  <p>A line that ends with the root consonant <span class="uname">U+0F40 TIBETAN LETTER KA</span> <span lang="bo">ཀ</span> or <span class="uname">U+0F42 TIBETAN LETTER GA</span> <span lang="bo">ག</span> will normally swallow up the shay that immediately follows it, even if there is a vowel sign. For example, where you might expect to see a double shay, you might see <span class="ex" style="white-space:nowrap;" lang="bo">ཀུ །</span> and <span class="ex" style="white-space:nowrap;" lang="bo">སྐུ །</span>. However, the shad is not omitted if these characters have a subscript, eg. <span class="ex" style="white-space:nowrap;" lang="bo">གྲུ། །</span>. </p>
-	  <figure>
-	    <p lang="bo">དུང་དང་འོ་མར་འགྲན་པའི་ལྷག་བསམ་མཐུ། །དམན་ཡང་དཀར་པོའི་བྱས་འབྲས་ཅུང་ཟད་ཅི<span class="char_highlight">ག །</span>བློ་དང་འདུན་པ་བཟང་བའི་རང་རིགས་ཀུན། །རྒྱལ་ཁའི་འཕྲིན་བཟང་ལས་དོན་འགྲུབ་ཕྱིར་འབད།།</p>
-	    <figcaption>Example of GA swallowing up a shay at the end of a topic.</figcaption>
-      </figure>
-	  <figure>
-	    <p lang="bo">རྩོམ་པ་པོ། ལྡོང་ཕྲུ<span class="char_highlight">ག </span>པར་སྐྲུན་ཁང་། གངས་ཅན་པ་ཚོང་འཕྲིན་ཇུས་འགོད་ཞབས་ཞུ་ལྟེ་གནས་ནས་དཔར།</p>
-	    <figcaption>Example of GA swallowing up a shay at the end of a section.</figcaption>
-      </figure>
-	  <p>Word boundaries within a section are not indicated. Only 'syllables', known as <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by the tsek character, <span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>.</p>
-	  <p>The tsek is not used before a shay, except after <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span>. For example, note the end of the three sections in this example:</p>
-	  <figure>
-      <p lang="bo">དོན་ཚན་དང་<span class="char_highlight">པོ།</span>&nbsp;འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་ད<span class="char_highlight">ང༌།</span>&nbsp;ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་<span class="char_highlight">ལ།</span></p>
-      <figcaption>Examples of tsek not being used before shay, and of U+0F0C being used between NGA and shay.</figcaption>
-      </figure>
-	  <p>Users may use an ordinary TSHEG between NGA and SHAD, but Unicode also provides a special non-breaking character that can be used instead, <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span> <span lang="bo">༌</span>. The word 'delimiter' in the name is a misnomer.</p>
-	  <figure>
-	    <p lang="bo">སུ་གང་གིས་གང་ཞིག་གི་རྒྱལ་ཁབ་ཐོབ་ཐང་བཙན་ཤེད་ཀྱིས་འཕྲོག་པ་ད<span class="char_highlight">ང༌།</span> ཡང་ན་དེའི་རྒྱལ་ཁབ་བརྗེ་བསྒྱུར་གྱི་ཐོབ་ཐང་བཀག་འགོག་བྱེདཔའི་རིགས་མི་ཆོག །</p>
-	    <figcaption>Example of U+0F0C being used between NGA and shay.</figcaption>
-      </figure>
-	  <p>Whitespace in Tibetan text should use U+00A0   NO-BREAK SPACE. Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following: <span class="ex" lang="bo">།</span>, <span class="ex" lang="bo">༑</span>, <span class="ex" lang="bo">༔</span> or <span class="ex" lang="bo">ཿ</span>. However, numbers and embedded Western text are surrounded by smaller spaces, eg. <span class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</span>.</p>
-	  <div class="issue">
-	    <p>What effect should double-clicking on text produce? Should the whole syllable be selected? Does that include the tsek? Or should the application just highlight the grapheme clusters?</p>
-      </div>
-    </section>
+
+
+
+<section id="tsheg">
+<h4>Tsek and section boundaries</h4>
+
+<p>The <span class="name">tsheg</span> is not used before a <span class="name">shad</span>, except after <span class="codepoint" translate="no"><bdi lang="bo">&#x0F44;</bdi> <span class="uname">U+0F44 TIBETAN LETTER NGA</span></span>. For example, note the end of the three sections in [[[#fig_tsek_shad]]]:</p>
+
+<figure id="fig_tsek_shad" class="sideCaption">
+<img src="images/fig_tsek_shad.png" alt="" style="height: 10rem;">
+<figcaption><span class="name">Tsheg</span> not being used before <span class="name">shad</span>, and of U+0F0C being used between NGA and <span class="name">shad</span>.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">དོན་ཚན་དང་<span class="fig_highlight">པོ།</span>&nbsp;འགྲོ་བ་མིའི་རིགས་རྒྱུད་ཡོངས་ལ་སྐྱེས་ཙམ་ཉིད་ནས་ཆེ་མཐོངས་ད<span class="fig_highlight">ང༌།</span>&nbsp;ཐོབ་ཐངགི་རང་དབང་འདྲ་མཉམ་དུ་ཡོད་<span class="fig_highlight">ལ།</span></p>
+</details>
+
+<p class="info">So that line-breaking keeps the <span class="uname">NGA</span> + <span class="name">tsheg</span> + <span class="name">shad</span> together, <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0C;</bdi> <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span></span> should be used between <span class="uname">NGA</span> and a <span class="name">shad</span>. This is a non-breaking version of the <span class="name">tsheg</span> (the word 'delimiter' in the name is a misnomer).</p>
+
+
+<figure id="fig_tsek_bstart" class="sideCaption">
+<img src="images/fig_tsek_bstart.png" alt="" style="height: 10rem;">
+<figcaption><span class="uname">TSEG BSTAR</span> being used between <span class="uname">NGA</span> and <span class="name">shad</span>.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">སུ་གང་གིས་གང་ཞིག་གི་རྒྱལ་ཁབ་ཐོབ་ཐང་བཙན་ཤེད་ཀྱིས་འཕྲོག་པ་ད<span class="fig_highlight">ང༌།</span>&nbsp;ཡང་ན་དེའི་རྒྱལ་ཁབ་བརྗེ་བསྒྱུར་གྱི་ཐོབ་ཐང་བཀག་འགོག་བྱེདཔའི་རིགས་མི་ཆོག&nbsp;།</p>
+</details>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="whitespace">
+<h4>White space</h4>
+
+<p>Space is used as a punctuation mark in Tibetan, to separate meaning in sections. It  should not appear at the start of a line.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p37">§</a></p>
+
+<p>Spaces in Tibetan text are usually wider than spaces in English text, and typically only occur after one of the following:</p>
+
+<ol style="list-style-type: lower-alpha">
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F0D;</bdi> <span class="uname">U+0F0D TIBETAN MARK SHAD</span></span></li>
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F11;</bdi> <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span></span></li>
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F14;</bdi> <span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span></span></li>
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F7F;</bdi> <span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span></span></li>
+</ol>
+
+<p>However, numbers and embedded Western text are surrounded by smaller spaces, eg.</p>
+<p><span class="charExample" translate="no"><bdi class="ex" lang="bo">ལོ་ ༢༠༠༡ ཤིང་བྱ་ཟླ་ ༩ ཚེས་ ༥ ཉིན་</bdi></span></p>
+
+<p class="info">So that line-breaks work correctly, <span class="codepoint" translate="no"><img src="images/ch/00A0.png" alt="NBSP" style="height:2rem; vertical-align: middle;"> <span class="uname">U+00A0 NO-BREAK SPACE</span></span>  should be used for spaces when they appear after 
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F40;</bdi> <span class="uname">U+0F40 TIBETAN LETTER KA</span></span>
+or
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F42;</bdi> <span class="uname">U+0F42 TIBETAN LETTER GA</span></span>,
+or between 2 <span class="name">shad</span> or double-<span class="name">shad</span> characters. It should also be used for spacing around 
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F08;</bdi> <span class="uname">U+0F08 TIBETAN MARK SBRUL SHAD</span></span>.</p>
+
+<p>Except for special situations, such as the use of <span class="name">sbrul shad</span>, it is recommended to use a single space where gaps appear, and to stretch that space where necessary.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p35">§</a></p>
+</section>
+</section>
+
 
 
 
@@ -423,9 +514,6 @@ postProcess: [
 
 <section id="emphasis">
 <h3>Emphasis</h3>
-
-
-
 
 
 <p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F35;</bdi> <span class="uname">U+0F35 TIBETAN MARK NGAS BZUNG NYI ZLA</span></span>
