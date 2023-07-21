@@ -100,11 +100,6 @@ samp, kbd {
 	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; 
     font-size: 100%; 
     }
-.uname {
-	text-transform: uppercase;
-	font-size: 85%;
-	letter-spacing:0.03em;
-	}
 
 
 
@@ -118,8 +113,7 @@ samp, kbd {
 }
 span[lang=bo], bdi[lang=bo] {
 	font-size: 28px;
-	margin: 0 0.25em 0 0.25em;
-}
+    }
 #terminology_table td {
 	border: 1px solid #eee;
 }

@@ -275,6 +275,30 @@ postProcess: [
 
 
 
+<section id="direction">
+<h3>Text direction</h3>
+
+<p>Tibetan is normally written horizontally and read from left to right.</p>
+
+<p>Occasionally, Tibetan text may occur in vertically-set text. In this case, syllables are kept together as an unbreakable unit.</p>
+
+
+<figure id="fig_vertical_text" class="sideCaption">
+<img src="images/fig_vertical_text.jpg" alt="藏传佛教活佛转世专题展 བོད་བརྒྱད་ནང་བསྟན་སྤྲུལ་སྐུའི་ལམ་སྲོལ་སྐོར་གྱི་བཤམས་སྟོན།" data-source="http://www.xzmuseum.cn/" style="height:20em;">
+<figcaption>Tibetan syllables that are not broken in vertically-set text.</figcaption>
+</figure>
+</section>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -343,9 +367,6 @@ postProcess: [
 <p><span class="charExample" translate="no"><bdi class="ex" lang="bo">ཡོངས་ཁྱབ་གསལ་བསྒྲགས་
 འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</bdi></span></p>
 </details>
-
-
-<p>See also <a href="#text_segmentation"></a>.</p>
 </section>
 
 
@@ -431,7 +452,7 @@ postProcess: [
 
 <p>This <span class="name">drul-shad</span> is usually surrounded on both sides by the equivalent of about three non-breaking spaces (though no rule is specified).<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p35">§</a> The <span class="name">drul-shad</span> should not appear at the beginning of a new line and the whole structure of spacing-plus-shad needs to be kept together.</p>
 
-<p>For <span class="codepoint" translate="no"><bdi lang="bo">༑</bdi><span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span></span> see <a class="secref">rin_chen_spung_shad</a>.</p>
+<p>For <span class="codepoint" translate="no"><bdi lang="bo">༑</bdi><span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span></span> see [[[#rin_chen_spungs_shad]]].</p>
 
 <p><span class="codepoint" translate="no"><bdi lang="bo">྾</bdi><span class="uname">U+0FBE TIBETAN KU RU KHA</span></span> (often repeated three times) indicates a refrain.</p> 
 </section>
@@ -533,6 +554,27 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 <figcaption>Use of colour and diacritics to emphasise text.</figcaption>
 </figure>
 </section>
+
+
+
+
+
+
+
+  
+<section id="inlinenotes">
+<h3>Inline notes &amp; annotations</h3>
+
+<p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F37;</bdi> <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span></span> can be used in interspersed commentaries to tag the root text that is being commented on. An alternative is to set the tsheg-bar being commented on in large type and the commentary in small type.</p>
+
+<p>Application software  has to ignore this character for text processing, such as search and collation.</p>
+
+
+<figure id="fig_root_text" class="sideCaption">
+<img src="images/fig_root_text.svg" alt="སྐུ༷་གསུ༷ང་ཐུག༷ས།" class="ex" lang="bo" style="height: 7rem;">
+<figcaption>Marks being used to identify root text.</figcaption>
+</figure>
+</section>
 </section>
 
 
@@ -541,81 +583,56 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
     
 
 <section id="paragraphs">
-<h2>Typography for Tibetan paragraphs</h2>
+<h2>Line &amp; paragraph layout</h2>
 
 
-      <section id="藏文的书写方式">
-    <h3>Tibetan Writing Mode</h3>
-    <p>Tibetan is written horizontally and read from left to right.</p>
-    <p its-locale-filter-list="zh-hans">藏文文字为“从左至右”书写、“从上向下”显示，也简称为横排从左至右排版。</p>
-    <div class="issue">
-      <p>Is Tibetan written vertically with upright glyphs at all (eg. in table headings, in pictures, etc.)? If so, does it require that all elements composing a syllable be kept together in horizontal fashion, placing just syllables one above the other? Or does each non-subjoined/combining character move to the next line? etc.</p>
-    </div>
-  </section>
 
-      <section id="line_breaking">
-    <h3>Line breaking</h3>
-    <p>Normally, Tibetan only breaks after a tsek (<span class="uname">U+0F0B TIBETAN MARK INTER-SYLLABIC TSHEG</span> <span lang="bo">་</span>), and doesn't break after spaces.</p>
-	  <p>Line breaks do not occur after a tsek
-	    when it follows <span class="uname">U+0F44 TIBETAN LETTER NGA</span> <span lang="bo">ང</span> (with or without a vowel sign) and precedes a shay (<span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span>).</p>
-	  <div class="issue">
-	    <p>The Unicode Standard also talks of other instances where Tibetan grammatical rules do not permit a break, but it isn't clear what those are.</p>
-      </div>
-	  <p>If the character after NGA is an ordinary tsek, then  lines should not break between the tsek and the shay. Text is likely to be more portable if content authors use the  TSHEG BSTAR in these locations, instead of the normal tsek.</p>
-	  <p>Line breaks are also possible after:</p>
-	  <ul>
-	    <li><p ><span class="uname">U+0F0D TIBETAN MARK SHAD</span> <span lang="bo">།</span> - as long as the next line starts with a consonant (ie. not a second shad).</p></li>
-	    <li><p><span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span> <span lang="bo">༔</span></p></li>
-      </ul>
-	  <ul>
-	    <li><p><span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span> <span lang="bo">ཿ</span> (used to represent the visarga in transliterations). There is never a tsek after this character, eg. <span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>.</p></li>
-      </ul>
-	  <p>Tibetan never breaks inside a syllable, and has no hyphenation. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
-	  <p>A line must never start with a shad.</p>
+<section id="line_breaking">
+<h3>Line breaking</h3>
 
+<p>Tibetan never breaks inside a syllable, and has no hyphenation.</p>
 
-      <section id="rin_chen_spungs_shad">
-    <h4>Line breaks and rin chen spungs shad</h4>
-	  <p>In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a shay breaks onto a new line. In that case the shay or double shay is replaced by rin chen spungs shad, <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span> <span lang="bo">༑</span>. </p>
-	  <p>At the end of a topic the rules say that only one shay should be converted, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑  །</span>, however it is moderately popular to convert both, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ ༑</span>. This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line. </p>
-	  <p>This varies in the following cases:</p>
-	  <ul>
-	    <li>
-	      <p>when a line starts with <span class="ex" style="white-space:nowrap;" lang="bo">ལེའུ། །</span>, no rin chen spungs shad would be used, since <span class="ipa">le'u</span> is pronounced as two syllables.</p></li>
-	    <li><p>sometimes  only the first of two shays is replaced, ie. <span class="ex" style="white-space:nowrap;" lang="bo">༑ །</span>, but this style is considered less attractive.</p></li>
-	    <li> <p>some printed books do not use rin chen spungs shad replacements, however the majority of books  apply the same rules as are used with pechas.</p></li>
-	  </ul>
-	  <p>In an environment where the width or content of the page can change, this feature poses a problem for the content author. The application needs to be able to automatically switch between the two styles of shad as a syllable moves on or off a new line when the page is resized or when preceding content is modified.</p>
-	  <p>The Unicode Standard adds: "Not only is rin-chen-spungs-shad used as the replacement for the shay but a whole class of “ornamental shays ” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it."</p>
-      </section>
-      <div class="issue">
-        <p>What are the rules for line-wrap for other symbols? Are there rules about certain characters not starting/ending a line?</p>
-      </div>
-  </section>
+<p> Normally, lines  break after  <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0B;</bdi> <span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span></span>, and don't break after spaces. If a word is composed of multiple syllables, it is also preferable to avoid breaking a line in the middle of the word.</p>
 
-      <section id="punctuation_marks">
-    <h3>Justification</h3>
-    <p>There are two alternative methods of justification.</p>
+<p>However, line breaks should not occur after a
+<span class="name">tsheg</span> when it is between <span class="codepoint" translate="no"><bdi lang="bo">&#x0F44;</bdi> <span class="uname">U+0F44 TIBETAN LETTER NGA</span></span>
+(with or without a vowel sign) and
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F0D;</bdi> <span class="uname">U+0F0D TIBETAN MARK SHAD</span></span>.
+Applications should be able to handle this  if they encounter a normal <span class="name">tsheg</span>, but content authors are advised to use
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F0C;</bdi> <span class="uname">U+0F0C TIBETAN MARK DELIMITER TSHEG BSTAR</span></span>
+instead,<span class="name"></span> to be on the safe side.</p>
+
+<p>Line breaks are also possible after:</p>
+
+<ul>
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F0D;</bdi> <span class="uname">U+0F0D TIBETAN MARK SHAD</span></span>
+- as long as the next line starts with a consonant (ie. not a second <span class="name">shad</span>).</li>
+
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F14;</bdi> <span class="uname">U+0F14 TIBETAN MARK GTER TSHEG</span></span></li>
+
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F7F;</bdi> <span class="uname">U+0F7F TIBETAN SIGN RNAM BCAD</span></span>
+(<span class="name">visarga</span>) (there is never a <span class="name">tsheg</span> after this character, eg.
+<span class="ex" lang="bo">ཨོཾ་ཨཱཿཧཱུྃ་</span>)</li>
+
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F34;</bdi> <span class="uname">U+0F34 TIBETAN MARK BSDUS RTAGS</span></span>
+or
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0FBE;</bdi> <span class="uname">U+0FBE TIBETAN KU RU KHA</span></span><a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p37">§</a></li>
+</ul>
 
 
-      <section id="inter_character_spacing">
-    <h4>Inter-character spacing</h4>
-	  <p>Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
-      </section>
-      
+<p>A line must never start with a <span class="name">shad</span>, space, or other punctuation sign.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p37">§</a></p>
 
+<p>A line that ends with a <span class="name">shad</span> plus space followed by a consonant can wrap after the <span class="name">shad</span> and discard the space. But a line that ends with one of the following must not lose the space and must not be broken either side of the space:</p>
 
-      <section id="tsek_padding">
-    <h4>Tsek padding</h4>
-	  <p>  While hand writing, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with tseks to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
-	  <figure><img src="images/tsek-justification.jpg" alt="" height="475" width="313"><figcaption>A page of a booklet showing tsek padding.</figcaption></figure>
-	  <p>There are a couple of detailed rules about the use of tsek padding. </p>
-	  <p>Justifying tseks are almost always used when the line ends in a tsek. If, however, the line ends in a shay, there are a number of alternatives.</p>
-	  <p>If the line ends with a single shay the shay is followed by spaces. Tsek padding is never applied after spaces. (See examples in the figure above.)</p>
-	  <p>If the line ends in a double shay (with space between), it is unusual (though possible) to add tsek padding. Instead, the space between the shays is stretched or narrowed. (See examples in the figure below.) The same applies if the second shay was removed because it was preceded by a KA or GA.</p>
-	  <figure><img src="images/shay-justification.jpg" alt="" height="440" width="600"><figcaption>Booklet pages showing double shay usage at the end of a line.</figcaption></figure>
-      </section>
-  </section>
+<ul>
+<li><span class="codepoint" translate="no"><bdi lang="bo">&#x0F40;</bdi> <span class="uname">U+0F40 TIBETAN LETTER KA</span></span>
+or
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F42;</bdi> <span class="uname">U+0F42 TIBETAN LETTER GA</span></span>
+followed by a space (in which case a <span class="name">shad</span> is not used)</li>
+
+<li>a <span class="name">shad</span> followed by a space then another <span class="name">shad</span>.</li>
+</ul>
+<p>This should be straighforward if content authors use <span class="codepoint" translate="no"><span class="uname">U+00A0 NO-BREAK SPACE</span></span> for the latter cases.</p>
 
 
 
@@ -623,17 +640,137 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 
 
 
+<section id="rin_chen_spungs_shad">
+<h4>Line breaks and rin chen spungs shad</h4>
+
+<p>In Tibetan, especially in pechas, it is considered a special case if the last syllable of an expression that is terminated by a <span class="name">shad</span> or a double-<span class="name">shad</span> breaks onto a new line. In that case
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F0D;</bdi> <span class="uname">U+0F0D TIBETAN MARK SHAD</span></span>
+may be replaced by
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F11;</bdi> <span class="uname">U+0F11 TIBETAN MARK RIN CHEN SPUNGS SHAD</span></span>.
+This change serves as an optical indication that there is a left-over syllable at the beginning of the line that actually belongs to the preceding line.</p>
 
 
+<figure id="fig_rin_chen_spung_shad">
+<img src="images/rin_chen_spung_shad.png" alt="ས་དང་པོར་སྦྱིན་པའི་གཏམ་མཛད་དོ། །སྙིང་རྗེ་དམན་ཞིང་་་་་་་་་་སེམས་<br>ཅན༑ །གཉས་པ་རྒྱལ་བའི་" class="ex" data-notes="25px Noto Serif Tibetan">
+<figcaption>Rin chen spung shad in use.  <a href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf">Source</a>.</figcaption>
+</figure>
+<details class="figureSub"><summary>show as text</summary>
+<p lang="bo">ས་དང་པོར་སྦྱིན་པའི་གཏམ་མཛད་དོ། །སྙིང་རྗེ་དམན་ཞིང་་་་་་་་་་སེམས་<br>ཅན<span class="fig_highlight">༑</span> །གཉས་པ་རྒྱལ་བའི་</p>
+</details>
 
 
+<p>This behaviour varies in the following cases:</p>
+<ul>
+<li>When a line starts with a <span class="name">tseg-bar</span> containing 2 vowel signs (ie. a diphthong), such as <span class="ex" lang="bo" style="white-space:nowrap;">ལེའུ། །</span>, no <span class="name">rin chen spungs shad</span> would be used, since <span class="ipa">le'u</span> is pronounced as two syllables.</li>
+
+<li>At the end of a topic the rules say that only one <span class="name">shad</span> should be converted, ie. <span class="ex" lang="bo" style="white-space:nowrap;">༑  །</span>, however it is moderately common to see both converted, ie. <span class="ex" lang="bo" style="white-space:nowrap;">༑ ༑</span>.</li>
+</ul>
 
 
-<section id="baseline_alignment">
-<h3>Baseline alignment</h3>
+<p>Some printed books do not use <span class="name">rin chen spungs shad</span> replacements, however the majority of books seem to apply the same rules as are used with pechas.</p>
 
-<p>When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
+<p>In an environment where the width or content of the page can change, such as a web browser, this feature poses a problem. In printed or written texts where the layout is fixed, a content author would typically only insert <span class="name">rin chen spungs shad</span> once the line breaks have been established, and would not expect the text to be changed after that. On the Web, resizing a window or displaying on different devices will reflow the content, and only after that process is it apparent which instances of <span class="name">shad</span> need to be converted. Applications need to be able to automatically switch between the two styles of <span class="name">shad</span> in real time, as a syllable moves on or off a new line because the page is resized or the preceding content is modified.</p>
+
+<p>The Unicode Standard adds: <q>Not only is rin-chen-spungs-shad used as the replacement for the shad but a whole class of “ornamental shads” are used for the same purpose. All are scribal variants on a rin-chen-spungs-shad, which is correctly written with three dots above it.</q></p>
 </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="justification">
+<h3>Text alignment &amp; justification</h3>
+
+<p> There are two alternative methods of justification.</p>
+
+
+
+
+<section id="icspacing">
+<h4>Method 1: Inter-character spacing</h4>
+
+<p>Spacing between all characters should be adapted equally. Note that the width of the white-space character should not be changed significantly, so Tibetan texts use the non-breaking space mentioned above, which doesn't change width on justification.</p>
+</section>
+
+
+
+
+
+
+<section id="icspacing2">
+<h4>Method 2: tsheg padding</h4>
+
+<p>While hand writing pechas, but also in some publications, authors add small spaces across the text to get the line end as near as possible to the right margin. Where space remains at the margin, it may be left as is, if it is short. Otherwise, the remaining space will be filled with <span class="name">tshegs</span> to make the line as flush as possible with the right margin (there will usually still be a slight raggedness to the right edge of the text).</p>
+
+
+<figure id="fig_tsek_justification" class="sideCaption">
+<a target="_blank" href="images/tsek-justification.jpg"><img src="images/tsek-justification.jpg" width="313" height="475" alt=""></a>
+<figcaption>A page of a booklet showing tsheg padding. <span class="instructions">(Click on the image to see larger.)</span></figcaption>
+</figure>
+
+
+<p>There are a couple of detailed rules about the use of <span class="name">tsheg</span> padding. Justifying <span class="name">tshegs</span> are almost always used when the line ends in a <span class="name">tsheg</span>. If, however, the line ends in a <span class="name">shad</span>, there are a number of alternatives.</p>
+
+<p>If the line ends with a single <span class="name">shad</span> the <span class="name">shad</span> is followed by spaces. <span class="name">Tsheg</span> padding is never applied after spaces. (See examples in the figure above.)</p>
+
+<p>If the line ends in a double <span class="name">shad</span> (with space between), it is unusual (though possible) to add <span class="name">tsheg</span> padding. Instead, the space between the <span class="name">shads</span> is stretched or narrowed. (See examples in the figure below.) The same applies if the second <span class="name">shad</span> was removed because it was preceded by a KA or GA.</p>
+
+
+<figure id="fig_shad_justification">
+<a target="_blank" href="images/shad-justification.jpg"><img src="images/shad-justification.jpg" width="600" height="440" alt=""></a>
+<figcaption>Booklet pages showing double shad usage at the end of a line.</figcaption>
+</figure>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="baselines">
+<h3>Baselines, line height, etc.</h3>
+
+<p>Tibetan uses a hanging baseline, which tends to fall between the ascender and x-height of Latin text. When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
+
+<p>Tibetan places vowel marks above base characters, and can also add combining characters below the line. In addition, the stacking of consonants, which can have vowel sign below, further extends the text height downwards. The complexity of the glyph clusters means that the vertical resolution needed for clearly readable Tibetan text is higher than for English, or most Latin text.</p>
+
+<p>To give an approximate idea, [[[#fig_baselines]]] compares Latin and Tibetan glyphs from the Noto  Serif font.</p>
+
+
+<figure id="fig_baselines">
+<img src="images/fig_baselines_noto_serif.png" alt="Hhqxམ་ནཐུདུརྡེམོཀདཤྲཱིསྤྱིསྒྲུཧཱུྃ།༼" class="ex" lang="bo" data-notes="Noto Serif Tibetan 130px" style="max-width: 90%; margin-block-end:1rem;">
+<figcaption>Font metrics for Latin text  compared with Tibetan glyphs in the Noto Serif Tibetan font.</figcaption>
+</figure>
+
+
+<p>[[[#fig_baselines_other]]] shows similar comparisons for the Microsoft Himalaya and Tibetan Machine Uni fonts.</p>
+
+
+<figure id="fig_baselines_other">
+<div>
+<img src="images/fig_baselines_ms_himalaya.png" alt="Hhqxམ་ནཐུདུརྡེམོཀདཤྲཱིསྤྱིསྒྲུཧཱུྃ།༼" class="ex" data-notes="Microsoft Himalaya 188px" style="max-width: 90%; margin-block-end:2rem;" lang="bo">
+
+<img src="images/fig_baselines_machine_uni.png" alt="Hhqxམ་ནཐུདུརྡེམོཀདཤྲཱིསྤྱིསྒྲུཧཱུྃ།༼" class="ex" data-notes="Tibetan Machine Uni 170px" style="max-width: 90%;" lang="bo">
+</div>
+<figcaption>Latin font metrics compared with Tibetan glyphs in the Microsoft Himalaya (top) and Tibetan Machine Uni (bottom) fonts.</figcaption>
+</figure>
+</section>
+
+
 
 
 
@@ -643,33 +780,103 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 
  
 <section id="counters_lists">
-          <h3>Lists and counters</h3>
+<h3>Lists and counters</h3>
 
-        <div class="note">
-        <p>This section needs attention. Questions include: Is a space expected after the counter? If so, is it a non-break space? Is any other punctuation needed after a Tibetan counter? How common is the Tibetan vs European counter?</p>
-        </div>
-      <p>Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals. They differ only in shape.</p>
-	  <figure>
-   		
-      <div style="text-align:left;">
-	    <p lang="bo">༡ འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
-	    <p lang="bo">༢ ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
-	    <p lang="bo">༣ ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
-        </div>
-	    <figcaption>Examples of Tibetan counters in a list.</figcaption>
-	    </figure>  
-      <p>European numerals can be used for list counters. The European numeral is followed by a period.</p>
-	  <figure>
-      <div style="text-align:left;">
-	    <p lang="bo">1. འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
-	    <p lang="bo">2. ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
-	    <p lang="bo">3. ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
-        </div>
-	    <figcaption>Examples of European numeral counters in a list.</figcaption>
-	    </figure>  
-  </section> 
-  
-  </section>
+<p>Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals; they differ only in shape.</p>
+<figure>
+
+<div style="text-align:left;">
+<p lang="bo">༡ འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
+<p lang="bo">༢ ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
+<p lang="bo">༣ ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
+</div>
+<figcaption>Examples of Tibetan counters in a list.</figcaption>
+</figure>
+
+
+<p>European numerals can also be used for list counters. The European numeral is followed by a period.</p>
+
+
+<figure>
+<div style="text-align:left;">
+<p lang="bo">1. འ་ཞ་མི་རིགས་ཀྱིས་བསྐྲུན་པའི་ཤིང་གི་ཟམ་པ།</p>
+<p lang="bo">2. ལོ་ངོ་800ཡི་ལོ་རྒྱུས་ལྡན་པའི་དགོན་རྙིང་ཆོས་པོ་དགོ།</p>
+<p lang="bo">3. ཆི་ཅ་ཞེས་པའི་ཁྱིམ་རྒྱུད་ཀྱི་བང་སོའི་ཚོགས།</p>
+</div>
+<figcaption>Examples of European numeral counters in a list.</figcaption>
+</figure>  
+
+
+
+
+<section id="cs_suffix">
+<h4>Prefixes and suffixes</h4>
+
+<p><span class="codepoint"><span lang="bo">&#x0F3D;</span><span class="uname">U+0F3D TIBETAN MARK ANG KHANG GYAS</span></span> can  be used much like a single parenthesis in list counters.</p>
+</section>
+
+
+
+
+
+<section id="superscript_counters">
+<h4>Sub- or superscript counters</h4>
+
+<p>Duff describes a form of numbered list where the numbers are placed above or below the main text, which he says is often used.<tt>dt,41</tt></p>
+
+
+<figure id="fig_superscript_counters">
+<img src="images/superscript_counters.png" alt="" class="ex" data-source="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf#page=41">
+<figcaption>Superscript numbering of text.</figcaption>
+</figure>
+</section>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="page">
+<h2>Page &amp; book layout</h2>
+
+
+
+<section id="generallayout">
+<h3>General page layout &amp; progression</h3>
+
+
+<section id="pechas">
+<h4>Pechas</h4>
+
+<p>In pechas, Tibetan text is written inside a visible box which defines the margin of the page. In more recent publications this box may be invisible. Modern publications also use paragraphs. The initial line of a new paragraph may be indented.</p>
+
+<p>Traditional pechas only have 2 sizes of text: <span class="charExample inline" translate="no"><span class="ex" lang="bo">ཡིག་ཆེན་</span> <span class="meaning">larger</span></span>, and <span class="charExample inline" translate="no"><span class="ex" lang="bo">ཡིག་ཆུང་</span> <span class="meaning">smaller</span></span>, where the larger is the standard size. The smaller text needs to be readable, and so doesn't usually go below 20pt; the larger text is likely to be around 27-30pt.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p34">§</a></p>
+
+<p>Titles are usually written on a title page, using the 'larger' size. However, on shorter pechas it may be written on the same page as the text using the 'smaller' size.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p34">§</a></p>
+
+<p>Small size text is also used to write annotations, in a similar way to the use of italics or footnotes in the West.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p34">§</a></p>
+</section>
+</section>
+
+
+
+
+
+<section id="footnotes_etc">
+<h3>Notes, footnotes, etc.</h3>
+
+<p><span class="codepoint"><span lang="bo">&#x0F36;</span> <span class="uname">U+0F36 TIBETAN MARK CARET -DZUD RTAGS BZHI MIG CAN</span></span> and <span class="codepoint"><span lang="bo">&#x0FBF;</span> <span class="uname">U+0FBF TIBETAN KU RU KHA BZHI MIG CAN</span></span> are used to indicate where text should be inserted within other text or as references to footnotes and marginal notes.</p>
+</section>
+</section>
+
+
+
+
 
 
 
