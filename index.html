@@ -57,15 +57,12 @@ postProcess: [
 <body>
 	
 <div id="abstract">
-<p>This document describes requirements for the layout and presentation of text in the Tibetan script for use with Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode. In addition to China, especially the Tibet Autonomous Region, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
+<p>This document describes or points to requirements for the layout and presentation of text in languages that use the Tibetan script. The target audience is developers of Web standards and technologies, such as HTML, CSS, Mobile Web, Digital Publications, and Unicode, as well as implementers of web browsers, ebook readers, and other applications that need to render Tibetan text.  In addition to China, especially the Tibet Autonomous Region, the script is widely used in Bhutan, Nepal, India and throughout the Tibetan diaspora, and requirements for these regions are also included in the scope of the document.</p>
 </div>
 
 
 <div id="sotd">
-<p>This document describes the basic requirements layout and text support on the Web and in eBooks for the Tibetan language, using the Tibetan script, and used in China, Bhutan, India, and other countries. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of the N'Ko script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/tibt-gap/">document that summarises gaps</a> in support on the Web for Tibetan.</p>
-
-<p>The document contains English and partial Chinese versions of the text, which can be filtered using the buttons at the top right of the window. The English version is  the authoritative version.</p>
-
+<p>This document describes the basic requirements layout and text support on the Web and in eBooks for the Tibetan language, using the Tibetan script, and used in China, Bhutan, India, and other countries. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of the Tibetan script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/tibt-gap/">document that summarises gaps</a> in support on the Web for Tibetan.</p>
 <p>The editor's draft of this document is being developed as part of the <a href="https://github.com/w3c/tlreq/">Tibetan Language Enablement</a> program of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It will be published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Draft Note.</p>
 </div>
 
@@ -99,14 +96,34 @@ postProcess: [
 
 <section id="intro">
 <h2>Introduction</h2>
-  
+
+
+
+<section id="h_acknowledgements">
+<h3>Contributors</h3>
+
+<p>The initial information in this document was provided by Richard Ishida, drawing on the structure and text in <a href="https://r12a.github.io/scripts/tibt/bo"><cite>Tibetan Orthography Notes</cite></a>.</p>
+
+<p>Some additional information was based on a <a href="https://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a>.</p>
+
+<p><span lang="zh-hans">胡春明</span> (Chunming Hu) prepared an early translation of parts of this document (now removed).</p>
+
+<p>This document has been developed with contributions from participants of the <a href="https://w3c.github.io/clreq/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
+
+<p data-lang="en">See also the <a href="https://github.com/w3c/tlreq/graphs/contributors">GitHub contributors list</a> for the Southeast Asia Language Enablement project, and the <a href="https://github.com/w3c/tlreq/issues?q=is%3Aissue++label%3As%3Atibt">discussions related to Tibetan</a>.</p>
+</section>
+
+
+
+
+
+
   
 <section id="h_about_this_document">
 <h3>About this document</h3>
 
 <p>This document provides information about the Tibetan script as used for the Tibetan and Dzongka languages as used in China, Bhutan, India, and the Tibetan diaspora.</p>
-
-<p>The document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
+<p>The aim of this document is to describe the basic requirements for Tibetan script layout and text support on the Web and in eBooks. These requirements provide information for Web technologies such as CSS, HTML and digital publications, and for application developers, about how to support users of the Tibetan script. The Tibetan script is used in China, Bhutan, India, and other countries.</p>
 </section>
 
 
@@ -126,7 +143,9 @@ postProcess: [
 
 <p>Wherever an unsupported feature is indentified through the gap analysis process, the requirements for that feature need to be documented. Those requirements can be described here.</p>
 
-<p>As gaps in support for Tibetan are captured, the gap is brought to the attention of the relevant spec developer or browser implementation community. The progress of such work is tracked in the <a href="https://github.com/w3c/i18n-activity/projects/3?card_filter_query=label%3Ax%3Atibt">Gap Analysis Pipeline</a>.</p>
+<p>As gaps in support for Tibetan are captured, the gaps can be brought to the attention of the relevant spec developer or the browser implementator community. The progress of such work is tracked in the <a href="https://github.com/w3c/i18n-activity/projects/3?card_filter_query=label%3Ax%3Atibt">Gap Analysis Pipeline</a>.</p>
+
+<p>The document should contain no reference to a particular technology. For example, it should not say &quot;CSS does/doesn't do such and such&quot;, and it should not describe how a technology, such as CSS, should implement the requirements. It is technology agnostic, so that it will be evergreen, and it simply describes how the script works. The gap analysis document is the appropriate place for all kinds of technology-specific information.</p>
 </section>
 
 
@@ -137,12 +156,11 @@ postProcess: [
 <section id="h_sources">
 <h3>Other related resources</h3>
 
+<p>To complement any  content authored specifically for this document, the sections in the document also point to related, external information, tests, GitHub discussions, etc.</p>
 <p>The initial material for this document was an edited extract from the page <a href="https://r12a.github.io/scripts/tibt/bo.html">Tibetan orthography notes</a>. That page contains additional details about character usage and how the writing system works, plus interactive information, which are not available here.</p>
-<p>Some additional information was based on a <a href="https://www.chinaw3c.org/layout-workshop-report.html#talk5">talk by Jianxin Yin</a>.</p>
-
 <p>The document <a href="https://www.w3.org/TR/typography/">Language enablement index</a> points to this document and others, and provides a central location for developers and implementers to find information related to various scripts.</p>
 
-<p>The W3C also maintains a tracking system that  has links to GitHub issues in W3C repositories. There are separate links for (a) requests from developers to the user community for information about how scripts/languages work, (b) issues raised against a spec, and (c) browser bugs.  For example, you can find out <a href="https://w3c.github.io/i18n-activity/textlayout/?filter=type-info-request">what information developers are currently seeking</a>, and the resulting list can also be filtered by script.</p>
+<p>The W3C also has a repository with discussion threads related to the Tibetan script, including requests from developers to the user community for information about how scripts/languages work, and a notification system that tracks issues in W3C working groups related to Southeast Asian scripts. See a list of <a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3As%3Atibt+label%3Aquestion+">unresolved questions</a> for Tibetan experts. Each section below points to related discussions. See also the <a href="https://w3c.github.io/tlreq/home">repository home page</a>.</p>
 </section>
 
 
@@ -225,7 +243,7 @@ postProcess: [
 
 
 
-<p>To write the sounds of the standard Lhasa dialect, Tibetan uses 30 consonant letters (plus their subjoined forms). 6 more letters are used to write Sanskrit.</p>
+<p>To write the sounds of the standard Lhasa dialect, Tibetan uses 28 consonant letters (plus their subjoined forms). 6 more letters are used to write Sanskrit.</p>
 
 <p>A  distinguishing feature of Tibetan is the set of separate code points for subjoined consonants, used to create consonant stacks. Of the 77 combining characters in the Tibetan block, 48 represent subjoined consonant forms. Unlike many other Indic scripts, the modern Tibetan orthography doesn't use a <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-virama">virama</a> to create stacks.</p>
 
@@ -237,7 +255,7 @@ postProcess: [
 
 <p><em>Sanskrit</em> vowels written in Tibetan use additional vowel signs and combining marks, some of which represent diphthongs, and some of which form circumgraphs or multipart characters, depending on the encoding.</p>
 
-<p>Tone is not explicitly indicated in the orthography.</p>
+<p>Tone is indicated by the choice of root character and/or its associated prefixes and superscripts.</p>
 
 <p>Modern Tibetan writing uses few punctuation marks or symbols, but the Tibetan script block in Unicode contains many of these.</p>
 
@@ -262,6 +280,8 @@ postProcess: [
 </div>
 <figcaption>Syllable composition in Tibetan</figcaption>
 </figure>
+
+<p>See <a href="https://r12a.github.io/scripts/tibt/bo.html#consonants">more information</a> about how the various parts of the <span class="name">tsheg-bar</span> work together.</p>
 </section>
 </section>
 
@@ -278,6 +298,56 @@ postProcess: [
 <section id="direction">
 <h3>Text direction</h3>
 
+
+<dl class="reslinks">
+<!--dt>Requirements</dt>
+<dd>
+<ul>
+<li>tba</li>
+</ul>
+</dd-->
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aopen+is%3Aissue+label%3Aquestion+label%3Ai%3Abidirectional_text%2Ci%3Avertical_text+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Abidirectional_text%2Ci%3Avertical_text">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Abidi-text%2Cvertical-text">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<!--dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbd)</li>
+
+<li>Exploratory/interactive test results (tbd)</li>
+</ul>
+</dd-->
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#direction">Text direction</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#text_direction">Text direction</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
 <p>Tibetan is normally written horizontally and read from left to right.</p>
 
 <p>Occasionally, Tibetan text may occur in vertically-set text. In this case, syllables are kept together as an unbreakable unit.</p>
@@ -287,6 +357,210 @@ postProcess: [
 <img src="images/fig_vertical_text.jpg" alt="藏传佛教活佛转世专题展 བོད་བརྒྱད་ནང་བསྟན་སྤྲུལ་སྐུའི་ལམ་སྲོལ་སྐོར་གྱི་བཤམས་སྟོན།" data-source="http://www.xzmuseum.cn/" style="height:20em;">
 <figcaption>Tibetan syllables that are not broken in vertically-set text.</figcaption>
 </figure>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_shaping">
+<h2>Glyph shaping &amp; positioning</h2>
+
+
+<section id="h_writing_styles">
+<h3>Fonts &amp; font styles</h3>
+
+<aside class="prompts">How are fonts grouped into recognisable writing styles? How is each writing style used? Are OpenType features needed? What other font-related requirements and issue exist?</aside>
+
+
+<dl class="reslinks">
+<!--dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tlreq/km.html#writingstyles">Font styles</a></li>
+</ul>
+</dd-->
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Afonts+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Afonts">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Afonts">Southeast Asian issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AFonts">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-fonts.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#fonts">Fonts</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#fonts">Fonts &amp; font styles</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<section class="h_context">
+<h3>Context-based shaping &amp; positioning</h3>
+
+<aside class="prompts">Are special glyph forms needed, depending on the context in which a character is used? Do glyphs interact in some circumstances? Are there requirements to position diacritics or other items specially, depending on context? Does the script have multiple diacritics competing for the same location relative to the base?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#context">Context-based shaping &amp; positioning</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Aglyph_shaping_positioning+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aglyph_shaping_positioning">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aglyphs">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbc)</li>
+
+<li>Exploratory/interactive test results (tbc)</li>
+</ul>
+</dd>
+
+
+<dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#glyphs">Glyph shaping and positioning</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#glyphs">Glyph shaping &amp; positioning</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<!--section class="h_cursive">
+<h3>Cursive text ****NA****</h3>
+
+</section-->
+
+
+
+
+
+
+
+
+<section class="h_fontstyle">
+<h3>Letterform slopes, weights, &amp; italics</h3>
+
+<aside class="prompts">Are italicisation, bolding, oblique, etc relevant? Do italic fonts lean in the right direction? Is synthesised italicisation problematic? Are there other problems relating to bolding or italicisation - perhaps relating to generalised assumptions of applicability?</aside>
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#fontstyle">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Aletterforms+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aletterforms">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Afont-style+">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3ALetterforms">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letterforms.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#font_style">Font styles, weight, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#font_style">Letterform slopes, weights, &amp; italics</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
+
+<!--section class="h_transforms">
+<h3>Character transforms ****NA****</h3>
+
+</section-->
 </section>
 
 
@@ -302,35 +576,61 @@ postProcess: [
 
 
 
-<section id="characters">
-<h2>Structural boundaries &amp; markers</h2>
- 
+
+<section class="h_graphemes">
+<h2>Typographic units</h2>
 
 
 
-    
-<section id="headmark">
-<h3>Head marks</h3>
 
-<p>In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front.</p>
-
-<p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
-
-<p>[[[#fig_head_marks]]] shows a common head mark, <span class="codepoint" translate="no"><bdi lang="bo">&#x0F04;</bdi> <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span></span>, and the extension character <span class="codepoint" translate="no"><bdi lang="bo">&#x0F05;</bdi> <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span></span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two <span class="name">shads</span>.</p>
+<section class="h_transforms">
+<h3>Characters &amp; encoding</h3>
 
 
-<figure id="fig_head_marks" class="sideCaption">
-<p style="font-size:2rem; line-height: 2;" lang="bo"><span class="fig_highlight">༄༅༎</span> ཡོངས་ཁྱབ་གསལ་བསྒྲགས་འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</p>
-<figcaption>Example of use of head marks at the start of the Universal Declaration of Human Rights.</figcaption>
-</figure>
+<aside class="prompts">Most languages are now supported by Unicode, but there are still occasional issues. In particular, there may be issues related to ordering of characters, or competing encodings (as in Myanmar), or standardisation of variation selectors or the encoding model (as in Mongolian).</aside>
 
 
-<p>Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#type" class="external">Basic features ff.</a></li>
+</ul>
+</dd>
 
-<p>Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
-<p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F01;</bdi> <span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span></span><br>
-<span class="codepoint" translate="no"><bdi lang="bo">&#x0F02;</bdi> <span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span></span><br>
-<span class="codepoint" translate="no"><bdi lang="bo">&#x0F03;</bdi> <span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span></span></p>
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Acharacters_and_encoding+label%3Aquestion">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Acharacters_and_encoding">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Acharset">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbc)</li>
+
+<li>Exploratory/interactive test results (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#charset">Characters &amp; encoding</a></li>
+</ul>
+</dd>
+</dl>
 </section>
 
 
@@ -341,9 +641,60 @@ postProcess: [
 
 
 
-<section id="word">
-<h3>Word &amp; syllable boundaries</h3>
-<p id="def-wordboundary" class="explanatoryintro definitionStub"></p>
+
+
+<section class="h_segmentation">
+<h3>Grapheme/word segmentation &amp; selection</h3>
+
+<aside class="prompts">Do Unicode grapheme clusters appropriately segment character units for the script? Are there special requirements for the following operations: forwards/backwards deletion, cursor movement &amp; selection, character counts, searching &amp; matching, text insertion, line-breaking, justification, case conversions, sorting? Are words separated by spaces, or other characters? Are there special requirements when double-clicking on the text? Are words hyphenated?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#word" class="external">Word boundaries</a></li>
+
+<!--li><cite>Tibetan Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#graphemes" class="external">Graphemes</a></li-->
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Agrapheme_word_segmentation+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Agrapheme_word_segmentation">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Asegmentation">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/glyph_character_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AGrapheme_word">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-grapheme-word-segmentation.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#segmentation">Grapheme/word segmentation &amp; selection</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
 
 
 <p>Word boundaries  are not indicated by the Tibetan orthography. However, phonetic syllables, represented by a sequence of letters known as a <span class="name">tsheg-bar</span> <span class="ipa">tsek bar</span>, are separated by <span class="codepoint" translate="no"><bdi lang="bo">&#x0F0B;</bdi> <span class="uname">U+0F0B TIBETAN MARK INTERSYLLABIC TSHEG</span></span>.</p> 
@@ -368,9 +719,25 @@ postProcess: [
 འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</bdi></span></p>
 </details>
 </section>
+</section>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+<section id="h_characters_and_phrases">
+<h2>Punctuation &amp; inline features</h2>
+
+<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
 
 
 
@@ -380,6 +747,81 @@ postProcess: [
 
 <section id="phrase">
 <h3>Phrase &amp; section boundaries</h3>
+
+<aside class="prompts">This section describes typographic features related to word boundaries, phrase &amp; section boundaries, bracketed text, quotations &amp; citations, emphasis, abbreviation, ellipsis &amp; repetition, inline notes &amp; annotations, other punctuation, and other inline text decoration.</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes:</cite> <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#phrase" class="external">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Ainline_features_punctuation+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Ainline_features_punctuation">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Apunctuation-etc">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbc)</li>
+
+<li>Exploratory/interactive test results (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#punctuation_etc">Phrase &amp; section boundaries</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
+
+<section id="headmark">
+<h4>Head marks</h4>
+
+<p>In traditional, loose-leaf Tibetan pechas a head mark or <span class="name">yig-mgo</span> (<span class="ipa">yig go</span>) is used at the beginning of the front of the folio so that you can tell which is the front.</p>
+
+<p>Head marks are also used in both pechas and books to indicate the start of a headline or the start of the first paragraph in a longer text.</p>
+
+<p>[[[#fig_head_marks]]] shows a common head mark, <span class="codepoint" translate="no"><bdi lang="bo">&#x0F04;</bdi> <span class="uname">U+0F04 TIBETAN MARK INITIAL YIG MGO MDUN MA</span></span>, and the extension character <span class="codepoint" translate="no"><bdi lang="bo">&#x0F05;</bdi> <span class="uname">U+0F05 TIBETAN MARK CLOSING YIG MGO SGAB MA</span></span>. A head mark can be written alone, or can be followed by as many as three closing marks; head marks are also followed by two <span class="name">shads</span>.</p>
+
+
+<figure id="fig_head_marks" class="sideCaption">
+<p style="font-size:2rem; line-height: 2;" lang="bo"><span class="fig_highlight">༄༅༎</span> ཡོངས་ཁྱབ་གསལ་བསྒྲགས་འགྲོ་བ་མིའི་ཐོབ་ཐང༌།</p>
+<figcaption>Example of use of head marks at the start of the Universal Declaration of Human Rights.</figcaption>
+</figure>
+
+
+<p>Head marks differ from text to text. The Unicode Standard provides a number of characters to give some basic coverage, but may not meet all needs.</p>
+
+<p>Three less common head marks, used in Nyingmapa and Bonpo literature, are also represented in the Tibetan block, namely:</p>
+<p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F01;</bdi> <span class="uname">U+0F01 TIBETAN MARK GTER YIG MGO TRUNCATED A</span></span><br>
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F02;</bdi> <span class="uname">U+0F02 TIBETAN MARK GTER YIG MGO -UM RNAM BCAD MA</span></span><br>
+<span class="codepoint" translate="no"><bdi lang="bo">&#x0F03;</bdi> <span class="uname">U+0F03 TIBETAN MARK GTER YIG MGO -UM GTER TSHEG MA</span></span></p>
+</section>
+
+
 
 
 
@@ -532,9 +974,116 @@ or between 2 <span class="name">shad</span> or double-<span class="name">shad</s
 
 
 
+<section id="h_quotations">
+<h3>Quotations &amp; citations</h3>
+
+
+<aside class="prompts">What characters are used to indicate quotations? Do quotations within quotations use different characters? What characters are used to indicate dialogue? Are the same mechanisms used to cite words, or for scare quotes, etc? What about citing book or article names?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<!--li><cite>Tibetan Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#quotations" class="external">Quotations &amp; citations</a></li-->
+
+<li><cite>Wikipedia</cite>: <a  target="_blank" href="https://en.wikipedia.org/wiki/Quotation_mark" class="external">Quotation mark</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Aquotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aquotations">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aquotations">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AQuotations">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-quotations.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#quotations">Quotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#quotations">Quotations &amp; citations</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
 
 <section id="emphasis">
-<h3>Emphasis</h3>
+<h3>Emphasis &amp; highlighting</h3>
+
+
+<aside class="prompts">How are emphasis and highlighting achieved? If lines or marks are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#emphasis" class="external">Emphasis</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Aemphasis+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aemphasis">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aemphasis">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AEmphasis">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-emphasis.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#punctuation_etc">Punctuation &amp; other inline features</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#emphasis">Emphasis &amp; highlighting</a></li>
+</ul>
+</dd>
+</dl>
+
+
 
 
 <p>Modern texts tend to bold text for emphasis.</p>
@@ -561,9 +1110,114 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 
 
 
+<section id="h_abbrev">
+<h3>Abbreviation, ellipsis &amp; repetition</h3>
+
+
+<aside class="prompts">What characters or other methods are used to indicate abbreviation, ellipsis &amp; repetition?</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#abbrev" class="external">Abbreviation, ellipsis &amp; repetition</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Aabbr_ellip_repetition+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aabbr_ellip_repetition">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aabbr_ellip_repetition">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbc)</li>
+
+<li>Exploratory/interactive test results (tbc)</li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li>tbd</li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
   
 <section id="inlinenotes">
 <h3>Inline notes &amp; annotations</h3>
+
+
+<aside class="prompts">What mechanisms, if any, are used to create *inline* notes and annotations? (For referent-type notes such as footnotes, see below?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite>Tibetan Orthography Notes</cite>: <a  target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#inlinenotes" class="external">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Ainline_notes_annotations+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Ainline_notes_annotations">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Ainline_notes">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AInline_notes_annotations">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-inline-notes-annotations.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#inline_notes">Inline notes &amp; annotations</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
 
 <p><span class="codepoint" translate="no"><bdi lang="bo">&#x0F37;</bdi> <span class="uname">U+0F37 TIBETAN MARK NGAS BZUNG SGOR RTAGS</span></span> can be used in interspersed commentaries to tag the root text that is being commented on. An alternative is to set the tsheg-bar being commented on in large type and the commentary in small type.</p>
 
@@ -575,7 +1229,71 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 <figcaption>Marks being used to identify root text.</figcaption>
 </figure>
 </section>
+
+
+
+
+
+
+<section id="h_otherinline">
+<h3>Other inline features</h3>
+
+
+<aside class="prompts">Any other form of highlighting or marking of text, such as underlining, numeric overbars, etc. What characters or methods (eg. text decoration) are used to convey information about a range of text? If lines are drawn alongside, over or through the text, do they need to be a special distance from the text itself? Is it important to skip characters when underlining, etc? How do things change for vertically set text?  Are there other punctuation marks that were not covered in preceding sections?</aside>
+
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Atext-decoration+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Atext-decoration">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Atext-decoration">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/character_phrase_tests/issues?q=is%3Aissue+is%3Aopen+label%3Ah2%3ATibetan+label%3Adoc%3AText_decoration">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-decoration.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#punctuation_etc">Inline features &amp; punctuation</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#text_decoration">Other inline features</a></li>
+</ul>
+</dd>
+</dl>
 </section>
+</section>
+
+
+
+
+
+
+
 
 
 
@@ -586,9 +1304,65 @@ may also be used to create a similar effect to underlining or to mark emphasis/h
 <h2>Line &amp; paragraph layout</h2>
 
 
+<aside class="prompts">This section describes typographic features related to line breaking &amp; hyphenation, text alignment &amp; justification, text spacing, baselines, line height, counters, lists, and styling initials.</aside>
+
+
+
+
+
 
 <section id="line_breaking">
-<h3>Line breaking</h3>
+<h3>Line breaking &amp; hyphenation</h3>
+
+<aside class="prompts">Are there special rules about the way text wraps when it hits the end of a line? Does line-breaking wrap whole 'words' at a time, or characters, or something else (such as syllables in Tibetan and Javanese)? What characters should not appear at the end or start of a line, and what should be done to prevent that? Is hyphenation used, or something else? What rules are used? What difficulties exist?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd class="reqs">
+<ul>
+<li><cite> Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#linebreak">Line breaking &amp; hyphenation</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/linebreak">Approaches to line-breaking</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd class="gh_discussions">
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion+label%3Ai%3Aline_breaking+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Aline_breaking">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aline-breaking">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd class="tests">
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3ATibetan+label%3Adoc%3ALine_breaking">Exploratory/interactive test repo</a></li>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-line-breaking.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+</dd>
+
+<dt>Gap analysis</dt>
+<dd class="gap_analysis">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#line_breaking"> Line breaking</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#line_breaking">Line breaking</a> • <a target="_blank" href="https://www.w3.org/TR/typography/#hyphenation">Hyphenation</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
 
 <p>Tibetan never breaks inside a syllable, and has no hyphenation.</p>
 
@@ -687,6 +1461,54 @@ This change serves as an optical indication that there is a left-over syllable a
 <section id="justification">
 <h3>Text alignment &amp; justification</h3>
 
+<aside class="prompts">Does text in a paragraph needs to have flush lines down both sides? Does the script allow punctuation to hang outside the text box at the start or end of a line? Where adjustments are need to make a line flush, how is that done? Does the script shrink/stretch space between words and/or letters? Are word baselines stretched, as in Arabic? What about paragraph indents?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#justification">Text alignment &amp; justification</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/articles/typography/justification">Approaches to full justification</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion+label%3Ai%3Atext_align_justification+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue++label%3Ai%3Atext_align_justification">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Ajustification">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3ATibetan+label%3Adoc%3AText_alignment_justification">Exploratory/interactive test repo</a></li>
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-text-alignment-justification.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#justification"> Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#justification">Text alignment &amp; justification</a></li>
+</ul>
+</dd>
+</dl>
+
+
+
+
 <p> There are two alternative methods of justification.</p>
 
 
@@ -735,6 +1557,60 @@ This change serves as an optical indication that there is a left-over syllable a
 
 
 
+<section id="h_spacing">
+<h3>Text spacing</h3>
+
+<aside class="prompts">This section looks at ways in which spacing is applied between characters over and above that which is introduced during justification. For example, does the orthography create emphasis or other effects by spacing out the words, letters or syllables in a word? (For justification related spacing, see Text alignment &amp; justification, above).</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tbd</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue++label%3Aquestion+label%3Ai%3Aletter_spacing">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue++label%3Ai%3Aletter_spacing">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Aletter_spacing">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AText_spacing">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-letter-spacing.html#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#spacing">Letter spacing</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#spacing">Text spacing</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
+
+
+
+
+
+
 
 
 
@@ -743,6 +1619,52 @@ This change serves as an optical indication that there is a left-over syllable a
 
 <section id="baselines">
 <h3>Baselines, line height, etc.</h3>
+
+<aside class="prompts">Does the script have special requirements for baseline alignment between mixed scripts and in general? Is line height special for this script? Are there other aspects that affect line spacing, or positioning of items vertically within a line?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#baselines">Baselines, line height, etc.</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Ai%3Abaselines_line_height_etc+label%3Aquestion+">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Abaselines_line_height_etc">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Abaselines">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li>Exploratory/interactive test repo (tbc)</li>
+
+<li>Exploratory/interactive test results (tbc)</li>
+</ul>
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#baselines"> Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#baselines">Baselines, line-height, etc</a></li>
+</ul>
+</dd>
+</dl>
+
+
 
 <p>Tibetan uses a hanging baseline, which tends to fall between the ascender and x-height of Latin text. When text in smaller annotations or larger heading text is mixed with normal text, the letter-heads of all characters should align to the same height.</p>
 
@@ -780,7 +1702,60 @@ This change serves as an optical indication that there is a left-over syllable a
 
  
 <section id="counters_lists">
-<h3>Lists and counters</h3>
+<h3>Lists, counters, etc</h3>
+
+<aside class="prompts">Are there list or other counter styles in use? If so, what is the format used? Do counters need to be upright in vertical text? Are there other aspects related to counters and lists that need to be addressed?</aside>
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li><cite> Tibetan Orthography Notes</cite>: <a target="_blank" href="https://r12a.github.io/scripts/tibt/bo.html#lists">Counters, lists, etc</a></li>
+<li><cite> Ready-made Counter Styles</cite>: <a target="_blank" href="https://www.w3.org/TR/predefined-counter-styles/#tibetan-styles">Tibetan</a></li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion+label%3Ai%3Alists_counters_etc">Open requests for information</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue++label%3Ai%3Alists_counters_etc">All Tibetan issues in the tlreq repo</a></li>
+
+<li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Alists">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue++label%3Ah2%3ATibetan+label%3Adoc%3ALists_counters_etc">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-lists-counters-etc.html#tibetan">Exploratory/interactive test results</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/predefined-counter-styles#simplenumeric">I18n test suite: CSS3 Counter Styles, predefined styles</a></li>
+
+<li><a target="_blank" href="https://w3c.github.io/i18n-tests/results/custom-counter-styles#tibetan">I18n test suite: Custom counter styles</a></li>
+</ul>
+
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#lists"> Lists, counters, etc</a></li>
+</ul>
+</dd>
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#lists">Lists, counters, etc</a></li>
+</ul>
+</dd>
+</dl>
+
+
 
 <p>Tibetan numerals can be used for list counters.  The  Tibetan numbers are used in a simple decimal notation, ie. in the same way as European numerals; they differ only in shape.</p>
 <figure>
@@ -831,6 +1806,63 @@ This change serves as an optical indication that there is a left-over syllable a
 </figure>
 </section>
 </section>
+
+
+
+
+
+
+
+<section id="h_initials">
+<h3>Styling initials</h3>
+
+<aside class="prompts">Does the script use special styling of the initial letter of a line or paragraph, such as for drop caps or similar? How about the size relationship between the large letter and the lines alongide? where does the large letter anchor relative to the lines alongside? is it normal to include initial quote marks in the large letter? is the large letter really a syllable? Are dropped, sunken, and raised types found? etc.</aside>
+
+
+
+<dl class="reslinks">
+<dt>Requirements</dt>
+<dd>
+<ul>
+<li>tba</li>
+</ul>
+</dd>
+
+<dt>GitHub discussions</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+is%3Aopen+label%3Aquestion+label%3Ai%3Astyling_initials">Open requests for information</a></li>
+<li><a target="_blank" href="https://github.com/w3c/tlreq/issues?q=is%3Aissue+label%3Ai%3Astyling_initials">All Tibetan issues in the tlreq repo</a></li><li><a target="_blank" href="https://github.com/w3c/i18n-activity/issues?q=+label%3Atlreq+label%3Aspec-type-issue+label%3Ai%3Ainitials">Tibetan issues in W3C specs</a></li>
+</ul>
+</dd>
+
+
+<dt>Tests</dt>
+<dd>
+<ul>
+<li><a target="_blank" href="https://github.com/w3c/line_paragraph_tests/issues?q=is%3Aissue+label%3Ah2%3ATibetan+label%3Adoc%3AStyling_initials">Exploratory/interactive test repo</a></li>
+
+<li><a target="_blank" href="https://www.w3.org/International/i18n-tests/results/int-styling-initials#tibetan">Exploratory/interactive test results</a></li>
+</ul>
+
+
+</dd><dt>Gap analysis</dt>
+<dd>
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/tibt-gap/#initials">Styling initials</a></li>
+</ul>
+</dd>
+
+
+<dt>LE Index</dt>
+<dd class="le_index">
+<ul class="linkList">
+<li><a target="_blank" href="https://www.w3.org/TR/typography/#initials">Styling initials</a></li>
+</ul>
+</dd>
+</dl>
+</section>
+
 </section>
 
 
@@ -934,6 +1966,14 @@ This change serves as an optical indication that there is a left-over syllable a
 <h2>Revision Log</h2>
 
 <ul>
+<li>Moved Acknowledgements section to top of introduction and renamed 'Contributors'.</li>
+
+<li>Updated information and links in the introduction.</li>
+
+<li>Rewrote the script overview section.</li>
+
+<li>Added links to all sections where additional information is available.</li>
+
 <li>Removed Appendix D: Character List.</li>
 
 <li>Removed and rewrote most of the material in the section Tibetan Script Overview. (More up to date and detailed information can be found in the page <a href="https://r12a.github.io/scripts/tibt/bo.html">Tibetan orthography notes</a>.)</li>
@@ -941,22 +1981,5 @@ This change serves as an optical indication that there is a left-over syllable a
 <li>Removed the (partial) Chinese translation text and markup. Moved Chunming Hu's name from the list of editors to the acknowledgements section.</li>
 </ul>
 </section>
-
-
-
-
-
-
-
-<section id="acknowledgements" class="appendix">
-<h2>Acknowledgements</h2>
-
-<p>The initial material for this document was an edited extract from the page <a href="https://r12a.github.io/scripts/tibt/bo.html">Tibetan orthography notes</a>. That page contains additional details about character usage and how the writing system works, plus interactive information, which are not available here.</p>
-
-<p><span lang="zh-hans">胡春明</span> (Chunming Hu) prepared an early translation of parts of this document (now removed).</p>
-
-<p>This document has been developed with contributions from participants of the <a href="https://w3c.github.io/clreq/">Chinese Layout Requirement Task Force</a>, with kind help from experts from 信标委中文信息处理分技术委员会及藏文信息处理工作组.</p>
-</section>
-
 </body>
 </html>
