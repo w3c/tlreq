@@ -63,7 +63,7 @@ postProcess: [
 
 <div id="sotd">
 <p>This document describes the basic requirements layout and text support on the Web and in eBooks for the Tibetan language, using the Tibetan script, and used in China, Bhutan, India, and other countries. These requirements provide information for Web technologies such as CSS, HTML and digital publications about how to support users of the Tibetan script. The information here is developed in conjunction with a <a href="https://www.w3.org/TR/tibt-gap/">document that summarises gaps</a> in support on the Web for Tibetan.</p>
-<p>The editor's draft of this document is being developed as part of the <a href="https://github.com/w3c/tlreq/">Tibetan Language Enablement</a> program of the W3C <a href="https://www.w3.org/International/ig/">Internationalization Interest Group</a>. It will be published by the <a href="https://www.w3.org/International/core/">Internationalization Working Group</a>. The end target for this document is a Working Group Draft Note.</p>
+<p>The editor's draft of this document is being developed as part of the <a href="https://github.com/w3c/tlreq/">Tibetan Language Enablement</a> program of the W3C <a href="https://www.w3.org/International/i18n-activity/i18n-ig/">Internationalization Interest Group</a>. It will be published by the <a href="https://www.w3.org/International/i18n-activity/i18n-wg/">Internationalization Working Group</a>. The end target for this document is a Working Group Draft Note.</p>
 </div>
 
 
@@ -245,13 +245,13 @@ postProcess: [
 
 <p>To write the sounds of the standard Lhasa dialect, Tibetan uses 28 consonant letters (plus their subjoined forms). 6 more letters are used to write Sanskrit.</p>
 
-<p>A  distinguishing feature of Tibetan is the set of separate code points for subjoined consonants, used to create consonant stacks. Of the 77 combining characters in the Tibetan block, 48 represent subjoined consonant forms. Unlike many other Indic scripts, the modern Tibetan orthography doesn't use a <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-virama">virama</a> to create stacks.</p>
+<p>A  distinguishing feature of Tibetan is the set of separate code points for subjoined consonants, used to create consonant stacks. Of the 77 combining characters in the Tibetan block, 48 represent subjoined consonant forms. Unlike many other Indic scripts, the modern Tibetan orthography doesn't use a <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-virama">virama</a> to create stacks.</p>
 
-<p>Tibetan is an <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-abugida">abugida</a> with one <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-inherent-vowel">inherent vowel</a>. When writing the Lhasa dialect, other post-consonant vowels are represented using 4 <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-vowel-sign">vowel signs</a>, all combining marks.</p>
+<p>Tibetan is an <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-abugida">abugida</a> with one <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-inherent-vowel">inherent vowel</a>. When writing the Lhasa dialect, other post-consonant vowels are represented using 4 <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-vowel-sign">vowel signs</a>, all combining marks.</p>
 
-<p>There are no <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-pre-base">pre-base</a>, <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-circumgraph">circumgraph</a>, or <a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-composite-vowel">multipart vowels</a> in the Tibetan used to write the Llasa dialect (though there are when writing in Sanskrit).</p>
+<p>There are no <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-pre-base">pre-base</a>, <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-circumgraph">circumgraph</a>, or <a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-composite-vowel">multipart vowels</a> in the Tibetan used to write the Llasa dialect (though there are when writing in Sanskrit).</p>
 
-<p><a class="termref" href="https://w3c.github.io/i18n-glossary/index.html#dfn-standalone-vowel">Standalone vowels</a> are written by adding vowel signs to either <span class="codepoint" translate="no"><bdi lang="bo">&#x0F60;</bdi> <span class="uname">U+0F60 TIBETAN LETTER -A</span></span> or  <span class="codepoint" translate="no"><bdi lang="bo">&#x0F68;</bdi> <span class="uname">U+0F68 TIBETAN LETTER A</span></span>, depending on the tone.</p>
+<p><a class="termref" href="https://www.w3.org/TR/i18n-glossary/index.html#dfn-standalone-vowel">Standalone vowels</a> are written by adding vowel signs to either <span class="codepoint" translate="no"><bdi lang="bo">&#x0F60;</bdi> <span class="uname">U+0F60 TIBETAN LETTER -A</span></span> or  <span class="codepoint" translate="no"><bdi lang="bo">&#x0F68;</bdi> <span class="uname">U+0F68 TIBETAN LETTER A</span></span>, depending on the tone.</p>
 
 <p><em>Sanskrit</em> vowels written in Tibetan use additional vowel signs and combining marks, some of which represent diphthongs, and some of which form circumgraphs or multipart characters, depending on the encoding.</p>
 
@@ -1797,7 +1797,8 @@ This change serves as an optical indication that there is a left-over syllable a
 <section id="superscript_counters">
 <h4>Sub- or superscript counters</h4>
 
-<p>Duff describes a form of numbered list where the numbers are placed above or below the main text, which he says is often used.<tt>dt,41</tt></p>
+<p>Duff describes a form of numbered list where the numbers are placed above or below the main text, which he says is often used.<a class="reflink" href="https://collab.its.virginia.edu/access/content/group/26a34146-33a6-48ce-001e-f16ce7908a6a/Tibetan%20fonts/Tibetan%20Legacy%20Fonts/Tibetan!.pdf" title="Tony Duff, Word Tibetan 5.1, Tibetan for Word, for Windows and the Macintosh, p41">§</a>
+</p>
 
 
 <figure id="fig_superscript_counters">
