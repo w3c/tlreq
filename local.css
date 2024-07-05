@@ -293,17 +293,16 @@ dl.reslinks {
     margin-block-end: 3em;
 	}
 
-
+.nobullet {
+    list-style-type: none;
+    }
 
 
 
 #linkWarning {
-    position:fixed;
-    bottom:0;
     margin-inline: 2.5%;
     background-color: antiquewhite;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-radius: 1em;
     font-size: 90%;
     padding: 1em;
     z-index: 2000;
@@ -314,6 +313,21 @@ dl.reslinks {
     margin-inline:1em;
     cursor:pointer;
     color: #999;
+    }
+
+
+
+.variable.empty[href], .variable.empty[href]:visited {
+    color: gray;
+    font-style: italic;
+    }
+
+
+.reslinks a[href] {
+    color: darkorange;
+    }
+.reslinks a[href]:visited {
+    color: darkorange;
     }
 
 
