@@ -1,0 +1,73 @@
+@font-face { 
+	font-family: 'Tibetan Machine Uni WF'; 
+	font-style: normal; 
+	font-weight: normal; 
+	src: url(fonts/TibMachUni-1.901.woff); 
+	} 
+
+[lang='bo'] { 
+	font-family: 'Tibetan Machine Uni WF', "Tibetan Machine Uni", Kokonor, "Microsoft Himalaya", sans-serif; 
+	font-size: 22px; 
+	}
+
+
+
+
+
+
+/*  tlreq specific */
+
+.large_example {
+	font-size: 32px;
+}
+.highlight_bo {
+	color: red;
+}
+span[lang=bo], bdi[lang=bo] {
+	font-size: 28px;
+    }
+#terminology_table td {
+	border: 1px solid #eee;
+}
+h3+h3 {
+	margin-top: 0;
+}
+.leadin[lang="bo"] {
+	font-size: 20px;
+}
+.locations td .ex {
+    margin-left: 8px;
+    font-size: 36px;
+	color: #f00;
+}
+.locations th {
+    border: 1px solid #CCC;
+    vertical-align: middle;
+    height: 40px;
+}
+.chartable { line-height: 1.4; }
+.chartable td { padding: 8px; border: 1px solid #ddd; }
+.chartable td :lang(bo) {
+    margin-left: 8px;
+    font-size: 48px;
+	color: #f00;
+}
+.ipa {
+    font-family: doulosipa,"Gentium Plus","Lucida Sans Unicode","Lucida Grande","lucida sans","helvetica",sans-serif;
+    font-size: 18px;
+}
+.ipa::before {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-right: 1.5px;
+}
+.ipa::after {
+    content: "/";
+    font-family: "Helvetica Neue",serif;
+    margin-left: 1.5px;
+}
+
+
+
+
+
