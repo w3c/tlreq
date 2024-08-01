@@ -23,9 +23,14 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-### Documents
-- **Tibetan Gap Analysis** • [DNOTE](https://www.w3.org/TR/tibt-gap) • [*Editor's draft*](https://www.w3.org/International/tlreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/gap-analysis/index.html)
+### Resource & requirement docs
+- **Tibetan Script Resources** • [DNOTE](https://www.w3.org/TR/tibt-lreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/tibt/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/tibt/)
 - **Tibetan Layout Requirements** • [DNOTE](https://www.w3.org/TR/tlreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/index.html)
+
+
+
+### Resource & requirement docs
+- **Tibetan Gap Analysis** • [DNOTE](https://www.w3.org/TR/tibt-gap) • [*Editor's draft*](https://www.w3.org/International/tlreq/gap-analysis/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/gap-analysis/index.html)
 
 
 
