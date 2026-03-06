@@ -22,7 +22,6 @@ Topics for discussion are suggested by [the gap-analysis template](https://www.w
 
 
 
-
 ### Tibetan
 - **Script Resources** • [DNOTE](https://www.w3.org/TR/tibt-lreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/tibt/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/tibt/)
 - **Layout Requirements** • [DNOTE](https://www.w3.org/TR/tlreq) • [*Editor's draft*](https://www.w3.org/International/tlreq/) • [*Latest commits*](https://github.com/w3c/tlreq/commits/gh-pages/index.html)
