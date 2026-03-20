@@ -1,12 +1,12 @@
-@font-face { 
+/* @font-face { 
 	font-family: 'Tibetan Machine Uni WF'; 
 	font-style: normal; 
 	font-weight: normal; 
 	src: url('webfonts/TibMachUni-1.901.woff'); 
-	} 
+	} */
 
 [lang='bo'] { 
-	font-family: 'Tibetan Machine Uni WF', "Tibetan Machine Uni", Kokonor, "Microsoft Himalaya", sans-serif; 
+	font-family: "Tibetan Machine Uni", Kokonor, "Microsoft Himalaya", sans-serif; 
 	font-size: 22px; 
 	}
 
